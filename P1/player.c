@@ -13,7 +13,7 @@ typedef struct _Player{
 }Player
 
 
-Player create(Id id){
+Player player_create(Id id){
 
   Player *newPlayer = NULL;
 
@@ -37,7 +37,7 @@ Player create(Id id){
 }
 
 
-STATUS destroy(Player player){
+STATUS player_destroy(Player player){
 
   if (!player) {
     return ERROR;
@@ -50,7 +50,7 @@ STATUS destroy(Player player){
 }
 
 
-char* get_name(Player player){ 
+char* player_get_name(Player player){ 
 
   if (!player) {
     return ERROR;
@@ -60,7 +60,7 @@ char* get_name(Player player){
 
 }
 
-Id get_location(Player player){ 
+Id player_get_location(Player player){ 
 
   if (!player) {
     return ERROR;
@@ -70,7 +70,7 @@ Id get_location(Player player){
 
 }
 
-Id get_object (Player player){ 
+Id player_get_object (Player player){ 
 
   if (!player) {
     return ERROR;
@@ -80,7 +80,7 @@ Id get_object (Player player){
 
 }
 
-STATUS set_name(Player player, char*nombre){ 
+STATUS player_set_name(Player player, char*nombre){ 
 
 if (!player || !nombre) {
     return ERROR;
@@ -94,7 +94,7 @@ if (!player || !nombre) {
 }
 
 
-STATUS set_location(Player player, Id location){ 
+STATUS player_set_location(Player player, Id location){ 
 
 if (!player || !location ) {
     return ERROR;
@@ -105,7 +105,7 @@ if (!player || !location ) {
   return OK;
 }
 
-STATUS set_object(Player player, Id object){ 
+STATUS player_set_object(Player player, Id object){ 
 
 if (!player || !object ) {
     return ERROR;
@@ -116,7 +116,7 @@ if (!player || !object ) {
   return OK;
 }
 
-STATUS print(Player player){
+STATUS player_print(Player player){
  Id idaux = NO_ID;
 
   if (!player) {

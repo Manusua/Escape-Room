@@ -5,14 +5,16 @@
 
 typedef struct _Player Player;
 
-Player create(Id id);
-STATUS destroy(Object object);
-char* get_name(Player player);
-Id get_location(Player player);
-Id get_object (Player player);
-STATUS set_name(Player player, char*nombre);
-STATUS set_location(Player player, Id location);
-STATUS set_object(Player player, Id object);
-STATUS print(Player player);
+#define MAX_PLAYERS 4
+
+Player player_create(Id id);
+STATUS player_destroy(Object object);
+char* player_get_name(Player player);
+Id player_get_location(Player player);
+Id player_get_object (Player player);
+STATUS player_set_name(Player player, char*nombre);
+STATUS player_set_location(Player player, Id location);
+STATUS player_set_object(Player player, Id object);
+STATUS player_sprint(Player player);
 
 #endif

@@ -7,11 +7,14 @@
 
 typedef struct _Object Object;
 
-Object create(Id id);
-STATUS destroy(Object object);
-char* get(Object object);
-STATUS set(Object object, char*nombre);
-STATUS print(Object object);
+//TODO no se exactamente que es un objeto asi que pongo 8 por ejemplo y ya lo cmabairemos si eso
+#define MAX_OBJECTS 8
+
+Object object_create(Id id);
+STATUS object_destroy(Object object);
+char* object_get(Object object);
+STATUS object_set(Object object, char*nombre);
+STATUS object_print(Object object);
 
 
 #endif

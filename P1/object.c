@@ -11,7 +11,7 @@ typedef struct _Object{
 
 
 
-Object create(Id id){
+Object object_create(Id id){
 
   Object *newObject = NULL;
 
@@ -31,7 +31,7 @@ Object create(Id id){
 }
 
 
-STATUS destroy(Object object){
+STATUS object_destroy(Object object){
 
   if (!object) {
     return ERROR;
@@ -43,7 +43,7 @@ STATUS destroy(Object object){
   return OK;
 }
 
-char* get(Object object){ 
+char* object_get(Object object){ 
 
   if (!object) {
     return ERROR;
@@ -53,7 +53,7 @@ char* get(Object object){
 
 }
 
-STATUS set(Object object, char*nombre){ 
+STATUS object_set(Object object, char*nombre){ 
 
 if (!object || !nombre) {
     return ERROR;
@@ -69,7 +69,7 @@ if (!object || !nombre) {
 }
 
 
-STATUS print(Object object){
+STATUS object_print(Object object){
   Id idaux = NO_ID;
 
   if (!object) {

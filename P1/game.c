@@ -54,9 +54,9 @@ STATUS game_create(Game* game) {
   for (i = 0; i < MAX_SPACES; i++) {
     game->spaces[i] = NULL;
   }
-  
-  game->player_location = NO_ID;
-  game->object_location = NO_ID;
+	//TODO que hago con los id, como los asigno?¿
+  game->players = NO_ID;
+  game->objects = NO_ID;
   game->last_cmd = NO_CMD;
   
   return OK;
@@ -84,6 +84,14 @@ STATUS game_destroy(Game* game) {
 
   for (i = 0; (i < MAX_SPACES) && (game->spaces[i] != NULL); i++) {
     space_destroy(game->spaces[i]);
+  }
+
+  for (i = 0; (i < MAX_PLAYERS) && (game->players[i] != NULL); i++) {
+    player_destroy(game->players[i]);
+  }
+
+  for (i = 0; (i < MAX_OBJECTS) && (game->objects[i] != NULL); i++) {
+    object_destroy(game->objects[i]);
   }
         
   return OK;
@@ -140,7 +148,7 @@ STATUS game_set_player_location(Game* game, Id id) {
     return ERROR;
   }
 
-  game->player_location = id;
+  player_set_location(game->player, id);
   return OK;	
 }
 
@@ -152,17 +160,17 @@ STATUS game_set_object_location(Game* game, Id id) {
     return ERROR;
   }
 
-  game->object_location = id;
+  player_set_location(game->object, id);
 
   return OK;
 }
 
 Id game_get_player_location(Game* game) {
-  return game->player_location;
+  return player_get_location(game->player);
 }
 
 Id game_get_object_location(Game* game) {
-  return game->object_location;
+  return object_get_location(game->object);
 }
 
 STATUS game_update(Game* game, T_Command cmd) {
@@ -185,8 +193,15 @@ void game_print_data(Game* game) {
     space_print(game->spaces[i]);
   }
   
-  printf("=> Object location: %d\n", (int) game->object_location);    
-  printf("=> Player location: %d\n", (int) game->player_location);
+  printf("=> Object Location: \n");
+  for (i = 0; i < MAX_OBJECTS && game->objects[i] != NULL; i++) {
+    object_print(game->objects[i]);
+  }
+
+  printf("=> Player Location: \n");
+  for (i = 0; i < MAX_PLAYERS && game->spaces[i] != NULL; i++) {
+    player_print(game->players[i]);
+  }
   printf("prompt:> ");
 }
 
