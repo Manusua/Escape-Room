@@ -10,13 +10,17 @@
 
 #ifndef COMMAND_H
 #define COMMAND_H
-
+/*Acciones que el usuario puede realizar: le hemos añadido PICK y DROP*/
 typedef enum enum_Command {
   NO_CMD = -1, 
   UNKNOWN, 
   EXIT, 
   FOLLOWING, 
-  PREVIOUS} T_Command;
+  PREVIOUS,
+  PICK,
+  DROP
+} T_Command;
+
 
 T_Command get_user_input();
 
