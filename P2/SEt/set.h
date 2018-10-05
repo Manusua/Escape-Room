@@ -4,11 +4,12 @@
 
 #define NUM_OBJECTS 5
 
-typedef Struct _Set Set;
+typedef struct _Set Set;
 
 
-Set set_create();
+Set* set_create();
 STATUS set_destroy(Set *set);
 STATUS set_add(Set *set, Id id);
 STATUS set_del(Set *set, Id id);
+
 void set_print(Set *set);
