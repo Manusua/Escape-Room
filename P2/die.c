@@ -51,9 +51,10 @@ Return:
 */
 STATUS die_roll(Die* die, int min, int max){
 /*No aceptamos intervalos con el minimo 0 o negativo*/
+  int aux;
   if(die == NULL || min < 1 || max <= min)
     return ERROR;
-  int aux = (int)clock();
+  aux= (int)clock();
   aux = aux%(max - min) + min;
   die->last = aux;
   return OK;

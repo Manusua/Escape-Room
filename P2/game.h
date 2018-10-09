@@ -12,6 +12,7 @@ que coordina las llamadas a Player, Object y Space
 #include "space.h"
 #include "player.h"
 #include "object.h"
+#include "die.h"
 
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román

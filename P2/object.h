@@ -15,7 +15,7 @@ acciones que estos pueden realizar sobre ellos
 typedef struct _Object Object;
 
 
-#define MAX_OBJECTS 100
+#define MAX_OBJECTS 4
 
 Object* object_create(Id id);
 STATUS object_destroy(Object *object);

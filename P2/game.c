@@ -6,8 +6,9 @@
 #include "GameReader.h"
 #include "player.h"
 #include "object.h"
+#include "die.h"
 
-#define N_CALLBACK 6
+#define N_CALLBACK 7
 
 /**
    Define the function type for the callbacks
@@ -31,7 +32,7 @@ static callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_following,
   game_callback_previous,
   game_callback_pick,
-  game_callback_drop
+  game_callback_drop,
   game_callback_roll};
 
 /**
@@ -59,13 +60,14 @@ Return:
 STATUS game_create(Game* game) {
   int i;
 
-
   for (i = 0; i < MAX_SPACES; i++) {
     game->spaces[i] = NULL;
   }
 
-  game->player=player_create(1);
-  game->object=object_create(2);
+  game->player=player_create(2);
+  for (i = 0; i < MAX_OBJECTS; i++) {
+    game->object[i] = NULL;
+  }
   game->last_cmd = NO_CMD;
   game->die = die_create(3);
 
@@ -111,7 +113,10 @@ STATUS game_destroy(Game* game) {
     space_destroy(game->spaces[i]);
   }
 
-  if(game->object!=NULL)object_destroy(game->object);
+  for (i = 0; (i < MAX_OBJECTS) && (game->object[i] != NULL); i++) {
+    object_destroy(game->object[i]);
+  }
+
   if(game->player!=NULL)player_destroy(game->player);
 
   die_destroy(game->die);
@@ -444,11 +449,11 @@ Date: 09/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de tirar el dado
 */
-void game_callback_drop(Game *game){
+void game_callback_roll(Game *game){
 
   if(game == NULL) return;
 
-  die_roll(game->die);
+  die_roll(game->die, 1, 6);
 
   return;
 }
