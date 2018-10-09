@@ -54,7 +54,7 @@ STATUS space_set_name(Space* space, char* name) {
   if (!space || !name) {
     return ERROR;
   }
-  
+
   if (!strcpy(space->name, name)) {
     return ERROR;
   }
@@ -149,6 +149,21 @@ Set* space_get_object(Space* space) {
     return NULL;
   }
   return space->objects;
+}
+
+/*
+Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
+Date: 09/10/2018
+Parámetros:
+  -space: espacio donde vamos a bsucar el objeto
+  -object: objeto que buscaremos en el espacio
+Return:
+  -BOOL: true si lo encontramos
+*/
+BOOL space_is_object(Space* space, Id id){
+  if(!space)
+    return FALSE;
+  return set_is_id(space->objects, id);
 }
 
 STATUS space_print(Space* space) {

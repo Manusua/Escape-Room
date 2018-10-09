@@ -11,5 +11,5 @@ Set* set_create();
 STATUS set_destroy(Set *set);
 STATUS set_add(Set *set, Id id);
 STATUS set_del(Set *set, Id id);
-
+BOOL set_is_id(Set *set, Id id);
 void set_print(Set *set);

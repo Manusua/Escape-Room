@@ -34,6 +34,7 @@ STATUS space_set_west(Space* space, Id id);
 Id space_get_west(Space* space);
 STATUS space_set_object(Space* space, Id id);
 Set* space_get_object(Space* space);
+BOOL space_is_object(Space* space, Id id);
 STATUS space_print(Space* space);
 
 #endif

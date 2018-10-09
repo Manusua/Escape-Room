@@ -6,7 +6,7 @@ FLAGS= -g -Wall -pedantic -ansi
 
 all: ocabas clean dist
 
-ocabas: space.o game.o command.o game_loop.o graphic_engine.o screen.o GameReader.o player.o object.o set.o
+ocabas: space.o game.o command.o game_loop.o graphic_engine.o screen.o GameReader.o player.o object.o set.o die.o
 	$(CC) $(FLAGS) -o ocabas $^
 
 game_loop.o: game_loop.c graphic_engine.h
@@ -40,6 +40,8 @@ player.o: player.c player.h
 object.o: object.c object.h
 	$(CC) $(FLAGS) -c object.c
 
+die.o: die.c die.h
+		$(CC) $(FLAGS) -c die.c
 
 clean:
 	rm -rf *.o

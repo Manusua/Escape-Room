@@ -1,7 +1,7 @@
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
-Módulo que contiene las funciones relevantes al desarrollo principal del juego y 
+Módulo que contiene las funciones relevantes al desarrollo principal del juego y
 que coordina las llamadas a Player, Object y Space
 */
 
@@ -24,9 +24,10 @@ Campos:
 */
 typedef struct _Game{
   Player *player;
-  Object *object;
+  Object *object[MAX_OBJECTS + 1];
   Space* spaces[MAX_SPACES + 1];
   T_Command last_cmd;
+  Die* die;
 } Game;
 
 

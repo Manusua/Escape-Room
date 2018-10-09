@@ -65,6 +65,7 @@ STATUS game_create(Game* game) {
   game->player=player_create(1);
   game->object=object_create(2);
   game->last_cmd = NO_CMD;
+  game->die = die_create(3);
 
   return OK;
 }
