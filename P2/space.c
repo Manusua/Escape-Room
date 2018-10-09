@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "types.h"
 #include "space.h"
 
 struct _Space {
@@ -11,7 +10,7 @@ struct _Space {
   Id south;
   Id east;
   Id west;
-  BOOL object;
+  Set* objects;
 };
 
 Space* space_create(Id id) {
@@ -35,7 +34,7 @@ Space* space_create(Id id) {
   newSpace->east = NO_ID;
   newSpace->west = NO_ID;
 
-  newSpace->object = FALSE;
+  newSpace->objects = set_create();
 
   return newSpace;
 }
@@ -55,7 +54,7 @@ STATUS space_set_name(Space* space, char* name) {
   if (!space || !name) {
     return ERROR;
   }
-
+  
   if (!strcpy(space->name, name)) {
     return ERROR;
   }
@@ -95,12 +94,11 @@ STATUS space_set_west(Space* space, Id id) {
   return OK;
 }
 
-STATUS space_set_object(Space* space, BOOL value) {
+STATUS space_set_object(Space* space, Id id) {
   if (!space) {
     return ERROR;
   }
-  space->object = value;
-  return OK;
+  return set_add(space->objects, id);
 }
 
 const char * space_get_name(Space* space) {
@@ -145,16 +143,17 @@ Id space_get_west(Space* space) {
   return space->west;
 }
 
-BOOL space_get_object(Space* space) {
+/*Supongo que hay que devolver el Set Entero*/
+Set* space_get_object(Space* space) {
   if (!space) {
-    return FALSE;
+    return NULL;
   }
-  return space->object;
+  return space->objects;
 }
 
 STATUS space_print(Space* space) {
   Id idaux = NO_ID;
-
+  Set* aux;
   if (!space) {
     return ERROR;
   }
@@ -188,13 +187,13 @@ STATUS space_print(Space* space) {
   } else {
     fprintf(stdout, "---> No west link.\n");
   }
-
-  if (space_get_object(space)) {
-    fprintf(stdout, "---> Object in the space.\n");
+  aux = space_get_object(space);
+  if (aux != NULL) {
+    fprintf(stdout, "---> Objects in the space:\n");
+    set_print(aux);
   } else {
     fprintf(stdout, "---> No object in the space.\n");
   }
 
   return OK;
 }
-

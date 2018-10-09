@@ -6,13 +6,16 @@ FLAGS= -g -Wall -pedantic -ansi
 
 all: ocabas clean dist
 
-ocabas: space.o game.o command.o game_loop.o graphic_engine.o screen.o GameReader.o player.o object.o
+ocabas: space.o game.o command.o game_loop.o graphic_engine.o screen.o GameReader.o player.o object.o set.o
 	$(CC) $(FLAGS) -o ocabas $^
 
 game_loop.o: game_loop.c graphic_engine.h
 	$(CC) $(FLAGS) -c game_loop.c
 
-space.o: space.c space.h
+set.o: set.c set.h
+		$(CC) $(FLAGS) -c set.c
+
+space.o: space.c space.h  set.h
 	$(CC) $(FLAGS) -c space.c
 
 game.o: game.c game.h command.h space.h GameReader.h
@@ -38,10 +41,8 @@ object.o: object.c object.h
 	$(CC) $(FLAGS) -c object.c
 
 
-
-
 clean:
-	rm -rf *.o 
+	rm -rf *.o
 
 dist:
 	tar -cvzf E1.tgz *c *h makefile

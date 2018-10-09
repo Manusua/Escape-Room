@@ -14,7 +14,7 @@ Campos:
 struct _Object{
   Id id;
   char  name[WORD_SIZE + 1];
-}Object;
+};
 
 
 /*
@@ -72,7 +72,7 @@ Parámetros:
 Return:
   -char*: nombre del objeto
 */
-char* object_get_name(Object *object){ 
+char* object_get_name(Object *object){
 
   if (!object) {
     return ERROR;
@@ -89,7 +89,7 @@ Parámetros:
 Return:
   -STATUS: código que indica si se ha podido realizar la tarea correctamente
 */
-STATUS object_set_name(Object *object, char*nombre){ 
+STATUS object_set_name(Object *object, char*nombre){
 
 if (!object || !nombre) {
     return ERROR;
@@ -118,7 +118,7 @@ STATUS object_print(Object *object){
     return ERROR;
   }
 
-  fprintf(stdout, "--> Object (Id: %ld; Name: %s)\n", object->id, get_name_object(object));
+  fprintf(stdout, "--> Object (Id: %ld; Name: %s)\n", object->id, object_get_name(object));
 
   return OK;
 }
@@ -135,7 +135,7 @@ Id object_get_id(Object *object){
   if (object==NULL)return NO_ID;
 
   return object->id;
-  
+
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -148,7 +148,7 @@ Return:
 */
 STATUS object_set_id(Object *object, Id id){
 
-  if(object==NULL || id == NULL)return ERROR;
+  if(object == NULL || !id) return ERROR;
 
   object->id=id;
 
