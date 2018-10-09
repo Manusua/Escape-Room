@@ -1,10 +1,10 @@
-/** 
+/**
  * @brief It implements the command interpreter
- * 
+ *
  * @file command.h
  * @author Profesores PPROG
- * @version 1.0 
- * @date 19-12-2014 
+ * @version 1.0
+ * @date 19-12-2014
  * @copyright GNU Public License
  */
 
@@ -12,13 +12,14 @@
 #define COMMAND_H
 /*Acciones que el usuario puede realizar: le hemos añadido PICK y DROP*/
 typedef enum enum_Command {
-  NO_CMD = -1, 
-  UNKNOWN, 
-  EXIT, 
-  FOLLOWING, 
+  NO_CMD = -1,
+  UNKNOWN,
+  EXIT,
+  FOLLOWING,
   PREVIOUS,
   PICK,
-  DROP
+  DROP,
+  ROLL
 } T_Command;
 
 

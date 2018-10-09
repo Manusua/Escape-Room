@@ -23,6 +23,7 @@ void game_callback_following(Game* game);
 void game_callback_previous(Game* game);
 void game_callback_pick(Game *game);
 void game_callback_drop(Game *game);
+void game_callback_roll(Game *game);
 
 static callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_unknown,
@@ -30,7 +31,8 @@ static callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_following,
   game_callback_previous,
   game_callback_pick,
-  game_callback_drop};
+  game_callback_drop
+  game_callback_roll};
 
 /**
    Private functions
@@ -111,6 +113,8 @@ STATUS game_destroy(Game* game) {
 
   if(game->object!=NULL)object_destroy(game->object);
   if(game->player!=NULL)player_destroy(game->player);
+
+  die_destroy(game->die);
 
   return OK;
 }
@@ -430,6 +434,21 @@ void game_callback_drop(Game *game){
   game_set_object_location(game,player_id);
   player_set_object(game->player,NO_ID);
 
+
+  return;
+}
+
+/*
+Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
+Date: 09/10/2018
+Parámetros:
+  -game: juego sobre el que tratamos de realizar la acción de tirar el dado
+*/
+void game_callback_drop(Game *game){
+
+  if(game == NULL) return;
+
+  die_roll(game->die);
 
   return;
 }
