@@ -25,7 +25,7 @@ Campos:
 */
 typedef struct _Game{
   Player *player;
-  Object *object[MAX_OBJECTS + 1];
+  Object *objects[MAX_OBJECTS + 1];
   Space* spaces[MAX_SPACES + 1];
   T_Command last_cmd;
   Die* die;
@@ -46,6 +46,7 @@ Id     game_get_object_location(Game* game);
 Id 	   game_get_player_object(Game* game);
 T_Command game_get_last_command(Game* game);
 STATUS game_add_space(Game* game, Space* space);
+STATUS game_add_object(Game* game, Object* object);
 STATUS game_set_player_location(Game* game, Id id);
 STATUS game_set_object_location(Game* game, Id id);
 

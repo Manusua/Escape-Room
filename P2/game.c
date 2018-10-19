@@ -66,7 +66,7 @@ STATUS game_create(Game* game) {
 
   game->player=player_create(2);
   for (i = 0; i < MAX_OBJECTS; i++) {
-    game->object[i] = NULL;
+    game->objects[i] = NULL;
   }
   game->last_cmd = NO_CMD;
   game->die = die_create(3);
@@ -89,9 +89,10 @@ STATUS game_create_from_file(Game* game, char* filename) {
   if (game_load_spaces(game, filename) == ERROR)
     return ERROR;
 
+  if (game_load_objects(game, filename) == ERROR)
+    return ERROR;
 
   game_set_player_location(game, game_get_space_id_at(game, 0));
-  game_set_object_location(game, game_get_space_id_at(game, 0));
 
   return OK;
 }
@@ -113,8 +114,8 @@ STATUS game_destroy(Game* game) {
     space_destroy(game->spaces[i]);
   }
 
-  for (i = 0; (i < MAX_OBJECTS) && (game->object[i] != NULL); i++) {
-    object_destroy(game->object[i]);
+  for (i = 0; (i < MAX_OBJECTS) && (game->objects[i] != NULL); i++) {
+    object_destroy(game->objects[i]);
   }
 
   if(game->player!=NULL)player_destroy(game->player);
@@ -151,6 +152,40 @@ STATUS game_add_space(Game* game, Space* space) {
 
   return OK;
 }
+
+
+/*
+Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
+Date: 19/10/2018
+Parámetros:
+  -game: juego sobre el que añadir un objeto
+  -object: objeto a añadir al juego
+Return:
+  -STATUS: código que indica si se ha podido realizar la tarea correctamente
+*/
+STATUS game_add_object(Game* game, Object* object){
+  int i = 0;
+
+  if (object == NULL) {
+    return ERROR;
+  }
+
+  while ( (i < MAX_OBJECTS) && (game->objects[i] != NULL)){
+    i++;
+  }
+
+  if (i >= MAX_OBJECTS) {
+    return ERROR;
+  }
+
+  game->objects[i] = object;
+
+  return OK;
+
+
+}
+
+
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -226,7 +261,7 @@ Return:
 STATUS game_set_object_location(Game* game, Id id) {
 
 
- if(object_set_id(game->object,id)==ERROR)
+ if(object_set_id(game->objects[],id)==ERROR)
     return ERROR;
 
   return OK;
@@ -252,7 +287,7 @@ Return:
   -Id: identificador de la localizacion del objeto
 */
 Id game_get_object_location(Game* game) {
-  return object_get_id(game->object);
+  return object_get_id(game->objects[]);
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -310,7 +345,7 @@ void game_print_data(Game* game) {
   }
 
   if(player_print(game->player)==ERROR)return;
-  if(object_print(game->object)==ERROR)return;
+  if(object_print(game->objects[])==ERROR)return;
 
   printf("prompt:> ");
 }
