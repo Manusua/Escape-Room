@@ -50,7 +50,7 @@ STATUS space_destroy(Space* space) {
     return ERROR;
   }
   set_destroy(space->objects);
-  for(i = 0; i < 3; ++i){
+  for(i = 0; i < NUM_STRINGS; ++i){
     free(space->gdesc[i]);
   }
   free(space);

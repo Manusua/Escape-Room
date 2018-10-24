@@ -40,11 +40,11 @@ void graphic_engine_destroy(Graphic_engine *ge){
 }
 
 void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
-  int i;
+  int i, auxi = 0;
+  Id auxili[MAX_OBJECTS];
   Id id_act = NO_ID, id_back = NO_ID, id_next = NO_ID, obj_loc = NO_ID;
   Space* space_act = NULL;
   char* aux[NUM_STRINGS];
-  char obj='\0';
   char str[255];
   T_Command last_cmd = UNKNOWN;
   extern char *cmd_to_str[];
@@ -56,28 +56,35 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
     space_act = game_get_space(game, id_act);
     id_back = space_get_north(space_act);
     id_next = space_get_south(space_act);
-
-    if (game_get_object_location(game) == id_back)
-      obj='*';
-    else
-      obj=' ';
-
+    for(i = 0; i < MAX_OBJECTS;++i){
+      if (game_get_object_location(game, object_get_id(game_get_object(game, i))) == id_back){
+        auxi++;
+        auxili[i] = object_get_id(game_get_object(game, i));
+      }
+    }
     if (id_back != NO_ID) {
       sprintf(str, "  |         %2d|",(int) id_back);
       screen_area_puts(ge->map, str);
-      sprintf(str, "  |     %c     |",obj);
+      switch (auxi) {
+        case 0: sprintf(str, "  |           |"); break;
+        case 1: sprintf(str, "  |     %ld     |",auxili[0]); break;
+        case 2:sprintf(str, "  |   %ld   %ld   |",auxili[0], auxili[1]); break;
+        case 3:sprintf(str, "  |  %ld  %ld %ld    |",auxili[0], auxili[1], auxili[2]); break;
+        case 4:sprintf(str, "  | %ld %ld %ld %ld   |",auxili[0], auxili[1], auxili[2], auxili[3]); break;
+      }
       screen_area_puts(ge->map, str);
       sprintf(str, "  +-----------+");
       screen_area_puts(ge->map, str);
       sprintf(str, "        ^");
       screen_area_puts(ge->map, str);
     }
-
-    if (game_get_object_location(game) == id_act)
-      obj='*';
-    else
-      obj=' ';
-
+    auxi = 0;
+    for(i = 0; i < MAX_OBJECTS;++i){
+      if (game_get_object_location(game, object_get_id(game_get_object(game, i))) == id_back){
+        auxi++;
+        auxili[i] = object_get_id(game_get_object(game, i));
+      }
+    }
     if (id_act != NO_ID) {
       space_get_gdesc(space_act, aux);
       sprintf(str, "  +-----------+");
@@ -85,16 +92,23 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
       for(i = 0; i < NUM_STRINGS; ++i){
         sprintf(str, "  |%s|", aux[i]);
       }
-      sprintf(str, "  |     %c     |",obj);
+      switch (auxi) {
+        case 0: sprintf(str, "  |           |"); break;
+        case 1: sprintf(str, "  |     %ld     |",auxili[0]); break;
+        case 2:sprintf(str, "  |   %ld   %ld   |",auxili[0], auxili[1]); break;
+        case 3:sprintf(str, "  |  %ld  %ld %ld    |",auxili[0], auxili[1], auxili[2]); break;
+        case 4:sprintf(str, "  | %ld %ld %ld %ld   |",auxili[0], auxili[1], auxili[2], auxili[3]); break;
+      }
       sprintf(str, "  +-----------+");
       screen_area_puts(ge->map, str);
     }
-
-    if (game_get_object_location(game) == id_next)
-      obj='*';
-    else
-      obj=' ';
-
+    auxi = 0;
+    for(i = 0; i < MAX_OBJECTS;++i){
+      if (game_get_object_location(game, object_get_id(game_get_object(game, i))) == id_back){
+        auxi++;
+        auxili[i] = object_get_id(game_get_object(game, i));
+      }
+    }
     if (id_next != NO_ID) {
       sprintf(str, "        v");
       screen_area_puts(ge->map, str);
@@ -102,17 +116,26 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
       screen_area_puts(ge->map, str);
       sprintf(str, "  |         %2d|",(int) id_next);
       screen_area_puts(ge->map, str);
-      sprintf(str, "  |     %c     |",obj);
+      switch (auxi) {
+        case 0: sprintf(str, "  |           |"); break;
+        case 1: sprintf(str, "  |     %ld     |",auxili[0]); break;
+        case 2:sprintf(str, "  |   %ld   %ld   |",auxili[0], auxili[1]); break;
+        case 3:sprintf(str, "  |  %ld  %ld %ld    |",auxili[0], auxili[1], auxili[2]); break;
+        case 4:sprintf(str, "  | %ld %ld %ld %ld   |",auxili[0], auxili[1], auxili[2], auxili[3]); break;
+      }
       screen_area_puts(ge->map, str);
     }
   }
 
   /* Paint the in the description area */
   screen_area_clear(ge->descript);
-  if ((obj_loc = game_get_object_location(game)) != NO_ID){
-    sprintf(str, "  Object location:%d", (int)obj_loc);
-    screen_area_puts(ge->descript, str);
-  }
+/*TODO ESTO LO HE PUESTO ENTRE PARENTESIS PAR AQUE NO PARENTESIS
+if ((obj_loc = game_get_object_location(game)) != NO_ID){
+  sprintf(str, "  Object location:%d", (int)obj_loc);
+  screen_area_puts(ge->descript, str);
+}
+
+*/
 
   /* Paint the in the banner area */
   screen_area_puts(ge->banner, " The game of the Goose ");

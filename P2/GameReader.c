@@ -11,6 +11,7 @@
 
 
 STATUS game_reader_load_spaces(Game* game, char* filename) {
+  int i;
   FILE* file = NULL;
   char line[WORD_SIZE] = "";
   char name[WORD_SIZE] = "";

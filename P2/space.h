@@ -37,5 +37,6 @@ STATUS space_set_object(Space* space, Id id);
 Set* space_get_object(Space* space);
 BOOL space_is_object(Space* space, Id id);
 STATUS space_print(Space* space);
-
+STATUS space_get_gdesc(Space* space, char* string[]);
+STATUS space_set_gdesc(Space* space, char* string[]);
 #endif

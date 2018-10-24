@@ -248,6 +248,37 @@ Space* game_get_space(Game* game, Id id){
 
   return NULL;
 }
+
+Object* game_get_object ( Game* game, Id id){
+  int i = 0;
+
+  if (id == NO_ID) {
+    return NULL;
+  }
+
+  for (i = 0; i < MAX_OBJECTS && game->objects[i] != NULL; i++) {
+    if (id == object_get_id(game->objects[i])){
+      return game->objects[i];
+    }
+  }
+
+  return NULL;
+}
+
+
+
+Id game_get_object_location(Game* game, Id id){
+
+int i;
+for(i = 0; i < MAX_SPACES + 1; ++i){
+  if(space_is_object(game->spaces[i], id))
+    return space_get_id(game->spaces[i]);
+  }
+return (long) NULL;
+}
+
+
+
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -296,17 +327,7 @@ Id game_get_player_location(Game* game) {
 
   return player_get_location(game->player);
 }
-/*
-Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
-Date: 04/10/2018
-Parámetros:
-  -game: juego sobre el que tratamos
-Return:
-  -Id: identificador de la localizacion del objeto
-*/
-Id game_get_object_location(Game* game) {
-  return object_get_id(game->objects[]);
-}
+
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -328,6 +349,7 @@ Return:
   -STATUS: código que indica si se ha podido realizar la tarea correctamente
 */
 STATUS game_update(Game* game, T_Command cmd) {
+
   game->last_cmd = cmd;
   (*game_callback_fn_list[cmd])(game);
   return OK;
@@ -363,7 +385,9 @@ void game_print_data(Game* game) {
   }
 
   if(player_print(game->player)==ERROR)return;
-  if(object_print(game->objects[])==ERROR)return;
+  for(i = 0; i < MAX_OBJECTS && game->objects[i] != NULL; ++i){
+    object_print(game->objects[i]);
+  }
 
   printf("prompt:> ");
 }
@@ -451,19 +475,21 @@ Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de coger el objeto
 */
 void game_callback_grasp(Game *game){
-
+  char input[WORD_SIZE] = "";
+  char* ptr;
   Id player_id=NO_ID;
   Id object_id=NO_ID;
+  scanf("%s", input);
+  object_id = strtol(input, &ptr, 10);
 
   player_id = game_get_player_location(game);
-  object_id = game_get_object_location(game);
-
-
-  if(object_id == NO_ID || player_id==NO_ID) return;
-  if(player_get_object(game->player) != NO_ID) return;
-  if(object_id==player_id){
-    game_set_object_location(game,NO_ID);
-    player_set_object(game->player,object_id);
+  if(space_is_object(game->spaces[player_id],object_id)){
+    if(object_id == NO_ID || player_id==NO_ID) return;
+    if(player_get_object(game->player) != NO_ID) return;
+    if(object_id==player_id){
+      game_set_object_location(game,NO_ID);
+      player_set_object(game->player,object_id);
+    }
   }
   return;
 }
