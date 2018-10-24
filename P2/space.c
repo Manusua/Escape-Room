@@ -196,6 +196,7 @@ BOOL space_is_object(Space* space, Id id){
 STATUS space_print(Space* space) {
   Id idaux = NO_ID;
   Set* aux;
+  int i ;
   if (!space) {
     return ERROR;
   }
@@ -237,5 +238,8 @@ STATUS space_print(Space* space) {
     fprintf(stdout, "---> No object in the space.\n");
   }
 
+  for(i = 0; i < NUM_STRINGS; ++i){
+    fprintf(stdout, "%s\n", space->gdesc[i]);
+  }
   return OK;
 }

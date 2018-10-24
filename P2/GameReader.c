@@ -16,6 +16,7 @@ STATUS game_reader_load_spaces(Game* game, char* filename) {
   char name[WORD_SIZE] = "";
   char* toks = NULL;
   Id id = NO_ID, north = NO_ID, east = NO_ID, south = NO_ID, west = NO_ID;
+  char* gdesc[NUM_STRINGS];
   Space* space = NULL;
   STATUS status = OK;
 
@@ -42,6 +43,14 @@ STATUS game_reader_load_spaces(Game* game, char* filename) {
       south = atol(toks);
       toks = strtok(NULL, "|");
       west = atol(toks);
+      toks = strtok(NULL, "|");
+      for(i = 0; i  < NUM_STRINGS; ++i){
+        if(toks!= NULL){
+          strcpy(gdesc[i], toks);
+          toks = strtok(NULL, "|");
+        }
+        else gdesc[i] = NULL;
+      }
       space = space_create(id);
       if (space != NULL) {
 	space_set_name(space, name);
@@ -49,6 +58,7 @@ STATUS game_reader_load_spaces(Game* game, char* filename) {
 	space_set_east(space, east);
 	space_set_south(space, south);
 	space_set_west(space, west);
+  space_set_gdesc(space, gdesc);
 	game_add_space(game, space);
       }
     }
