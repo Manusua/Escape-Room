@@ -23,6 +23,7 @@ Graphic_engine *graphic_engine_create(){
   ge->feedback = screen_area_init( 1,19, 78,  3);
 
   return ge;
+
 }
 
 void graphic_engine_destroy(Graphic_engine *ge){

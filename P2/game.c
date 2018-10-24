@@ -8,7 +8,7 @@
 #include "object.h"
 #include "die.h"
 
-#define N_CALLBACK 7
+#define N_CALLBACK 9
 
 /**
    Define the function type for the callbacks
@@ -46,6 +46,8 @@ void game_callback_previous(Game* game);
 void game_callback_grasp(Game *game);
 void game_callback_drop(Game *game);
 void game_callback_roll(Game *game);
+void game_callback_left(Game *game);
+void game_callback_right(Game *game);
 
 static callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_unknown,
@@ -54,7 +56,9 @@ static callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_previous,
   game_callback_grasp,
   game_callback_drop,
-  game_callback_roll};
+  game_callback_roll,
+  game_callback_left,
+  game_callback_right};
 
 /**
    Private functions
@@ -528,3 +532,8 @@ void game_callback_roll(Game *game){
 
   return;
 }
+
+void game_callback_left(Game *game){}
+
+
+void game_callback_right(Game *game){}

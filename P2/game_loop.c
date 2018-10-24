@@ -25,6 +25,7 @@ int main(int argc, char *argv[]){
       return 1;
   }
   if ((gengine = graphic_engine_create()) == NULL){
+
     fprintf(stderr, "Error while initializing graphic engine.\n");
     game_destroy(game); return 1;}
   	while ( (command != EXIT) && !game_is_over(game) ){

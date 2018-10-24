@@ -29,7 +29,9 @@ STATUS game_reader_load_spaces(Game* game, char* filename) {
   if (file == NULL) {
     return ERROR;
   }
-
+    for(i = 0; i < NUM_STRINGS; ++i){
+      gdesc[i] = (char*)malloc(sizeof(char)*7);
+  }
   while (fgets(line, WORD_SIZE, file)) {
     if (strncmp("#s:", line, 3) == 0) {
       toks = strtok(line + 3, "|");
@@ -47,11 +49,12 @@ STATUS game_reader_load_spaces(Game* game, char* filename) {
       toks = strtok(NULL, "|");
       for(i = 0; i  < NUM_STRINGS; ++i){
         if(toks!= NULL){
-          strcpy(gdesc[i], toks);
+          gdesc[i] = toks;
           toks = strtok(NULL, "|");
         }
         else gdesc[i] = NULL;
       }
+
       space = space_create(id);
       if (space != NULL) {
 	space_set_name(space, name);
@@ -59,6 +62,7 @@ STATUS game_reader_load_spaces(Game* game, char* filename) {
 	space_set_east(space, east);
 	space_set_south(space, south);
 	space_set_west(space, west);
+
   space_set_gdesc(space, gdesc);
 	game_add_space(game, space);
       }

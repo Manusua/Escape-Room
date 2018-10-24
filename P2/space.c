@@ -115,6 +115,7 @@ STATUS space_get_gdesc(Space* space, char* string[]){
   int i;
   for(i = 0; i < NUM_STRINGS; ++i){
     strcpy(string[i], space->gdesc[i]);
+
   }
   return OK;
 }
@@ -165,7 +166,11 @@ Id space_get_west(Space* space) {
 STATUS space_set_gdesc(Space* space, char* string[]){
   int i;
   for(i = 0; i < NUM_STRINGS; ++i){
-    strcpy(space->gdesc[i], string[i]);
+    if(string[i] != NULL){
+      
+      strcpy(space->gdesc[i], string[i]);
+    }
+    else space->gdesc[i] = NULL;
   }
   return OK;
 }
