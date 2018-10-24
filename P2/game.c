@@ -1,4 +1,4 @@
-
+ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -33,7 +33,6 @@ Campos:
    T_Command last_cmd;
    Die* die;
 };
-
 
 
 /**
@@ -82,21 +81,34 @@ Return:
   -STATUS: código que indica si se ha podido realizar la tarea correctamente
 */
 
-STATUS game_create(Game* game) {
+Game * game_create() {
   int i;
+  Game *game;
+
+  game=(Game*)malloc(sizeof(Game));
+  if(game==NULL)return NULL;
 
   for (i = 0; i < MAX_SPACES; i++) {
     game->spaces[i] = NULL;
   }
 
-  game->player=player_create(2);
+  game->player=player_create(1);
+  if(game->player==NULL){
+    game_destroy(game);
+    return NULL;
+  }
+
   for (i = 0; i < MAX_OBJECTS; i++) {
     game->objects[i] = NULL;
   }
   game->last_cmd = NO_CMD;
-  game->die = die_create(3);
+  game->die = die_create(1);
+  if(game->die==ERROR){
+    game_destroy(game);
+    return NULL;
+  }
 
-  return OK;
+  return game;
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -108,14 +120,12 @@ Return:
 */
 STATUS game_create_from_file(Game* game, char* filename) {
 
-  if (game_create(game) == ERROR)
-    return ERROR;
 
   if (game_reader_load_spaces(game, filename) == ERROR)
     return ERROR;
 
-  if (game_reader_load_objects(game, filename) == ERROR)
-    return ERROR;
+  /*if (game_reader_load_objects(game, filename) == ERROR)
+    return ERROR;*/
 
   game_set_player_location(game, game_get_space_id_at(game, 0));
 
@@ -274,7 +284,7 @@ Object* game_get_object ( Game* game, Id id){
 Id game_get_object_location(Game* game, Id id){
 
 int i;
-for(i = 0; i < MAX_SPACES + 1; ++i){
+for(i = 0; i < MAX_SPACES; ++i){
   if(space_is_object(game->spaces[i], id))
     return space_get_id(game->spaces[i]);
   }
@@ -394,6 +404,17 @@ void game_print_data(Game* game) {
   }
 
   printf("prompt:> ");
+}
+
+int game_get_last_roll(Game* game){
+  int roll;
+
+  if(game==NULL)return -1;
+
+  roll=die_get(game->die);
+  if(roll<1 || roll>6)return 0;
+
+  return roll;
 }
 
 /*
@@ -533,7 +554,50 @@ void game_callback_roll(Game *game){
   return;
 }
 
-void game_callback_left(Game *game){}
+void game_callback_left(Game *game){
+  int i = 0;
+  Id current_id = NO_ID;
+  Id space_id = NO_ID;
+
+  space_id = game_get_player_location(game);
+
+  if (NO_ID == space_id) {
+    return;
+  }
+
+  for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
+    current_id = space_get_id(game->spaces[i]);
+    if (current_id == space_id) {
+      current_id = space_get_west(game->spaces[i]);
+      if (current_id != NO_ID) {
+         game_set_player_location(game, current_id);
+      }
+      return;
+    }
+  }
+}
 
 
-void game_callback_right(Game *game){}
+void game_callback_right(Game *game){
+  int i = 0;
+  Id current_id = NO_ID;
+  Id space_id = NO_ID;
+
+  space_id = game_get_player_location(game);
+
+  if (NO_ID == space_id) {
+    return;
+  }
+
+  for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
+    current_id = space_get_id(game->spaces[i]);
+    if (current_id == space_id) {
+      current_id = space_get_east(game->spaces[i]);
+      if (current_id != NO_ID) {
+         game_set_player_location(game, current_id);
+      }
+      return;
+    }
+  }
+}
+

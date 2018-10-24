@@ -13,6 +13,9 @@
 
 #include "game.h"
 
+#define NUM_STRINGS 3
+#define MAX_OBJ 10
+
 typedef struct _Graphic_engine Graphic_engine;
 
 Graphic_engine* graphic_engine_create();

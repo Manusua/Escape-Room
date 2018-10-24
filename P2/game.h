@@ -16,7 +16,7 @@ que coordina las llamadas a Player, Object y Space
 
 typedef struct _Game Game;
 
-STATUS game_create(Game* game);
+Game *game_create();
 STATUS game_create_from_file(Game* game, char* filename);
 STATUS game_update(Game* game, T_Command cmd);
 STATUS game_destroy(Game* game);
@@ -33,5 +33,6 @@ STATUS game_add_space(Game* game, Space* space);
 STATUS game_add_object(Game* game, Object* object);
 STATUS game_set_player_location(Game* game, Id id);
 STATUS game_set_object_location(Game* game, Id id);
+int game_get_last_roll(Game* game);
 
 #endif

@@ -77,11 +77,11 @@ BOOL set_is_id(Set *set, Id id){
 }
 
 
-void set_print(Set *set){
+void set_print(Set *set,FILE *f){
 	int i;
-	printf("El numero de elementos del conjunto es: %d.\n", set->num_id);
+	fprintf(f,"El numero de elementos del conjunto es: %d.\n", set->num_id);
 	for(i = 0; i < set->num_id; i++){
-		printf("Elemento %d: %ld \n", i, set->ids[i]);
+		fprintf(f,"Elemento %d: %ld \n", i, set->ids[i]);
 	}
 	return;
 }

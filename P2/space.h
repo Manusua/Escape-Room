@@ -18,6 +18,8 @@ typedef struct _Space Space;
 
 #define MAX_SPACES 100
 #define FIRST_SPACE 1
+#define GDESC_LINES 3
+#define GDESC_TAM 8
 #define NUM_STRINGS 3
 
 Space* space_create(Id id);
@@ -37,6 +39,9 @@ STATUS space_set_object(Space* space, Id id);
 Set* space_get_object(Space* space);
 BOOL space_is_object(Space* space, Id id);
 STATUS space_print(Space* space);
-STATUS space_get_gdesc(Space* space, char* string[]);
+char** space_get_gdesc(Space* space);
 STATUS space_set_gdesc(Space* space, char* string[]);
+STATUS space_add_object(Space *space,Id id);
+STATUS space_print_objects(Space *space,FILE *f);
+
 #endif

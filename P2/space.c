@@ -11,12 +11,12 @@ struct _Space {
   Id east;
   Id west;
   Set* objects;
-  char* gdesc[3];
+  char** gdesc;
 
 };
 
 Space* space_create(Id id) {
-  int i;
+  int i,j;
   Space *newSpace = NULL;
 
   if (id == NO_ID)
@@ -38,21 +38,33 @@ Space* space_create(Id id) {
 
   newSpace->objects = set_create();
 
-  for(i = 0; i < NUM_STRINGS; ++i){
-    newSpace->gdesc[i] = (char*) malloc(sizeof(char)*7);
+  newSpace->gdesc=(char **)malloc(GDESC_LINES *sizeof(char*));
+  if(newSpace->gdesc==NULL){
+    return NULL;
   }
+
+  for(i = 0; i < GDESC_LINES; ++i){
+    newSpace->gdesc[i] = (char*)malloc(sizeof(char)*GDESC_TAM);
+    if(newSpace->gdesc[i]==NULL){
+      for(j=0;j<i;j++){
+        free(newSpace->gdesc[i]);
+      }
+      free(newSpace->gdesc);
+      return NULL;
+    }
+  }
+
+
   return newSpace;
 }
 
 STATUS space_destroy(Space* space) {
-  int i;
+  
   if (!space) {
     return ERROR;
   }
   set_destroy(space->objects);
-  for(i = 0; i < NUM_STRINGS; ++i){
-    free(space->gdesc[i]);
-  }
+
   free(space);
   space = NULL;
 
@@ -111,13 +123,9 @@ STATUS space_set_object(Space* space, Id id) {
 }
 
 /*Puesto que el array es estatico, pasamos string como parametro y ahi se devuelve la string */
-STATUS space_get_gdesc(Space* space, char* string[]){
-  int i;
-  for(i = 0; i < NUM_STRINGS; ++i){
-    strcpy(string[i], space->gdesc[i]);
-
-  }
-  return OK;
+char** space_get_gdesc(Space* space){
+  if(space==NULL)return NULL;
+  return space->gdesc;
 }
 
 
@@ -166,11 +174,10 @@ Id space_get_west(Space* space) {
 STATUS space_set_gdesc(Space* space, char* string[]){
   int i;
   for(i = 0; i < NUM_STRINGS; ++i){
-    if(string[i] != NULL){
-      
+    if(string[i] != NULL){ 
       strcpy(space->gdesc[i], string[i]);
     }
-    else space->gdesc[i] = NULL;
+
   }
   return OK;
 }
@@ -196,6 +203,14 @@ BOOL space_is_object(Space* space, Id id){
   if(!space)
     return FALSE;
   return set_is_id(space->objects, id);
+}
+
+STATUS space_add_object(Space* space,Id id){
+  
+  if(space==NULL)return ERROR;
+  if(space_is_object(space,id)==TRUE)return OK;
+  if(set_add(space->objects,id)==ERROR)return ERROR;
+  return OK;
 }
 
 STATUS space_print(Space* space) {
@@ -238,7 +253,7 @@ STATUS space_print(Space* space) {
   aux = space_get_object(space);
   if (aux != NULL) {
     fprintf(stdout, "---> Objects in the space:\n");
-    set_print(aux);
+    set_print(aux,stdout);
   } else {
     fprintf(stdout, "---> No object in the space.\n");
   }

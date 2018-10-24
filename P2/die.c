@@ -66,7 +66,10 @@ Date: 09/10/2018
 Parámetros:
   -die: dado a imprimir
 */
-void die_print(Die* die){
-  printf("La ultima tirada fue: %d\n", die->last);
+void die_print(Die* die,FILE* f){
+  fprintf(f,"La ultima tirada fue: %d\n", die->last);
   return;
+}
+int die_get(Die *die){
+  return die->last;
 }

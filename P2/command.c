@@ -17,7 +17,7 @@ Sumamos 2 por lo tanto a N_CMD*/
 #define CMD_LENGHT 30
 #define N_CMD 10
 
-char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Exit", "Following", "Previous", "Grasp", "Drop", "Roll", "Left", "Right"};
+char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Exit", "Following", "Previous", "Grab", "Drop", "Roll", "Left", "Right"};
 char *short_cmd_to_str[N_CMD] = {"","","e","f","p","g","d","t","l","r"};
 
 
