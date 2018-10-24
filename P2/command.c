@@ -15,10 +15,10 @@
 Añadimos 2 nuevos comandos correspondientes con las teclas c y d, que se corresponden con coger y dejar el objeto
 Sumamos 2 por lo tanto a N_CMD*/
 #define CMD_LENGHT 30
-#define N_CMD 8
+#define N_CMD 10
 
-char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Exit", "Following", "Previous","Pick","Drop", "Roll"};
-char *short_cmd_to_str[N_CMD] = {"","","e","f","p","c","d", "r"};
+char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Exit", "Following", "Previous", "Grasp", "Drop", "Roll", "Left", "Right"};
+char *short_cmd_to_str[N_CMD] = {"","","e","f","p","g","d","t","l","r"};
 
 
 T_Command command_get_user_input(){

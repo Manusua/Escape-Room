@@ -10,16 +10,18 @@
 
 #ifndef COMMAND_H
 #define COMMAND_H
-/*Acciones que el usuario puede realizar: le hemos añadido PICK y DROP*/
+/*Acciones que el usuario puede realizar: le hemos añadido PICK DROP, ROLL, LEFT Y RIGHT*/
 typedef enum enum_Command {
   NO_CMD = -1,
   UNKNOWN,
   EXIT,
   FOLLOWING,
   PREVIOUS,
-  PICK,
+  GRASP,
   DROP,
-  ROLL
+  ROLL,
+  LEFT,
+  RIGHT
 } T_Command;
 
 

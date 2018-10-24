@@ -43,7 +43,7 @@ void game_callback_unknown(Game* game);
 void game_callback_exit(Game* game);
 void game_callback_following(Game* game);
 void game_callback_previous(Game* game);
-void game_callback_pick(Game *game);
+void game_callback_grasp(Game *game);
 void game_callback_drop(Game *game);
 void game_callback_roll(Game *game);
 
@@ -52,7 +52,7 @@ static callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_exit,
   game_callback_following,
   game_callback_previous,
-  game_callback_pick,
+  game_callback_grasp,
   game_callback_drop,
   game_callback_roll};
 
@@ -450,7 +450,7 @@ Date: 04/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de coger el objeto
 */
-void game_callback_pick(Game *game){
+void game_callback_grasp(Game *game){
 
   Id player_id=NO_ID;
   Id object_id=NO_ID;

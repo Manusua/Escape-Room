@@ -18,6 +18,7 @@ typedef struct _Space Space;
 
 #define MAX_SPACES 100
 #define FIRST_SPACE 1
+#define NUM_STRINGS 3
 
 Space* space_create(Id id);
 STATUS space_destroy(Space* space);

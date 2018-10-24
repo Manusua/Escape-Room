@@ -11,10 +11,12 @@ struct _Space {
   Id east;
   Id west;
   Set* objects;
+  char* gdesc[3];
+
 };
 
 Space* space_create(Id id) {
-
+  int i;
   Space *newSpace = NULL;
 
   if (id == NO_ID)
@@ -36,14 +38,21 @@ Space* space_create(Id id) {
 
   newSpace->objects = set_create();
 
+  for(i = 0; i < NUM_STRINGS; ++i){
+    newSpace->gdesc[i] = (char*) malloc(sizeof(char)*7);
+  }
   return newSpace;
 }
 
 STATUS space_destroy(Space* space) {
+  int i;
   if (!space) {
     return ERROR;
   }
-
+  set_destroy(space->objects);
+  for(i = 0; i < 3; ++i){
+    free(space->gdesc[i]);
+  }
   free(space);
   space = NULL;
 
@@ -101,6 +110,16 @@ STATUS space_set_object(Space* space, Id id) {
   return set_add(space->objects, id);
 }
 
+/*Puesto que el array es estatico, pasamos string como parametro y ahi se devuelve la string */
+STATUS space_get_gdesc(Space* space, char* string[]){
+  int i;
+  for(i = 0; i < NUM_STRINGS; ++i){
+    strcpy(string[i], space->gdesc[i]);
+  }
+  return OK;
+}
+
+
 const char * space_get_name(Space* space) {
   if (!space) {
     return NULL;
@@ -141,6 +160,14 @@ Id space_get_west(Space* space) {
     return NO_ID;
   }
   return space->west;
+}
+
+STATUS space_set_gdesc(Space* space, char* string[]){
+  int i;
+  for(i = 0; i < NUM_STRINGS; ++i){
+    strcpy(space->gdesc[i], string[i]);
+  }
+  return OK;
 }
 
 /*Supongo que hay que devolver el Set Entero*/
