@@ -14,23 +14,7 @@ que coordina las llamadas a Player, Object y Space
 #include "object.h"
 #include "die.h"
 
-/*
-Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
-Date: 04/10/2018
-Campos:
-  -player: jugador del juego (de momento solo 1)
-  -object: objeto del juego (de momento solo 1)
-  -spaces: espacios disponibles del juego
-  -last_cmd: ultimo comando ejecutado por el jugador
-*/
-typedef struct _Game{
-  Player *player;
-  Object *objects[MAX_OBJECTS + 1];
-  Space* spaces[MAX_SPACES + 1];
-  T_Command last_cmd;
-  Die* die;
-} Game;
-
+typedef struct _Game Game;
 
 
 STATUS game_create(Game* game);

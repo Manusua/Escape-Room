@@ -23,6 +23,6 @@ typedef enum enum_Command {
 } T_Command;
 
 
-T_Command get_user_input();
+T_Command command_get_user_input();
 
 #endif

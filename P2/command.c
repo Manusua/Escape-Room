@@ -21,7 +21,7 @@ char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Exit", "Following", "Previo
 char *short_cmd_to_str[N_CMD] = {"","","e","f","p","c","d", "r"};
 
 
-T_Command get_user_input(){
+T_Command command_get_user_input(){
 
 	T_Command cmd = NO_CMD;
 	char input[CMD_LENGHT] = "";

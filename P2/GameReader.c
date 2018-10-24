@@ -10,7 +10,7 @@
 
 
 
-STATUS game_load_spaces(Game* game, char* filename) {
+STATUS game_reader_load_spaces(Game* game, char* filename) {
   FILE* file = NULL;
   char line[WORD_SIZE] = "";
   char name[WORD_SIZE] = "";
@@ -65,7 +65,7 @@ STATUS game_load_spaces(Game* game, char* filename) {
 
 
 
-STATUS game_load_objects(Game* game, char* filename) {
+STATUS game_reader_load_objects(Game* game, char* filename) {
   FILE* file = NULL;
   char line[WORD_SIZE] = "";
   char name[WORD_SIZE] = "";

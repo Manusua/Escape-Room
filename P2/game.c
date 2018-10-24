@@ -15,6 +15,27 @@
 */
 typedef void (*callback_fn)(Game* game);
 
+
+
+/*
+Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
+Date: 04/10/2018
+Campos:
+  -player: jugador del juego (de momento solo 1)
+  -object: objeto del juego (de momento solo 1)
+  -spaces: espacios disponibles del juego
+  -last_cmd: ultimo comando ejecutado por el jugador
+*/
+ struct _Game{
+   Player *player;
+   Object *objects[MAX_OBJECTS + 1];
+   Space* spaces[MAX_SPACES + 1];
+   T_Command last_cmd;
+   Die* die;
+};
+
+
+
 /**
    List of callbacks for each command in the game
 */
@@ -86,10 +107,10 @@ STATUS game_create_from_file(Game* game, char* filename) {
   if (game_create(game) == ERROR)
     return ERROR;
 
-  if (game_load_spaces(game, filename) == ERROR)
+  if (game_reader_load_spaces(game, filename) == ERROR)
     return ERROR;
 
-  if (game_load_objects(game, filename) == ERROR)
+  if (game_reader_load_objects(game, filename) == ERROR)
     return ERROR;
 
   game_set_player_location(game, game_get_space_id_at(game, 0));
@@ -260,11 +281,8 @@ Return:
 */
 STATUS game_set_object_location(Game* game, Id id) {
 
+  return space_set_object(game->spaces[player_get_location(game->player)],id);
 
- if(object_set_id(game->objects[],id)==ERROR)
-    return ERROR;
-
-  return OK;
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -441,15 +459,11 @@ void game_callback_pick(Game *game){
   object_id = game_get_object_location(game);
 
 
-  if(object_id == NO_ID || player_id==NO_ID)return;
-
+  if(object_id == NO_ID || player_id==NO_ID) return;
+  if(player_get_object(game->player) != NO_ID) return;
   if(object_id==player_id){
-
-
     game_set_object_location(game,NO_ID);
     player_set_object(game->player,object_id);
-
-
   }
   return;
 }
@@ -467,14 +481,10 @@ void game_callback_drop(Game *game){
   player_id = game_get_player_location(game);
   object_id = game_get_player_object(game);
 
-
+  /*TODO comprovacion de que no haya objeto? es necesaria ahora que implementamos sets?*/
   if(object_id == NO_ID || player_id==NO_ID)return;
-
-
-  game_set_object_location(game,player_id);
+  game_set_object_location(game,object_id);
   player_set_object(game->player,NO_ID);
-
-
   return;
 }
 
