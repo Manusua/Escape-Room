@@ -41,12 +41,12 @@ STATUS set_del(Set *set, Id id){
 	int pos;
 	if (set == NULL || set->ids == NULL)
 		return ERROR;
-
+	printf("elimino\n");
 	pos = set_search_id(set, id);
 	set->num_id--;
 	set->ids[pos] = set->ids[set->num_id];
 	set->ids = (Id*)realloc(set->ids, sizeof(Id)*set->num_id);
-
+	set_print(set, stdout);
 	return OK;
 }
 

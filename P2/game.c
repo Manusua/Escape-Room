@@ -324,9 +324,9 @@ Parámetros:
 Return:
   -STATUS: código que indica si se ha podido realizar la tarea correctamente
 */
-STATUS game_set_object_location(Game* game, Id id) {
+STATUS game_set_object_location(Game* game, Id pos, Id object_id) {
 
-  return space_set_object(game->spaces[player_get_location(game->player)],id);
+  return space_set_object(game->spaces[player_get_location(game->player) - 1],pos, object_id);
 
 }
 /*
@@ -403,7 +403,6 @@ void game_print_data(Game* game) {
     object_print(game->objects[i]);
   }
 
-  printf("prompt:> ");
 }
 
 int game_get_last_roll(Game* game){
@@ -500,22 +499,25 @@ Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de coger el objeto
 */
 void game_callback_grasp(Game *game){
+  int i;
   char input[WORD_SIZE] = "";
   char* ptr;
-  Id player_id=NO_ID;
+  Id player_loc=NO_ID;
   Id object_id=NO_ID;
   scanf("%s", input);
-  object_id = strtol(input, &ptr, 10);
-
-  player_id = game_get_player_location(game);
-  if(space_is_object(game->spaces[player_id],object_id)){
-    if(object_id == NO_ID || player_id==NO_ID) return;
-    if(player_get_object(game->player) != NO_ID) return;
-    if(object_id==player_id){
-      game_set_object_location(game,NO_ID);
-      player_set_object(game->player,object_id);
-    }
+  for(i = 0;  i < MAX_OBJECTS; ++i){
+    if(strcmp(object_get_name(game->objects[i]), input))
+      object_id = object_get_id(game->objects[i]);
   }
+  player_loc = game_get_player_location(game);
+  printf("1: %ld  2: %ld\n",space_get_id(game->spaces[player_loc]), object_id );
+  if(space_is_object(game->spaces[player_loc - 1],object_id)){
+    if(object_id == NO_ID || player_loc==NO_ID) return;
+    if(player_get_object(game->player) != NO_ID) return;
+    game_set_object_location(game,NO_ID, object_id);
+    player_set_object(game->player,object_id);
+  }
+  game_print_data(game);
   return;
 }
 /*
@@ -526,15 +528,15 @@ Parámetros:
 */
 void game_callback_drop(Game *game){
 
-  Id player_id=NO_ID;
+  Id player_loc=NO_ID;
   Id object_id=NO_ID;
 
-  player_id = game_get_player_location(game);
+  player_loc = game_get_player_location(game);
   object_id = game_get_player_object(game);
 
   /*TODO comprovacion de que no haya objeto? es necesaria ahora que implementamos sets?*/
-  if(object_id == NO_ID || player_id==NO_ID)return;
-  game_set_object_location(game,object_id);
+  if(object_id == NO_ID || player_loc==NO_ID)return;
+  game_set_object_location(game,player_loc,object_id);
   player_set_object(game->player,NO_ID);
   return;
 }

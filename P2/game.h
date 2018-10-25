@@ -32,7 +32,7 @@ T_Command game_get_last_command(Game* game);
 STATUS game_add_space(Game* game, Space* space);
 STATUS game_add_object(Game* game, Object* object);
 STATUS game_set_player_location(Game* game, Id id);
-STATUS game_set_object_location(Game* game, Id id);
+STATUS game_set_object_location(Game* game, Id id, Id object_id);
 int game_get_last_roll(Game* game);
 
 #endif

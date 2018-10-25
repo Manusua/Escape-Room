@@ -59,7 +59,7 @@ Space* space_create(Id id) {
 }
 
 STATUS space_destroy(Space* space) {
-  
+
   if (!space) {
     return ERROR;
   }
@@ -115,11 +115,14 @@ STATUS space_set_west(Space* space, Id id) {
   return OK;
 }
 
-STATUS space_set_object(Space* space, Id id) {
+STATUS space_set_object(Space* space, Id pos, Id object_id) {
   if (!space) {
     return ERROR;
   }
-  return set_add(space->objects, id);
+  if(pos == NO_ID){
+    return set_del(space->objects, object_id);
+  }
+  else return set_add(space->objects, object_id);
 }
 
 /*Puesto que el array es estatico, pasamos string como parametro y ahi se devuelve la string */
@@ -174,7 +177,7 @@ Id space_get_west(Space* space) {
 STATUS space_set_gdesc(Space* space, char* string[]){
   int i;
   for(i = 0; i < NUM_STRINGS; ++i){
-    if(string[i] != NULL){ 
+    if(string[i] != NULL){
       strcpy(space->gdesc[i], string[i]);
     }
 
@@ -206,7 +209,7 @@ BOOL space_is_object(Space* space, Id id){
 }
 
 STATUS space_add_object(Space* space,Id id){
-  
+
   if(space==NULL)return ERROR;
   if(space_is_object(space,id)==TRUE)return OK;
   if(set_add(space->objects,id)==ERROR)return ERROR;
