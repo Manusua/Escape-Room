@@ -124,13 +124,10 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
         strcpy(obj3_name,object_get_name(game_get_object(game,3)));
         strcpy(obj4_name,object_get_name(game_get_object(game,4)));
 
-
         obj1_loc = game_get_object_location(game,1);
         obj2_loc = game_get_object_location(game,2);
         obj3_loc = game_get_object_location(game,3);
         obj4_loc = game_get_object_location(game,4);
-
-
 
         if (obj1_loc == id_next)
           strcpy(obj1,obj1_name);
@@ -172,15 +169,18 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
 
   /* Paint the in the description area */
     screen_area_clear(ge->descript);
-/*
-if ((obj_loc = game_get_object_location(game)) != NO_ID){
-  sprintf(str, "  Object location:%d", (int)obj_loc);
-  screen_area_puts(ge->descript, str);
-}
 
-*/
 
-    sprintf(str,"La última tirada es: %d",game_get_last_roll(game));
+    sprintf(str, "Object location: %s:%ld, %s:%ld, %s:%ld, %s:%ld", object_get_name(game_get_object(game,1)), obj1_loc, object_get_name(game_get_object(game,2)), obj2_loc, object_get_name(game_get_object(game,3)), obj3_loc, object_get_name(game_get_object(game,4)), obj4_loc );
+    screen_area_puts(ge->descript, str);
+
+    if(game_get_player_object(game) != NULL && game_get_player_object(game) != NO_ID){
+      sprintf(str, "Players objects: %s", object_get_name(game_get_object(game, game_get_player_object(game))));
+      screen_area_puts(ge->descript, str);
+    }
+
+    sprintf(str, "Last dice value: %d", game_get_last_roll(game));
+    screen_area_puts(ge->descript, str);
 
 
   }

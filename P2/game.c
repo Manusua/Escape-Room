@@ -282,13 +282,12 @@ Object* game_get_object ( Game* game, Id id){
 
 
 Id game_get_object_location(Game* game, Id id){
-
-int i;
-for(i = 0; i < MAX_SPACES; ++i){
-  if(space_is_object(game->spaces[i], id))
-    return space_get_id(game->spaces[i]);
-  }
-return (long) NULL;
+  int i;
+  for(i = 0; i < MAX_SPACES; ++i){
+    if(space_is_object(game->spaces[i], id))
+      return space_get_id(game->spaces[i]);
+    }
+  return (long) NULL;
 }
 
 
@@ -501,7 +500,6 @@ Parámetros:
 void game_callback_grasp(Game *game){
   int i;
   char input[WORD_SIZE] = "";
-  char* ptr;
   Id player_loc=NO_ID;
   Id object_id=NO_ID;
   scanf("%s", input);
