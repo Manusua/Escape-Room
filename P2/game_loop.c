@@ -30,9 +30,10 @@ int main(int argc, char *argv[]){
   if ((gengine = graphic_engine_create()) == NULL){
 
     fprintf(stderr, "Error while initializing graphic engine.\n");
-    game_destroy(game); 
+    game_destroy(game);
     return 1;
   }
+  game_print_data(game);
   while ( (command != EXIT) && !game_is_over(game) ){
    graphic_engine_paint_game(gengine, game);
    command = command_get_user_input();

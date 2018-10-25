@@ -1,4 +1,4 @@
- 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -124,8 +124,8 @@ STATUS game_create_from_file(Game* game, char* filename) {
   if (game_reader_load_spaces(game, filename) == ERROR)
     return ERROR;
 
-  /*if (game_reader_load_objects(game, filename) == ERROR)
-    return ERROR;*/
+  if (game_reader_load_objects(game, filename) == ERROR)
+    return ERROR;
 
   game_set_player_location(game, game_get_space_id_at(game, 0));
 
@@ -600,4 +600,3 @@ void game_callback_right(Game *game){
     }
   }
 }
-

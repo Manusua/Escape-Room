@@ -60,17 +60,26 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
     space_act = game_get_space(game, id_act);
     id_next = space_get_south(space_act);
 
-    /*
+
+
+
+
+
+
 
     strcpy(obj1_name,object_get_name(game_get_object(game,1)));
+
+
     strcpy(obj2_name,object_get_name(game_get_object(game,2)));
     strcpy(obj3_name,object_get_name(game_get_object(game,3)));
     strcpy(obj4_name,object_get_name(game_get_object(game,4)));
+
 
     obj1_loc = game_get_object_location(game,1);
     obj2_loc = game_get_object_location(game,2);
     obj3_loc = game_get_object_location(game,3);
     obj4_loc = game_get_object_location(game,4);
+
 
 
     if (obj1_loc == id_act)
@@ -82,7 +91,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
       strcpy(obj2,obj2_name);
     else
       strcpy(obj2," ");
-    
+
     if (obj3_loc == id_act)
       strcpy(obj3,obj3_name);
     else
@@ -92,8 +101,15 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
       strcpy(obj4,obj4_name);
     else
       strcpy(obj4," ");
-    
-    */
+
+
+
+
+
+
+
+
+
 
     if (id_act != NO_ID) {
 
@@ -110,7 +126,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
         screen_area_puts(ge->map, str);
         sprintf(str, "  |%s    |",desc[2]);
         screen_area_puts(ge->map, str);
-        sprintf(str, "  |  %s %s %s %s  |",obj1, obj2, obj3, obj4);
+        sprintf(str, "  |%s %s %s %s|",obj1, obj2, obj3, obj4);
         screen_area_puts(ge->map, str);
         sprintf(str, "  +-----------+");
         screen_area_puts(ge->map, str);
@@ -134,7 +150,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
         screen_area_puts(ge->map, str);
         sprintf(str, "  |%s    |",desc[2]);
         screen_area_puts(ge->map, str);
-        sprintf(str, "  |  %s %s %s %s  |",obj1, obj2, obj3, obj4);
+        sprintf(str, "  |%s %s %s %s|",obj1, obj2, obj3, obj4);
         screen_area_puts(ge->map, str);
         sprintf(str, "  +-----------+");
         screen_area_puts(ge->map, str);
@@ -174,4 +190,3 @@ if ((obj_loc = game_get_object_location(game)) != NO_ID){
   screen_paint();
   printf("prompt:> ");
 }
-

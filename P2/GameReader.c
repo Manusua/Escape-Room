@@ -128,6 +128,7 @@ STATUS game_reader_load_objects(Game* game, char* filename) {
       object = object_create(id);
       object_set_name(object, name);
       game_add_object(game, object);
+      object_print(object);
       space_add_object(game_get_space(game,1),object_get_id(object));
 
     }
