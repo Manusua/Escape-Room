@@ -13,7 +13,7 @@
 /**
    Define the function type for the callbacks
 */
-typedef void (*callback_fn)(Game* game);
+typedef STATUS (*callback_fn)(Game* game);
 
 
 
@@ -38,17 +38,17 @@ Campos:
 /**
    List of callbacks for each command in the game
 */
-void game_callback_unknown(Game* game);
-void game_callback_exit(Game* game);
-void game_callback_following(Game* game);
-void game_callback_previous(Game* game);
-void game_callback_grasp(Game *game);
-void game_callback_drop(Game *game);
-void game_callback_roll(Game *game);
-void game_callback_left(Game *game);
-void game_callback_right(Game *game);
+STATUS game_callback_unknown(Game* game);
+STATUS game_callback_exit(Game* game);
+STATUS game_callback_following(Game* game);
+STATUS game_callback_previous(Game* game);
+STATUS game_callback_grasp(Game *game);
+STATUS game_callback_drop(Game *game);
+STATUS game_callback_roll(Game *game);
+STATUS game_callback_left(Game *game);
+STATUS game_callback_right(Game *game);
 
-static callback_fn game_callback_fn_list[N_CALLBACK]={
+static  callback_fn game_callback_fn_list[N_CALLBACK]={
   game_callback_unknown,
   game_callback_exit,
   game_callback_following,
@@ -64,7 +64,7 @@ static callback_fn game_callback_fn_list[N_CALLBACK]={
 */
 
 
-Id     game_get_space_id_at(Game* game, int position);
+Id game_get_space_id_at(Game* game, int position);
 
 
 /**
@@ -80,7 +80,6 @@ Parámetros:
 Return:
   -STATUS: código que indica si se ha podido realizar la tarea correctamente
 */
-
 Game * game_create() {
   int i;
   Game *game;
@@ -131,9 +130,6 @@ STATUS game_create_from_file(Game* game, char* filename) {
 
   return OK;
 }
-
-
-
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -187,8 +183,6 @@ STATUS game_add_space(Game* game, Space* space) {
 
   return OK;
 }
-
-
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 19/10/2018
@@ -219,8 +213,6 @@ STATUS game_add_object(Game* game, Object* object){
 
 
 }
-
-
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -279,8 +271,6 @@ Object* game_get_object ( Game* game, Id id){
   return NULL;
 }
 
-
-
 Id game_get_object_location(Game* game, Id id){
   int i;
   for(i = 0; i < MAX_SPACES; ++i){
@@ -289,9 +279,6 @@ Id game_get_object_location(Game* game, Id id){
     }
   return (long) NULL;
 }
-
-
-
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -340,7 +327,6 @@ Id game_get_player_location(Game* game) {
 
   return player_get_location(game->player);
 }
-
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
 Date: 04/10/2018
@@ -364,8 +350,8 @@ Return:
 STATUS game_update(Game* game, T_Command cmd) {
 
   game->last_cmd = cmd;
-  (*game_callback_fn_list[cmd])(game);
-  return OK;
+  return (*game_callback_fn_list[cmd])(game);
+
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -431,10 +417,12 @@ BOOL game_is_over(Game* game) {
    Callbacks implementation for each action
 */
 
-void game_callback_unknown(Game* game) {
+STATUS game_callback_unknown(Game* game) {
+  return OK;
 }
 
-void game_callback_exit(Game* game) {
+STATUS game_callback_exit(Game* game) {
+  return OK;
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -442,14 +430,14 @@ Date: 04/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de siguiente
 */
-void game_callback_following(Game* game) {
+STATUS game_callback_following(Game* game) {
   int i = 0;
   Id current_id = NO_ID;
   Id space_id = NO_ID;
 
   space_id = game_get_player_location(game);
   if (space_id == NO_ID) {
-    return;
+    return ERROR;
   }
 
   for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
@@ -459,9 +447,10 @@ void game_callback_following(Game* game) {
       if (current_id != NO_ID) {
 	       game_set_player_location(game, current_id);
       }
-      return;
+      return OK;
     }
   }
+  return OK;
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -469,7 +458,7 @@ Date: 04/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de atrás
 */
-void game_callback_previous(Game* game) {
+STATUS game_callback_previous(Game* game) {
   int i = 0;
   Id current_id = NO_ID;
   Id space_id = NO_ID;
@@ -477,7 +466,7 @@ void game_callback_previous(Game* game) {
   space_id = game_get_player_location(game);
 
   if (NO_ID == space_id) {
-    return;
+    return ERROR;
   }
 
   for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
@@ -487,9 +476,10 @@ void game_callback_previous(Game* game) {
       if (current_id != NO_ID) {
 	       game_set_player_location(game, current_id);
       }
-      return;
+      return OK;
     }
   }
+  return OK;
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -497,26 +487,30 @@ Date: 04/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de coger el objeto
 */
-void game_callback_grasp(Game *game){
+STATUS game_callback_grasp(Game *game){
   int i;
   char input[WORD_SIZE] = "";
   Id player_loc=NO_ID;
   Id object_id=NO_ID;
   scanf("%s", input);
   for(i = 0;  i < MAX_OBJECTS; ++i){
-    if(strcmp(object_get_name(game->objects[i]), input))
+    if(strcmp(object_get_name(game->objects[i]), input) == 0){
       object_id = object_get_id(game->objects[i]);
+    }
   }
   player_loc = game_get_player_location(game);
-  printf("1: %ld  2: %ld\n",space_get_id(game->spaces[player_loc]), object_id );
+
   if(space_is_object(game->spaces[player_loc - 1],object_id)){
-    if(object_id == NO_ID || player_loc==NO_ID) return;
-    if(player_get_object(game->player) != NO_ID) return;
+    if(object_id == NO_ID || player_loc==NO_ID)
+      return ERROR;
+    if(player_get_object(game->player) != NO_ID){
+      return ERROR;
+    }
     game_set_object_location(game,NO_ID, object_id);
     player_set_object(game->player,object_id);
+    return OK;
   }
-  game_print_data(game);
-  return;
+  return ERROR;
 }
 /*
 Autores: Rodrigo Lardies Guillen y Manuel Suárez Román
@@ -524,7 +518,7 @@ Date: 04/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de dejar el objeto
 */
-void game_callback_drop(Game *game){
+STATUS game_callback_drop(Game *game){
 
   Id player_loc=NO_ID;
   Id object_id=NO_ID;
@@ -532,11 +526,11 @@ void game_callback_drop(Game *game){
   player_loc = game_get_player_location(game);
   object_id = game_get_player_object(game);
 
-  /*TODO comprovacion de que no haya objeto? es necesaria ahora que implementamos sets?*/
-  if(object_id == NO_ID || player_loc==NO_ID)return;
+  if(object_id == NO_ID || player_loc==NO_ID)
+    return ERROR;
   game_set_object_location(game,player_loc,object_id);
   player_set_object(game->player,NO_ID);
-  return;
+  return OK;
 }
 
 /*
@@ -545,16 +539,16 @@ Date: 09/10/2018
 Parámetros:
   -game: juego sobre el que tratamos de realizar la acción de tirar el dado
 */
-void game_callback_roll(Game *game){
+STATUS game_callback_roll(Game *game){
 
-  if(game == NULL) return;
+  if(game == NULL) return ERROR;
 
   die_roll(game->die, 1, 6);
 
-  return;
+  return OK;
 }
 
-void game_callback_left(Game *game){
+STATUS game_callback_left(Game *game){
   int i = 0;
   Id current_id = NO_ID;
   Id space_id = NO_ID;
@@ -562,7 +556,7 @@ void game_callback_left(Game *game){
   space_id = game_get_player_location(game);
 
   if (NO_ID == space_id) {
-    return;
+    return ERROR;
   }
 
   for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
@@ -572,13 +566,14 @@ void game_callback_left(Game *game){
       if (current_id != NO_ID) {
          game_set_player_location(game, current_id);
       }
-      return;
+      return OK ;
     }
   }
+  return OK;
 }
 
 
-void game_callback_right(Game *game){
+STATUS game_callback_right(Game *game){
   int i = 0;
   Id current_id = NO_ID;
   Id space_id = NO_ID;
@@ -586,7 +581,7 @@ void game_callback_right(Game *game){
   space_id = game_get_player_location(game);
 
   if (NO_ID == space_id) {
-    return;
+    return ERROR;
   }
 
   for (i = 0; i < MAX_SPACES && game->spaces[i] != NULL; i++) {
@@ -596,7 +591,8 @@ void game_callback_right(Game *game){
       if (current_id != NO_ID) {
          game_set_player_location(game, current_id);
       }
-      return;
+      return OK;
     }
   }
+  return OK;
 }

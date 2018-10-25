@@ -47,4 +47,4 @@ clean:
 	rm -rf *.o
 
 dist:
-	tar -cvzf E1.tgz *c *h makefile
+	tar -cvzf dist.tgz *c *h *dat makefile

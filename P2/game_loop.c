@@ -15,7 +15,7 @@
 
 int main(int argc, char *argv[]){
   Game* game;
-  BOOL regis, aux;
+  BOOL regis, aux, ant_cmd;
   FILE* f;
   T_Command command = NO_CMD;
   Graphic_engine *gengine;
@@ -46,10 +46,10 @@ int main(int argc, char *argv[]){
   }
   game_print_data(game);
   while ( (command != EXIT) && !game_is_over(game) ){
-   graphic_engine_paint_game(gengine, game);
+   graphic_engine_paint_game(gengine, game, ant_cmd);
    command = command_get_user_input();
    aux = game_update(game, command);
-
+   ant_cmd = aux;
    if(regis){
       if (aux)
         fprintf(f, "%s: OK\n",cmd_to_str[command + 1]);

@@ -1,6 +1,10 @@
-Following: OK
-Previous: OK
 Grab: OK
+Grab: ERROR
 Following: OK
+Drop: OK
+Grab: ERROR
+Grab: ERROR
+Grab: OK
+Previous: OK
 Drop: OK
 Exit: OK

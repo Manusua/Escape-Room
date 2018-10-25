@@ -41,7 +41,7 @@ void graphic_engine_destroy(Graphic_engine *ge){
   free(ge);
 }
 
-void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
+void graphic_engine_paint_game(Graphic_engine *ge, Game *game, BOOL ant_cmd){
   Id id_act = NO_ID,  id_next = NO_ID, obj1_loc = NO_ID, obj2_loc = NO_ID, obj3_loc = NO_ID, obj4_loc = NO_ID;
   Space* space_act = NULL;
   char obj1_name[MAX_OBJ],obj2_name[MAX_OBJ],obj3_name[MAX_OBJ],obj4_name[MAX_OBJ];
@@ -50,7 +50,6 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
   char str[255];
   T_Command last_cmd = UNKNOWN;
   extern char *cmd_to_str[];
-
 
   /* Paint the in the map area */
   screen_area_clear(ge->map);
@@ -111,12 +110,7 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
         sprintf(str, "  +-----------+");
         screen_area_puts(ge->map, str);
       }
-     /* for(i = 0; i < MAX_OBJECTS;++i){
-        if (game_get_object_location(game, object_get_id(game_get_object(game, i))) == id_back){
-          auxi++;
-          auxili[i] = object_get_id(game_get_object(game, i));
-        }
-      }*/
+
       if (id_next != NO_ID) {
 
         strcpy(obj1_name,object_get_name(game_get_object(game,1)));
@@ -170,18 +164,16 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
   /* Paint the in the description area */
     screen_area_clear(ge->descript);
 
-
     sprintf(str, "Object location: %s:%ld, %s:%ld, %s:%ld, %s:%ld", object_get_name(game_get_object(game,1)), obj1_loc, object_get_name(game_get_object(game,2)), obj2_loc, object_get_name(game_get_object(game,3)), obj3_loc, object_get_name(game_get_object(game,4)), obj4_loc );
     screen_area_puts(ge->descript, str);
 
-    if(game_get_player_object(game) != NULL && game_get_player_object(game) != NO_ID){
+    if(game_get_player_object(game) != NO_ID && game_get_player_object(game) != NO_ID){
       sprintf(str, "Players objects: %s", object_get_name(game_get_object(game, game_get_player_object(game))));
       screen_area_puts(ge->descript, str);
     }
 
     sprintf(str, "Last dice value: %d", game_get_last_roll(game));
     screen_area_puts(ge->descript, str);
-
 
   }
   /* Paint the in the banner area */
@@ -196,7 +188,11 @@ void graphic_engine_paint_game(Graphic_engine *ge, Game *game){
 
   /* Paint the in the feedback area */
   last_cmd = game_get_last_command(game);
-  sprintf(str, " %s", cmd_to_str[last_cmd-NO_CMD]);
+  if(ant_cmd)
+    sprintf(str, " %s: OK", cmd_to_str[last_cmd-NO_CMD]);
+  else
+    sprintf(str, " %s: ERROR", cmd_to_str[last_cmd-NO_CMD]);
+
   screen_area_puts(ge->feedback, str);
 
   /* Dump to the terminal */
