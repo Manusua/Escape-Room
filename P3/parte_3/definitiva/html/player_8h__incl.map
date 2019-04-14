@@ -1,0 +1,5 @@
+<map id="player.h" name="player.h">
+<area shape="rect" id="node2" href="$types_8h.html" title="It defines common types. " alt="" coords="5,229,71,256"/>
+<area shape="rect" id="node3" href="$inventory_8h.html" title="En este fichero implementamos las funciones del inventario. " alt="" coords="105,80,192,107"/>
+<area shape="rect" id="node7" href="$set_8h.html" title="En este fichero implementamos las funciones de set. " alt="" coords="339,155,390,181"/>
+</map>

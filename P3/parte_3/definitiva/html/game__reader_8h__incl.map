@@ -1,0 +1,12 @@
+<map id="game_reader.h" name="game_reader.h">
+<area shape="rect" id="node2" href="$game_8h.html" title="En este fichero definimos las funciones para el juego. " alt="" coords="225,80,291,107"/>
+<area shape="rect" id="node3" href="$space_8h.html" title="En este fichero implementamos las funciones de space. " alt="" coords="520,229,588,256"/>
+<area shape="rect" id="node6" href="$command_8h.html" title="En este fichero definimos las funciones para los comandos. " alt="" coords="617,229,707,256"/>
+<area shape="rect" id="node7" href="$object_8h.html" title="En este fichero implementamos las funciones del objeto. " alt="" coords="5,155,73,181"/>
+<area shape="rect" id="node8" href="$player_8h.html" title="En este fichero implementamos las funciones del jugador. " alt="" coords="188,155,256,181"/>
+<area shape="rect" id="node13" href="$die_8h.html" title="En este fichero definimos las funciones para el dado. " alt="" coords="106,155,157,181"/>
+<area shape="rect" id="node14" href="$link_8h.html" title="En este fichero implementamos las funciones de link. " alt="" coords="267,229,321,256"/>
+<area shape="rect" id="node4" href="$types_8h.html" title="It defines common types. " alt="" coords="301,379,367,405"/>
+<area shape="rect" id="node5" href="$set_8h.html" title="En este fichero implementamos las funciones de set. " alt="" coords="529,304,579,331"/>
+<area shape="rect" id="node9" href="$inventory_8h.html" title="En este fichero implementamos las funciones del inventario. " alt="" coords="357,229,444,256"/>
+</map>

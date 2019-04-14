@@ -1,0 +1,6 @@
+<map id="player.c" name="player.c">
+<area shape="rect" id="node5" href="$player_8h.html" title="En este fichero implementamos las funciones del jugador. " alt="" coords="323,80,391,107"/>
+<area shape="rect" id="node6" href="$types_8h.html" title="It defines common types. " alt="" coords="222,304,287,331"/>
+<area shape="rect" id="node7" href="$inventory_8h.html" title="En este fichero implementamos las funciones del inventario. " alt="" coords="161,155,247,181"/>
+<area shape="rect" id="node8" href="$set_8h.html" title="En este fichero implementamos las funciones de set. " alt="" coords="229,229,280,256"/>
+</map>

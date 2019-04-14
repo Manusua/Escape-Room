@@ -1,0 +1,64 @@
+take o1
+take o2
+take o3
+following
+leave o2
+take o3
+following
+following
+following
+oca_following
+following
+leave o1
+oca_previous
+oca_following
+take o4
+leave o1
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+take o3
+previous
+previous
+previous
+take o4
+oca_following
+oca_previous
+following
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+roll
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+previous
+roll
+previous
+previous
+previous
+leave o3
+leave o4
+inspect o3
+roll
+quit
+

@@ -1,0 +1,26 @@
+take obj20: OK
+go north: OK
+take obj21: OK
+go north: OK
+take obj22: OK
+go north: OK
+take obj23: OK
+go north: OK
+take obj24: OK
+go north: OK
+take obj25: ERROR
+go north: OK
+take obj26: ERROR
+go north: OK
+take obj27: ERROR
+go north: OK
+take obj28: ERROR
+go north: OK
+take obj29: ERROR
+leave obj20: OK
+go south: OK
+go north: OK
+take obj29: OK
+leave obj29: OK
+take obj20: OK
+quit: OK

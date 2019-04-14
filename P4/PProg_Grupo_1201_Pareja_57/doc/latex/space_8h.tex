@@ -1,0 +1,867 @@
+\hypertarget{space_8h}{}\section{include/space.h File Reference}
+\label{space_8h}\index{include/space.\+h@{include/space.\+h}}
+
+
+En este fichero implementamos las funciones de space.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for space.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}~10000
+\item 
+\#define \hyperlink{space_8h_a088cbe7c6f78264d46c2624194c5c680}{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}~1
+\item 
+\#define \hyperlink{space_8h_a894ebc9b2098fe63607e0ca2e5f5ce8d}{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO}~21
+\item 
+\#define \hyperlink{space_8h_ad29ae39d7c9da97f682d80fcee3e9fa4}{T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA}~\hyperlink{space_8h_a894ebc9b2098fe63607e0ca2e5f5ce8d}{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO}/3
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Space}{\+\_\+\+Space} \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$ \hyperlink{space_8h_a162866fcea156b800fd546d0ffd271c9}{space\+\_\+create} (\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em crea un espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a5c70c70398923693ddbe4dfac8d72a0d}{space\+\_\+destroy} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em destruye y libera la memoria de un espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_ac8ddfd0d8692fd852ee49698c446cb50}{space\+\_\+get\+\_\+id} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_aab5b468f9822ab78dbe16d1321870d93}{space\+\_\+set\+\_\+name} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em cambia el nombre del espacio \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{space_8h_a310c540cd6e11073f7328add1f927001}{space\+\_\+get\+\_\+name} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el nombre del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a9e6e3e3bac4996ac6b8bd555e52bfb26}{space\+\_\+set\+\_\+north} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id del norte del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_ad331fba774897900f615d9d2e8d81a90}{space\+\_\+get\+\_\+north} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id del norte \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a422ab9f220b4c471c44256a27377de1a}{space\+\_\+set\+\_\+south} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id del sur del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_a9b86e1335c423eaad832e50d4c12cf1f}{space\+\_\+get\+\_\+south} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id del sur \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a860a8f3e0227955ad56d1a12f0bdc44a}{space\+\_\+set\+\_\+east} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id del este del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_a978a22b77f74bb2dab68a00571abbe0b}{space\+\_\+get\+\_\+east} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id del este \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_ad44b14cb38902cf31fa1f341beaab0db}{space\+\_\+set\+\_\+west} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id del oeste del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_af495ebfd5d13eba1a48cebd10992a17f}{space\+\_\+get\+\_\+west} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id del oeste \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{space_8h_aac1e07503b3a4e740444c1318f6ea868}{space\+\_\+is\+\_\+object\+\_\+in} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em comprueba si hay un objeto en el espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a18eca058da6cdf20ae5eda9d122d992e}{space\+\_\+print} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em imprime el espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_af845878ae403cdd733520bb96e2385ea}{space\+\_\+take\+\_\+object} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em coge un objeto del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_af038679271749a0298ba4a7c2efd46ed}{space\+\_\+leave\+\_\+object} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em suelta un objeto del espacio \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{space_8h_a757f05fd67a488ddd96a541b7743520f}{space\+\_\+get\+\_\+gdesc} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$)
+\begin{DoxyCompactList}\small\item\em devuelve el contenido del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_af71d1536b5452e698e670d61a4f0376f}{space\+\_\+set\+\_\+gdesc} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$, char $\ast$)
+\begin{DoxyCompactList}\small\item\em cambia el contenido del espacio \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{space_8h_a292ba89734c883f99015a8b6ec147be8}{space\+\_\+get\+\_\+description} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve la descripcion del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a7aecc426029f567d452a0f916fd512d6}{space\+\_\+set\+\_\+description} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em cambia la descripcion del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_a08ee81e588e2ce8744e0c9abc2b5f2c7}{space\+\_\+set\+\_\+detailed\+\_\+description} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, char $\ast$description)
+\begin{DoxyCompactList}\small\item\em cambia la descripcion detallada del espacio \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{space_8h_a478db36871e852912a3ae266c58145dc}{space\+\_\+get\+\_\+detailed\+\_\+description} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve la descripcion detallada del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_a174a988b899d5a0db889a31b70763c9c}{space\+\_\+get\+\_\+up} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id arriba \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{space_8h_ab269eab72b9ea7254044b34b1c177602}{space\+\_\+get\+\_\+down} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el Id abajo \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{space_8h_abae16fa836379f9fa4b22d9417b317b0}{space\+\_\+get\+\_\+light} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space)
+\begin{DoxyCompactList}\small\item\em devuelve el estado de iluminación \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_aa2707bdca8fd356ed8d15fd48e820a4f}{space\+\_\+set\+\_\+up} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id de arriba del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_ae5b9fef52456ffccffbd73f882a56d23}{space\+\_\+set\+\_\+down} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id de abajo del espacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{space_8h_ad6a4bfb3b69236212c618d4c86181608}{space\+\_\+set\+\_\+light} (\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$space, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} status)
+\begin{DoxyCompactList}\small\item\em cambia el estado de iluminación de un espacio \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones de space. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{space_8h_a088cbe7c6f78264d46c2624194c5c680}\label{space_8h_a088cbe7c6f78264d46c2624194c5c680}} 
+\index{space.\+h@{space.\+h}!F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE@{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}}
+\index{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE@{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE}{FIRST\_SPACE}}
+{\footnotesize\ttfamily \#define F\+I\+R\+S\+T\+\_\+\+S\+P\+A\+CE~1}
+
+primer espacio \mbox{\Hypertarget{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}\label{space_8h_a5f54fd55f983a2e33ce076cd9f587e82}} 
+\index{space.\+h@{space.\+h}!M\+A\+X\+\_\+\+S\+P\+A\+C\+ES@{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}}
+\index{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES@{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+P\+A\+C\+ES}{MAX\_SPACES}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+S\+P\+A\+C\+ES~10000}
+
+maximo de espacios \mbox{\Hypertarget{space_8h_a894ebc9b2098fe63607e0ca2e5f5ce8d}\label{space_8h_a894ebc9b2098fe63607e0ca2e5f5ce8d}} 
+\index{space.\+h@{space.\+h}!T\+A\+M\+\_\+\+D\+I\+B\+U\+JO@{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO}}
+\index{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO@{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO}{TAM\_DIBUJO}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+D\+I\+B\+U\+JO~21}
+
+maximo de dibujo \mbox{\Hypertarget{space_8h_ad29ae39d7c9da97f682d80fcee3e9fa4}\label{space_8h_ad29ae39d7c9da97f682d80fcee3e9fa4}} 
+\index{space.\+h@{space.\+h}!T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA@{T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA}}
+\index{T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA@{T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA}{TAM\_DIBUJO\_LINEA}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+D\+I\+B\+U\+J\+O\+\_\+\+L\+I\+N\+EA~\hyperlink{space_8h_a894ebc9b2098fe63607e0ca2e5f5ce8d}{T\+A\+M\+\_\+\+D\+I\+B\+U\+JO}/3}
+
+maximo del dibujo de cada linea 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{space_8h_a67533ffc2b70463baecc38fb0629bbfc}\label{space_8h_a67533ffc2b70463baecc38fb0629bbfc}} 
+\index{space.\+h@{space.\+h}!Space@{Space}}
+\index{Space@{Space}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{Space}{Space}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Space}{\+\_\+\+Space} \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}}
+
+Estructura de espacio 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{space_8h_a162866fcea156b800fd546d0ffd271c9}\label{space_8h_a162866fcea156b800fd546d0ffd271c9}} 
+\index{space.\+h@{space.\+h}!space\+\_\+create@{space\+\_\+create}}
+\index{space\+\_\+create@{space\+\_\+create}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+create()}{space\_create()}}
+{\footnotesize\ttfamily \hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space}$\ast$ space\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+crea un espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & (id del nuevo espacio) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Space$\ast$ (El espacio que crea) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a5c70c70398923693ddbe4dfac8d72a0d}\label{space_8h_a5c70c70398923693ddbe4dfac8d72a0d}} 
+\index{space.\+h@{space.\+h}!space\+\_\+destroy@{space\+\_\+destroy}}
+\index{space\+\_\+destroy@{space\+\_\+destroy}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+destroy()}{space\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+destruye y libera la memoria de un espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (el espacio a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (Ok si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a292ba89734c883f99015a8b6ec147be8}\label{space_8h_a292ba89734c883f99015a8b6ec147be8}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+description@{space\+\_\+get\+\_\+description}}
+\index{space\+\_\+get\+\_\+description@{space\+\_\+get\+\_\+description}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+description()}{space\_get\_description()}}
+{\footnotesize\ttfamily char$\ast$ space\+\_\+get\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve la descripcion del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char (La descripcion del espacio) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a478db36871e852912a3ae266c58145dc}\label{space_8h_a478db36871e852912a3ae266c58145dc}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+detailed\+\_\+description@{space\+\_\+get\+\_\+detailed\+\_\+description}}
+\index{space\+\_\+get\+\_\+detailed\+\_\+description@{space\+\_\+get\+\_\+detailed\+\_\+description}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+detailed\+\_\+description()}{space\_get\_detailed\_description()}}
+{\footnotesize\ttfamily char$\ast$ space\+\_\+get\+\_\+detailed\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve la descripcion detallada del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char (La descripcion del espacio) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ab269eab72b9ea7254044b34b1c177602}\label{space_8h_ab269eab72b9ea7254044b34b1c177602}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+down@{space\+\_\+get\+\_\+down}}
+\index{space\+\_\+get\+\_\+down@{space\+\_\+get\+\_\+down}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+down()}{space\_get\_down()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+down (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id abajo 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id(devuelve el Id abajo) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a978a22b77f74bb2dab68a00571abbe0b}\label{space_8h_a978a22b77f74bb2dab68a00571abbe0b}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+east@{space\+\_\+get\+\_\+east}}
+\index{space\+\_\+get\+\_\+east@{space\+\_\+get\+\_\+east}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+east()}{space\_get\_east()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+east (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id del este 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id(devuelve el Id del este) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a757f05fd67a488ddd96a541b7743520f}\label{space_8h_a757f05fd67a488ddd96a541b7743520f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+gdesc@{space\+\_\+get\+\_\+gdesc}}
+\index{space\+\_\+get\+\_\+gdesc@{space\+\_\+get\+\_\+gdesc}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+gdesc()}{space\_get\_gdesc()}}
+{\footnotesize\ttfamily char$\ast$ space\+\_\+get\+\_\+gdesc (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el contenido del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char (La informacion del espacio) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ac8ddfd0d8692fd852ee49698c446cb50}\label{space_8h_ac8ddfd0d8692fd852ee49698c446cb50}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+id@{space\+\_\+get\+\_\+id}}
+\index{space\+\_\+get\+\_\+id@{space\+\_\+get\+\_\+id}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+id()}{space\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (El Id del espacio) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_abae16fa836379f9fa4b22d9417b317b0}\label{space_8h_abae16fa836379f9fa4b22d9417b317b0}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+light@{space\+\_\+get\+\_\+light}}
+\index{space\+\_\+get\+\_\+light@{space\+\_\+get\+\_\+light}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+light()}{space\_get\_light()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} space\+\_\+get\+\_\+light (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el estado de iluminación 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si está iluminado, False en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a310c540cd6e11073f7328add1f927001}\label{space_8h_a310c540cd6e11073f7328add1f927001}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+name@{space\+\_\+get\+\_\+name}}
+\index{space\+\_\+get\+\_\+name@{space\+\_\+get\+\_\+name}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+name()}{space\_get\_name()}}
+{\footnotesize\ttfamily const char$\ast$ space\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el nombre del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char(\+El nombre del espacio) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ad331fba774897900f615d9d2e8d81a90}\label{space_8h_ad331fba774897900f615d9d2e8d81a90}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+north@{space\+\_\+get\+\_\+north}}
+\index{space\+\_\+get\+\_\+north@{space\+\_\+get\+\_\+north}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+north()}{space\_get\_north()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+north (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id del norte 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id(devuelve el Id del norte) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a9b86e1335c423eaad832e50d4c12cf1f}\label{space_8h_a9b86e1335c423eaad832e50d4c12cf1f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+south@{space\+\_\+get\+\_\+south}}
+\index{space\+\_\+get\+\_\+south@{space\+\_\+get\+\_\+south}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+south()}{space\_get\_south()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+south (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id del sur 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id(devuelve el Id del sur) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a174a988b899d5a0db889a31b70763c9c}\label{space_8h_a174a988b899d5a0db889a31b70763c9c}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+up@{space\+\_\+get\+\_\+up}}
+\index{space\+\_\+get\+\_\+up@{space\+\_\+get\+\_\+up}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+up()}{space\_get\_up()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+up (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id arriba 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id(devuelve el Id arriba) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_af495ebfd5d13eba1a48cebd10992a17f}\label{space_8h_af495ebfd5d13eba1a48cebd10992a17f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+get\+\_\+west@{space\+\_\+get\+\_\+west}}
+\index{space\+\_\+get\+\_\+west@{space\+\_\+get\+\_\+west}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+get\+\_\+west()}{space\_get\_west()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+get\+\_\+west (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id del oeste 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id(devuelve el Id del oeste) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aac1e07503b3a4e740444c1318f6ea868}\label{space_8h_aac1e07503b3a4e740444c1318f6ea868}} 
+\index{space.\+h@{space.\+h}!space\+\_\+is\+\_\+object\+\_\+in@{space\+\_\+is\+\_\+object\+\_\+in}}
+\index{space\+\_\+is\+\_\+object\+\_\+in@{space\+\_\+is\+\_\+object\+\_\+in}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+is\+\_\+object\+\_\+in()}{space\_is\_object\_in()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} space\+\_\+is\+\_\+object\+\_\+in (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+comprueba si hay un objeto en el espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id del objeto a comprobar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE si se el objeto esta en el espacio o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_af038679271749a0298ba4a7c2efd46ed}\label{space_8h_af038679271749a0298ba4a7c2efd46ed}} 
+\index{space.\+h@{space.\+h}!space\+\_\+leave\+\_\+object@{space\+\_\+leave\+\_\+object}}
+\index{space\+\_\+leave\+\_\+object@{space\+\_\+leave\+\_\+object}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+leave\+\_\+object()}{space\_leave\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+leave\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+suelta un objeto del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (id del objeto a soltar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se suelta bien o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a18eca058da6cdf20ae5eda9d122d992e}\label{space_8h_a18eca058da6cdf20ae5eda9d122d992e}} 
+\index{space.\+h@{space.\+h}!space\+\_\+print@{space\+\_\+print}}
+\index{space\+\_\+print@{space\+\_\+print}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+print()}{space\_print()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space }\end{DoxyParamCaption})}
+
+
+
+imprime el espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (Ok si se imprime bien o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a7aecc426029f567d452a0f916fd512d6}\label{space_8h_a7aecc426029f567d452a0f916fd512d6}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+description@{space\+\_\+set\+\_\+description}}
+\index{space\+\_\+set\+\_\+description@{space\+\_\+set\+\_\+description}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+description()}{space\_set\_description()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+cambia la descripcion del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em description} & (La descripcion del espacio) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se modifica bien o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a08ee81e588e2ce8744e0c9abc2b5f2c7}\label{space_8h_a08ee81e588e2ce8744e0c9abc2b5f2c7}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+detailed\+\_\+description@{space\+\_\+set\+\_\+detailed\+\_\+description}}
+\index{space\+\_\+set\+\_\+detailed\+\_\+description@{space\+\_\+set\+\_\+detailed\+\_\+description}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+detailed\+\_\+description()}{space\_set\_detailed\_description()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+detailed\+\_\+description (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{description }\end{DoxyParamCaption})}
+
+
+
+cambia la descripcion detallada del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+23/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em description} & (La informacion del espacio) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se modifica bien o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ae5b9fef52456ffccffbd73f882a56d23}\label{space_8h_ae5b9fef52456ffccffbd73f882a56d23}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+down@{space\+\_\+set\+\_\+down}}
+\index{space\+\_\+set\+\_\+down@{space\+\_\+set\+\_\+down}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+down()}{space\_set\_down()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+down (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id de abajo del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id nuevo para arriba) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a860a8f3e0227955ad56d1a12f0bdc44a}\label{space_8h_a860a8f3e0227955ad56d1a12f0bdc44a}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+east@{space\+\_\+set\+\_\+east}}
+\index{space\+\_\+set\+\_\+east@{space\+\_\+set\+\_\+east}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+east()}{space\_set\_east()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+east (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id del este del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id nuevo para el este) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_af71d1536b5452e698e670d61a4f0376f}\label{space_8h_af71d1536b5452e698e670d61a4f0376f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+gdesc@{space\+\_\+set\+\_\+gdesc}}
+\index{space\+\_\+set\+\_\+gdesc@{space\+\_\+set\+\_\+gdesc}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+gdesc()}{space\_set\_gdesc()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+gdesc (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{gdesc }\end{DoxyParamCaption})}
+
+
+
+cambia el contenido del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em gdesc} & (La informacion del espacio) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se modifica bien o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ad6a4bfb3b69236212c618d4c86181608}\label{space_8h_ad6a4bfb3b69236212c618d4c86181608}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+light@{space\+\_\+set\+\_\+light}}
+\index{space\+\_\+set\+\_\+light@{space\+\_\+set\+\_\+light}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+light()}{space\_set\_light()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+light (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{status }\end{DoxyParamCaption})}
+
+
+
+cambia el estado de iluminación de un espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em status} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aab5b468f9822ab78dbe16d1321870d93}\label{space_8h_aab5b468f9822ab78dbe16d1321870d93}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+name@{space\+\_\+set\+\_\+name}}
+\index{space\+\_\+set\+\_\+name@{space\+\_\+set\+\_\+name}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+name()}{space\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+cambia el nombre del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em name} & (nuevo nombre) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a9e6e3e3bac4996ac6b8bd555e52bfb26}\label{space_8h_a9e6e3e3bac4996ac6b8bd555e52bfb26}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+north@{space\+\_\+set\+\_\+north}}
+\index{space\+\_\+set\+\_\+north@{space\+\_\+set\+\_\+north}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+north()}{space\_set\_north()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+north (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id del norte del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id nuevo para el norte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_a422ab9f220b4c471c44256a27377de1a}\label{space_8h_a422ab9f220b4c471c44256a27377de1a}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+south@{space\+\_\+set\+\_\+south}}
+\index{space\+\_\+set\+\_\+south@{space\+\_\+set\+\_\+south}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+south()}{space\_set\_south()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+south (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id del sur del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id nuevo para el sur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_aa2707bdca8fd356ed8d15fd48e820a4f}\label{space_8h_aa2707bdca8fd356ed8d15fd48e820a4f}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+up@{space\+\_\+set\+\_\+up}}
+\index{space\+\_\+set\+\_\+up@{space\+\_\+set\+\_\+up}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+up()}{space\_set\_up()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+up (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id de arriba del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id nuevo para arriba) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_ad44b14cb38902cf31fa1f341beaab0db}\label{space_8h_ad44b14cb38902cf31fa1f341beaab0db}} 
+\index{space.\+h@{space.\+h}!space\+\_\+set\+\_\+west@{space\+\_\+set\+\_\+west}}
+\index{space\+\_\+set\+\_\+west@{space\+\_\+set\+\_\+west}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+set\+\_\+west()}{space\_set\_west()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+set\+\_\+west (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id del oeste del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (Id nuevo para el oeste) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{space_8h_af845878ae403cdd733520bb96e2385ea}\label{space_8h_af845878ae403cdd733520bb96e2385ea}} 
+\index{space.\+h@{space.\+h}!space\+\_\+take\+\_\+object@{space\+\_\+take\+\_\+object}}
+\index{space\+\_\+take\+\_\+object@{space\+\_\+take\+\_\+object}!space.\+h@{space.\+h}}
+\subsubsection{\texorpdfstring{space\+\_\+take\+\_\+object()}{space\_take\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} space\+\_\+take\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{space_8h_a67533ffc2b70463baecc38fb0629bbfc}{Space} $\ast$}]{space,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+coge un objeto del espacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em space} & (espacio a usar) \\
+\hline
+{\em id} & (id del objeto a coger) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se coge bien o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}

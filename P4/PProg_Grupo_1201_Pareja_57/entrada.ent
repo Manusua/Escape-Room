@@ -1,0 +1,78 @@
+Take clip
+Take ordenador
+Take radiografia
+Open puertahab1 with clip
+Go east
+Turnon ordenador
+Leave clip
+Take destornillador
+Leave ordenador
+Take martillo
+Go west
+Save juego
+Load juego
+Open puertacocina with destornillador
+Open escsotano with radiografia
+Leave radiografia
+Go west
+Take linterna
+Leave destornillador
+Take tnt
+Go east
+Go up
+Open puertahab2 with martillo
+Turnon linterna
+Go east
+Inspect cuadro
+Take clave
+Leave martillo
+Take clave
+Go west
+Go down
+Go down
+Turnon linterna
+Open cerradura with clave
+Go south
+Turnon linterna
+Leave clave
+Take dedo
+Go north
+Go up
+Go up
+Go up
+Turnon linterna
+Open puertahab3 with dedo
+Leave dedo
+Take mechero
+Open paredoculta with tnt
+Go down
+Leave tnt
+Take extintor
+Go up
+Open fuego with extintor
+Go west
+Turnon linterna
+Leave extintor
+Leave mechero
+Take escalera
+Go east
+Open escterraza with escalera
+Go up
+Take felpudo
+leave felpudo
+Take contrasena
+Go down
+Go east
+Open combinacion with contrasena
+Go north
+Turnon linterna
+Leave contrasena
+Take llave
+Go south
+Go east
+Go west
+Go down
+Go down
+Open puertasalida with llave
+Go north
+quit

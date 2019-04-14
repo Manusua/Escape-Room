@@ -1,0 +1,359 @@
+\hypertarget{link_8c}{}\section{link.\+c File Reference}
+\label{link_8c}\index{link.\+c@{link.\+c}}
+
+
+En este fichero implementamos las funciones de link.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}link.\+h\char`\"{}}\newline
+Include dependency graph for link.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{link_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Link}{\+\_\+\+Link}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$ \hyperlink{link_8c_aaf21d03943afcbed370ca720f972482c}{link\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em crea un link \end{DoxyCompactList}\item 
+void \hyperlink{link_8c_a117e4e5a82b23b805052d1eace34d068}{link\+\_\+destroy} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em destruye y libera la memoria de un link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}{link\+\_\+get\+\_\+id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em devuelve el Id de un link \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{link_8c_a9747ee8201a323e112e67bdeacbc90d8}{link\+\_\+get\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em devuelve el Id de un link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_a8b02c6629b52f2be8fa22c8f3f7466fe}{link\+\_\+get\+\_\+conection\+\_\+1} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em el Id de la conexion 1 del link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{link_8c_ae49357746643a5e0786c6c1c843f0351}{link\+\_\+get\+\_\+conection\+\_\+2} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em el Id de la conexion 2 del link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{link_8c_af50c9578ed458d4ef4f4c85bdb60b3e1}{link\+\_\+get\+\_\+status} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em comprueba si la conexion esta abierta o cerrada \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a3fd49fb1a3f19be4fc800ff07820cafb}{link\+\_\+set\+\_\+id} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em modifica el Id de un link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a6c7a3bd7a856288c377edbcd045912e6}{link\+\_\+set\+\_\+name} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em modifica el nombre de un link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a93bfde2dd6d354dfca04cf0643317433}{link\+\_\+set\+\_\+conection} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id1, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id2)
+\begin{DoxyCompactList}\small\item\em modifica ela conexion de un link \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{link_8c_a9cd26b9d2d38b901380885e8ea7edec4}{link\+\_\+set\+\_\+status} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link, \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} bool)
+\begin{DoxyCompactList}\small\item\em modifica el estado de un link \end{DoxyCompactList}\item 
+int \hyperlink{link_8c_ab5c45f8c1edc80d2f2dd73f5539d1951}{link\+\_\+print} (\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$link)
+\begin{DoxyCompactList}\small\item\em imprime un link \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones de link. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{link_8c_aaf21d03943afcbed370ca720f972482c}\label{link_8c_aaf21d03943afcbed370ca720f972482c}} 
+\index{link.\+c@{link.\+c}!link\+\_\+create@{link\+\_\+create}}
+\index{link\+\_\+create@{link\+\_\+create}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+create()}{link\_create()}}
+{\footnotesize\ttfamily \hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link}$\ast$ link\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+crea un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+Link (El link que crea) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a117e4e5a82b23b805052d1eace34d068}\label{link_8c_a117e4e5a82b23b805052d1eace34d068}} 
+\index{link.\+c@{link.\+c}!link\+\_\+destroy@{link\+\_\+destroy}}
+\index{link\+\_\+destroy@{link\+\_\+destroy}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+destroy()}{link\_destroy()}}
+{\footnotesize\ttfamily void link\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+destruye y libera la memoria de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a8b02c6629b52f2be8fa22c8f3f7466fe}\label{link_8c_a8b02c6629b52f2be8fa22c8f3f7466fe}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+conection\+\_\+1@{link\+\_\+get\+\_\+conection\+\_\+1}}
+\index{link\+\_\+get\+\_\+conection\+\_\+1@{link\+\_\+get\+\_\+conection\+\_\+1}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+conection\+\_\+1()}{link\_get\_conection\_1()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+conection\+\_\+1 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+el Id de la conexion 1 del link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (Id de la conexion) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_ae49357746643a5e0786c6c1c843f0351}\label{link_8c_ae49357746643a5e0786c6c1c843f0351}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+conection\+\_\+2@{link\+\_\+get\+\_\+conection\+\_\+2}}
+\index{link\+\_\+get\+\_\+conection\+\_\+2@{link\+\_\+get\+\_\+conection\+\_\+2}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+conection\+\_\+2()}{link\_get\_conection\_2()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+conection\+\_\+2 (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+el Id de la conexion 2 del link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (Id de la conexion) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}\label{link_8c_a2bbd320f995a72b2ea7ea639b1c81892}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}}
+\index{link\+\_\+get\+\_\+id@{link\+\_\+get\+\_\+id}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+id()}{link\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} link\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (Id del link) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a9747ee8201a323e112e67bdeacbc90d8}\label{link_8c_a9747ee8201a323e112e67bdeacbc90d8}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}}
+\index{link\+\_\+get\+\_\+name@{link\+\_\+get\+\_\+name}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+name()}{link\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ link\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char (nombre del link) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_af50c9578ed458d4ef4f4c85bdb60b3e1}\label{link_8c_af50c9578ed458d4ef4f4c85bdb60b3e1}} 
+\index{link.\+c@{link.\+c}!link\+\_\+get\+\_\+status@{link\+\_\+get\+\_\+status}}
+\index{link\+\_\+get\+\_\+status@{link\+\_\+get\+\_\+status}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+get\+\_\+status()}{link\_get\_status()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} link\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+comprueba si la conexion esta abierta o cerrada 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE o F\+A\+L\+SE dependiendo de si la conexion esta abierta o cerrada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_ab5c45f8c1edc80d2f2dd73f5539d1951}\label{link_8c_ab5c45f8c1edc80d2f2dd73f5539d1951}} 
+\index{link.\+c@{link.\+c}!link\+\_\+print@{link\+\_\+print}}
+\index{link\+\_\+print@{link\+\_\+print}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+print()}{link\_print()}}
+{\footnotesize\ttfamily int link\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link }\end{DoxyParamCaption})}
+
+
+
+imprime un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a modificar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (-\/1 si no se ha realizado con exito) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a93bfde2dd6d354dfca04cf0643317433}\label{link_8c_a93bfde2dd6d354dfca04cf0643317433}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+conection@{link\+\_\+set\+\_\+conection}}
+\index{link\+\_\+set\+\_\+conection@{link\+\_\+set\+\_\+conection}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+conection()}{link\_set\_conection()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+conection (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id1,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id2 }\end{DoxyParamCaption})}
+
+
+
+modifica ela conexion de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a modificar) \\
+\hline
+{\em id1} & (Nuevo id1) \\
+\hline
+{\em id2} & (Nuevo Id2) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a3fd49fb1a3f19be4fc800ff07820cafb}\label{link_8c_a3fd49fb1a3f19be4fc800ff07820cafb}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+id@{link\+\_\+set\+\_\+id}}
+\index{link\+\_\+set\+\_\+id@{link\+\_\+set\+\_\+id}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+id()}{link\_set\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+modifica el Id de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a modificar) \\
+\hline
+{\em id} & (Nuevo Id) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a6c7a3bd7a856288c377edbcd045912e6}\label{link_8c_a6c7a3bd7a856288c377edbcd045912e6}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}}
+\index{link\+\_\+set\+\_\+name@{link\+\_\+set\+\_\+name}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+name()}{link\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+modifica el nombre de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a modificar) \\
+\hline
+{\em name} & (Nuevo nombre) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{link_8c_a9cd26b9d2d38b901380885e8ea7edec4}\label{link_8c_a9cd26b9d2d38b901380885e8ea7edec4}} 
+\index{link.\+c@{link.\+c}!link\+\_\+set\+\_\+status@{link\+\_\+set\+\_\+status}}
+\index{link\+\_\+set\+\_\+status@{link\+\_\+set\+\_\+status}!link.\+c@{link.\+c}}
+\subsubsection{\texorpdfstring{link\+\_\+set\+\_\+status()}{link\_set\_status()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} link\+\_\+set\+\_\+status (\begin{DoxyParamCaption}\item[{\hyperlink{link_8h_ae3b299941e67be6971bfd64a25505eff}{Link} $\ast$}]{link,  }\item[{\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL}}]{bool }\end{DoxyParamCaption})}
+
+
+
+modifica el estado de un link 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em link} & (link a modificar) \\
+\hline
+{\em bool} & (Nuevo estado) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}

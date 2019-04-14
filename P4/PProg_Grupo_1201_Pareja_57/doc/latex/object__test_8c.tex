@@ -1,0 +1,653 @@
+\hypertarget{object__test_8c}{}\section{src/object\+\_\+test.c File Reference}
+\label{object__test_8c}\index{src/object\+\_\+test.\+c@{src/object\+\_\+test.\+c}}
+
+
+Prueba del modulo object.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}object\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+Include dependency graph for object\+\_\+test.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{object__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}~41
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{object__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Funcion principal de pruebas para el modulo object. \end{DoxyCompactList}\item 
+void \hyperlink{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}{test1\+\_\+object\+\_\+create} ()
+\item 
+void \hyperlink{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}{test1\+\_\+object\+\_\+set\+\_\+name} ()
+\item 
+void \hyperlink{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}{test2\+\_\+object\+\_\+set\+\_\+name} ()
+\item 
+void \hyperlink{object__test_8c_ab40669b5d083b6484197d917fb6882b1}{test3\+\_\+object\+\_\+set\+\_\+name} ()
+\item 
+void \hyperlink{object__test_8c_a6f19ebf6034115c2cdcc3c7bfea25964}{test1\+\_\+object\+\_\+set\+\_\+id} ()
+\item 
+void \hyperlink{object__test_8c_a9ada47d4e8c46f0f3374b2fa66d6430c}{test2\+\_\+object\+\_\+set\+\_\+north} ()
+\item 
+void \hyperlink{object__test_8c_a3418e1bc1ae952d49085a68375940ef6}{test1\+\_\+object\+\_\+set\+\_\+south} ()
+\item 
+void \hyperlink{object__test_8c_aa606c3fb296b209d5165b0c45a322fec}{test2\+\_\+object\+\_\+set\+\_\+south} ()
+\item 
+void \hyperlink{object__test_8c_a0da5b8050f929cbcfa8a759a962856f5}{test1\+\_\+object\+\_\+set\+\_\+east} ()
+\item 
+void \hyperlink{object__test_8c_a6d5475cf455fe37de66ccca9fd2187dc}{test2\+\_\+object\+\_\+set\+\_\+east} ()
+\item 
+void \hyperlink{object__test_8c_a7f0c6a44fb6b1010810050f2ea72dc69}{test1\+\_\+object\+\_\+set\+\_\+west} ()
+\item 
+void \hyperlink{object__test_8c_a79539ace87f072f2722181db52004696}{test2\+\_\+object\+\_\+set\+\_\+west} ()
+\item 
+void \hyperlink{object__test_8c_ad2411bc3cc47c9905e63a3d9c561d369}{test1\+\_\+object\+\_\+get\+\_\+name} ()
+\item 
+void \hyperlink{object__test_8c_abdfafbc7b8588d3dcdb05fd2beb2397e}{test2\+\_\+object\+\_\+get\+\_\+name} ()
+\item 
+void \hyperlink{object__test_8c_a8476950bc3a7d77a95a393acec4a9f7a}{test1\+\_\+object\+\_\+take\+\_\+object} ()
+\item 
+void \hyperlink{object__test_8c_a0bd507dfdefd8223c1c0d5c8aeb44d23}{test2\+\_\+object\+\_\+take\+\_\+object} ()
+\item 
+void \hyperlink{object__test_8c_add7988c5f1529d05be42760049c5b554}{test3\+\_\+object\+\_\+take\+\_\+object} ()
+\item 
+void \hyperlink{object__test_8c_acedfe61e854500c485598d66b7e5096c}{test1\+\_\+object\+\_\+get\+\_\+north} ()
+\item 
+void \hyperlink{object__test_8c_a098d0c4e35b24e3b126575e47c76e523}{test2\+\_\+object\+\_\+get\+\_\+north} ()
+\item 
+void \hyperlink{object__test_8c_a2e91b10e48cc9dc38285a3e358650e80}{test1\+\_\+object\+\_\+get\+\_\+south} ()
+\item 
+void \hyperlink{object__test_8c_a84bb6c22cdec27962fe5a6b81e41010b}{test2\+\_\+object\+\_\+get\+\_\+south} ()
+\item 
+void \hyperlink{object__test_8c_add870347717b28f9627efc66ddb5a12b}{test1\+\_\+object\+\_\+get\+\_\+east} ()
+\item 
+void \hyperlink{object__test_8c_a0af301322234ef610275643ea846ec67}{test2\+\_\+object\+\_\+get\+\_\+east} ()
+\item 
+void \hyperlink{object__test_8c_a8375fd84bcc6e4a2427cf4f6a77e102d}{test1\+\_\+object\+\_\+get\+\_\+west} ()
+\item 
+void \hyperlink{object__test_8c_a3e8525c0760af6b2bed97b3e81592fa9}{test2\+\_\+object\+\_\+get\+\_\+west} ()
+\item 
+void \hyperlink{object__test_8c_aa88e9e9dab92ba9c58851d7a7a8415f0}{test1\+\_\+object\+\_\+get\+\_\+id} ()
+\item 
+void \hyperlink{object__test_8c_a1ff250f0f43297f57fcce1f3a6ae490b}{test2\+\_\+object\+\_\+get\+\_\+id} ()
+\item 
+void \hyperlink{object__test_8c_a90c957b12175892a0dacc4e61f3c2ec2}{test1\+\_\+object\+\_\+leave\+\_\+object} ()
+\item 
+void \hyperlink{object__test_8c_a934818c30bc94f423633661c38c73f2a}{test2\+\_\+object\+\_\+leave\+\_\+object} ()
+\item 
+void \hyperlink{object__test_8c_ade12664b9bc4400080ba40f8db7105aa}{test1\+\_\+object\+\_\+set\+\_\+gdesc} ()
+\item 
+void \hyperlink{object__test_8c_af8a5fe8a62dfe35363d287574bac56c1}{test2\+\_\+object\+\_\+set\+\_\+gdesc} ()
+\item 
+void \hyperlink{object__test_8c_a43375c48c794bb6b2ed3fb8d949149b5}{test1\+\_\+object\+\_\+get\+\_\+gdesc} ()
+\item 
+void \hyperlink{object__test_8c_a986fccb3aa7593b75b043547e9e22ebb}{test2\+\_\+object\+\_\+get\+\_\+gdesc} ()
+\item 
+void \hyperlink{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}{test1\+\_\+object\+\_\+set\+\_\+description} ()
+\item 
+void \hyperlink{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}{test2\+\_\+object\+\_\+set\+\_\+description} ()
+\item 
+void \hyperlink{object__test_8c_afe180b78a201df7bc1629701db1d464c}{test1\+\_\+object\+\_\+get\+\_\+description} ()
+\item 
+void \hyperlink{object__test_8c_a35d9a40796133791c157c044ea1cef85}{test2\+\_\+object\+\_\+get\+\_\+description} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prueba del modulo object. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, �?lvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/11-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{object__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{object__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}}
+\index{M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+E\+S\+TS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~41}
+
+T\+A\+M\+\_\+\+T\+E\+S\+TS 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{object__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{object__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!main@{main}}
+\index{main@{main}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Funcion principal de pruebas para el modulo object. 
+
+Dos modos de ejecucion\+: 1.-\/\+Si se ejecuta sin parametros se ejecutan todas las pruebas 2.-\/\+Si se ejecuta con un numero entre 1 y el numero de pruebas solo ejecuta la prueba indicada \mbox{\Hypertarget{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}\label{object__test_8c_a3836d69f92ce7149d56bafcaec83f516}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+create@{test1\+\_\+object\+\_\+create}}
+\index{test1\+\_\+object\+\_\+create@{test1\+\_\+object\+\_\+create}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+create()}{test1\_object\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000047}{Test}]Prueba la función de creación de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Nada 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Un puntero no nulo al objeto creado 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_afe180b78a201df7bc1629701db1d464c}\label{object__test_8c_afe180b78a201df7bc1629701db1d464c}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+description@{test1\+\_\+object\+\_\+get\+\_\+description}}
+\index{test1\+\_\+object\+\_\+get\+\_\+description@{test1\+\_\+object\+\_\+get\+\_\+description}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+description()}{test1\_object\_get\_description()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000082}{Test}]Prueba la función para obtener una descripcion en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con una descripcion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser una comparación de cadenas igual a 0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_add870347717b28f9627efc66ddb5a12b}\label{object__test_8c_add870347717b28f9627efc66ddb5a12b}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+east@{test1\+\_\+object\+\_\+get\+\_\+east}}
+\index{test1\+\_\+object\+\_\+get\+\_\+east@{test1\+\_\+object\+\_\+get\+\_\+east}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+east()}{test1\_object\_get\_east()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000068}{Test}]Prueba la función para obtener el este de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con este asignado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser id=4 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a43375c48c794bb6b2ed3fb8d949149b5}\label{object__test_8c_a43375c48c794bb6b2ed3fb8d949149b5}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+gdesc@{test1\+\_\+object\+\_\+get\+\_\+gdesc}}
+\index{test1\+\_\+object\+\_\+get\+\_\+gdesc@{test1\+\_\+object\+\_\+get\+\_\+gdesc}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+gdesc()}{test1\_object\_get\_gdesc()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000078}{Test}]Prueba la función para dejar un obtener un dibujo en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con dibujo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser una comparacion de cadenas igual a 0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_aa88e9e9dab92ba9c58851d7a7a8415f0}\label{object__test_8c_aa88e9e9dab92ba9c58851d7a7a8415f0}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+id@{test1\+\_\+object\+\_\+get\+\_\+id}}
+\index{test1\+\_\+object\+\_\+get\+\_\+id@{test1\+\_\+object\+\_\+get\+\_\+id}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+id()}{test1\_object\_get\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000072}{Test}]Prueba la función para obtener el id de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con id asignado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser id=5 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_ad2411bc3cc47c9905e63a3d9c561d369}\label{object__test_8c_ad2411bc3cc47c9905e63a3d9c561d369}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+name@{test1\+\_\+object\+\_\+get\+\_\+name}}
+\index{test1\+\_\+object\+\_\+get\+\_\+name@{test1\+\_\+object\+\_\+get\+\_\+name}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+name()}{test1\_object\_get\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000059}{Test}]Prueba la función para obtener el nombre de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con nombre establecido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser una comparación de cadenas igual a 0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_acedfe61e854500c485598d66b7e5096c}\label{object__test_8c_acedfe61e854500c485598d66b7e5096c}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+north@{test1\+\_\+object\+\_\+get\+\_\+north}}
+\index{test1\+\_\+object\+\_\+get\+\_\+north@{test1\+\_\+object\+\_\+get\+\_\+north}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+north()}{test1\_object\_get\_north()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000064}{Test}]Prueba la función para obtener el norte de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con norte asignado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser id=4 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a2e91b10e48cc9dc38285a3e358650e80}\label{object__test_8c_a2e91b10e48cc9dc38285a3e358650e80}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+south@{test1\+\_\+object\+\_\+get\+\_\+south}}
+\index{test1\+\_\+object\+\_\+get\+\_\+south@{test1\+\_\+object\+\_\+get\+\_\+south}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+south()}{test1\_object\_get\_south()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000066}{Test}]Prueba la función para obtener el sur de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con sur asignado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser id=4 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a8375fd84bcc6e4a2427cf4f6a77e102d}\label{object__test_8c_a8375fd84bcc6e4a2427cf4f6a77e102d}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+get\+\_\+west@{test1\+\_\+object\+\_\+get\+\_\+west}}
+\index{test1\+\_\+object\+\_\+get\+\_\+west@{test1\+\_\+object\+\_\+get\+\_\+west}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+get\+\_\+west()}{test1\_object\_get\_west()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+get\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000070}{Test}]Prueba la función para obtener el oeste de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con oeste asignado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser id=4 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a90c957b12175892a0dacc4e61f3c2ec2}\label{object__test_8c_a90c957b12175892a0dacc4e61f3c2ec2}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+leave\+\_\+object@{test1\+\_\+object\+\_\+leave\+\_\+object}}
+\index{test1\+\_\+object\+\_\+leave\+\_\+object@{test1\+\_\+object\+\_\+leave\+\_\+object}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+leave\+\_\+object()}{test1\_object\_leave\_object()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+leave\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000074}{Test}]Prueba la función para dejar un objeto en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto no N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}\label{object__test_8c_afb26b8c66d332354df8bfd57a8033b8f}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+description@{test1\+\_\+object\+\_\+set\+\_\+description}}
+\index{test1\+\_\+object\+\_\+set\+\_\+description@{test1\+\_\+object\+\_\+set\+\_\+description}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+description()}{test1\_object\_set\_description()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000080}{Test}]Prueba la función para dejar un establecer una descripcion en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto no N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a0da5b8050f929cbcfa8a759a962856f5}\label{object__test_8c_a0da5b8050f929cbcfa8a759a962856f5}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+east@{test1\+\_\+object\+\_\+set\+\_\+east}}
+\index{test1\+\_\+object\+\_\+set\+\_\+east@{test1\+\_\+object\+\_\+set\+\_\+east}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+east()}{test1\_object\_set\_east()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000055}{Test}]Prueba la función para establecer el este de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Id a establecer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_ade12664b9bc4400080ba40f8db7105aa}\label{object__test_8c_ade12664b9bc4400080ba40f8db7105aa}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+gdesc@{test1\+\_\+object\+\_\+set\+\_\+gdesc}}
+\index{test1\+\_\+object\+\_\+set\+\_\+gdesc@{test1\+\_\+object\+\_\+set\+\_\+gdesc}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+gdesc()}{test1\_object\_set\_gdesc()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000076}{Test}]Prueba la función para dejar un establecer un dibujo en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto no N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a6f19ebf6034115c2cdcc3c7bfea25964}\label{object__test_8c_a6f19ebf6034115c2cdcc3c7bfea25964}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+id@{test1\+\_\+object\+\_\+set\+\_\+id}}
+\index{test1\+\_\+object\+\_\+set\+\_\+id@{test1\+\_\+object\+\_\+set\+\_\+id}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+id()}{test1\_object\_set\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000051}{Test}]Prueba la función para establecer el norte de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Id a establecer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}\label{object__test_8c_a74e25ad653c4a32b9922fff8e4f916fd}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+name@{test1\+\_\+object\+\_\+set\+\_\+name}}
+\index{test1\+\_\+object\+\_\+set\+\_\+name@{test1\+\_\+object\+\_\+set\+\_\+name}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+name()}{test1\_object\_set\_name()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000048}{Test}]Prueba la función para establecer el nombre de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Nombre que establecer al objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a3418e1bc1ae952d49085a68375940ef6}\label{object__test_8c_a3418e1bc1ae952d49085a68375940ef6}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+south@{test1\+\_\+object\+\_\+set\+\_\+south}}
+\index{test1\+\_\+object\+\_\+set\+\_\+south@{test1\+\_\+object\+\_\+set\+\_\+south}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+south()}{test1\_object\_set\_south()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000053}{Test}]Prueba la función para establecer el sur de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Id a establecer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a7f0c6a44fb6b1010810050f2ea72dc69}\label{object__test_8c_a7f0c6a44fb6b1010810050f2ea72dc69}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+set\+\_\+west@{test1\+\_\+object\+\_\+set\+\_\+west}}
+\index{test1\+\_\+object\+\_\+set\+\_\+west@{test1\+\_\+object\+\_\+set\+\_\+west}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+set\+\_\+west()}{test1\_object\_set\_west()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+set\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000057}{Test}]Prueba la función para establecer el oeste de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+Id a establecer 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a8476950bc3a7d77a95a393acec4a9f7a}\label{object__test_8c_a8476950bc3a7d77a95a393acec4a9f7a}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test1\+\_\+object\+\_\+take\+\_\+object@{test1\+\_\+object\+\_\+take\+\_\+object}}
+\index{test1\+\_\+object\+\_\+take\+\_\+object@{test1\+\_\+object\+\_\+take\+\_\+object}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+object\+\_\+take\+\_\+object()}{test1\_object\_take\_object()}}
+{\footnotesize\ttfamily void test1\+\_\+object\+\_\+take\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000061}{Test}]Prueba la función para coger un objeto de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto sin objetos 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a35d9a40796133791c157c044ea1cef85}\label{object__test_8c_a35d9a40796133791c157c044ea1cef85}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+description@{test2\+\_\+object\+\_\+get\+\_\+description}}
+\index{test2\+\_\+object\+\_\+get\+\_\+description@{test2\+\_\+object\+\_\+get\+\_\+description}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+description()}{test2\_object\_get\_description()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000083}{Test}]Prueba la función para dejar un obtener una descripcion en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a0af301322234ef610275643ea846ec67}\label{object__test_8c_a0af301322234ef610275643ea846ec67}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+east@{test2\+\_\+object\+\_\+get\+\_\+east}}
+\index{test2\+\_\+object\+\_\+get\+\_\+east@{test2\+\_\+object\+\_\+get\+\_\+east}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+east()}{test2\_object\_get\_east()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000069}{Test}]Prueba la función para obtener el este de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a986fccb3aa7593b75b043547e9e22ebb}\label{object__test_8c_a986fccb3aa7593b75b043547e9e22ebb}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+gdesc@{test2\+\_\+object\+\_\+get\+\_\+gdesc}}
+\index{test2\+\_\+object\+\_\+get\+\_\+gdesc@{test2\+\_\+object\+\_\+get\+\_\+gdesc}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+gdesc()}{test2\_object\_get\_gdesc()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000079}{Test}]Prueba la función para dejar un obtener un dibujo en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a1ff250f0f43297f57fcce1f3a6ae490b}\label{object__test_8c_a1ff250f0f43297f57fcce1f3a6ae490b}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+id@{test2\+\_\+object\+\_\+get\+\_\+id}}
+\index{test2\+\_\+object\+\_\+get\+\_\+id@{test2\+\_\+object\+\_\+get\+\_\+id}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+id()}{test2\_object\_get\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000073}{Test}]Prueba la función para obtener el id de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_abdfafbc7b8588d3dcdb05fd2beb2397e}\label{object__test_8c_abdfafbc7b8588d3dcdb05fd2beb2397e}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+name@{test2\+\_\+object\+\_\+get\+\_\+name}}
+\index{test2\+\_\+object\+\_\+get\+\_\+name@{test2\+\_\+object\+\_\+get\+\_\+name}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+name()}{test2\_object\_get\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000060}{Test}]Prueba la función para obtener el nombre de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+U\+LL 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a098d0c4e35b24e3b126575e47c76e523}\label{object__test_8c_a098d0c4e35b24e3b126575e47c76e523}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+north@{test2\+\_\+object\+\_\+get\+\_\+north}}
+\index{test2\+\_\+object\+\_\+get\+\_\+north@{test2\+\_\+object\+\_\+get\+\_\+north}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+north()}{test2\_object\_get\_north()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000065}{Test}]Prueba la función para obtener el norte de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a84bb6c22cdec27962fe5a6b81e41010b}\label{object__test_8c_a84bb6c22cdec27962fe5a6b81e41010b}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+south@{test2\+\_\+object\+\_\+get\+\_\+south}}
+\index{test2\+\_\+object\+\_\+get\+\_\+south@{test2\+\_\+object\+\_\+get\+\_\+south}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+south()}{test2\_object\_get\_south()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000067}{Test}]Prueba la función para obtener el sur de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a3e8525c0760af6b2bed97b3e81592fa9}\label{object__test_8c_a3e8525c0760af6b2bed97b3e81592fa9}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+get\+\_\+west@{test2\+\_\+object\+\_\+get\+\_\+west}}
+\index{test2\+\_\+object\+\_\+get\+\_\+west@{test2\+\_\+object\+\_\+get\+\_\+west}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+get\+\_\+west()}{test2\_object\_get\_west()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+get\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000071}{Test}]Prueba la función para obtener el oeste de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser N\+O\+\_\+\+ID 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a934818c30bc94f423633661c38c73f2a}\label{object__test_8c_a934818c30bc94f423633661c38c73f2a}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+leave\+\_\+object@{test2\+\_\+object\+\_\+leave\+\_\+object}}
+\index{test2\+\_\+object\+\_\+leave\+\_\+object@{test2\+\_\+object\+\_\+leave\+\_\+object}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+leave\+\_\+object()}{test2\_object\_leave\_object()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+leave\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000075}{Test}]Prueba la función para dejar un objeto en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}\label{object__test_8c_a65e32c3642c1d9207cdd84b134c616da}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+description@{test2\+\_\+object\+\_\+set\+\_\+description}}
+\index{test2\+\_\+object\+\_\+set\+\_\+description@{test2\+\_\+object\+\_\+set\+\_\+description}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+description()}{test2\_object\_set\_description()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000081}{Test}]Prueba la función para establecer una descripcion en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a6d5475cf455fe37de66ccca9fd2187dc}\label{object__test_8c_a6d5475cf455fe37de66ccca9fd2187dc}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+east@{test2\+\_\+object\+\_\+set\+\_\+east}}
+\index{test2\+\_\+object\+\_\+set\+\_\+east@{test2\+\_\+object\+\_\+set\+\_\+east}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+east()}{test2\_object\_set\_east()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+east (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000056}{Test}]Prueba la función para establecer el este de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_af8a5fe8a62dfe35363d287574bac56c1}\label{object__test_8c_af8a5fe8a62dfe35363d287574bac56c1}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+gdesc@{test2\+\_\+object\+\_\+set\+\_\+gdesc}}
+\index{test2\+\_\+object\+\_\+set\+\_\+gdesc@{test2\+\_\+object\+\_\+set\+\_\+gdesc}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+gdesc()}{test2\_object\_set\_gdesc()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+gdesc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000077}{Test}]Prueba la función para dejar un establecer un dibujo en un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}\label{object__test_8c_acf42b7e7be91ede243f2aaa56c4c9347}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+name@{test2\+\_\+object\+\_\+set\+\_\+name}}
+\index{test2\+\_\+object\+\_\+set\+\_\+name@{test2\+\_\+object\+\_\+set\+\_\+name}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+name()}{test2\_object\_set\_name()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000049}{Test}]Prueba la función para establecer el nombre de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El objeto al que establecer el nombre es un puntero a N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a9ada47d4e8c46f0f3374b2fa66d6430c}\label{object__test_8c_a9ada47d4e8c46f0f3374b2fa66d6430c}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+north@{test2\+\_\+object\+\_\+set\+\_\+north}}
+\index{test2\+\_\+object\+\_\+set\+\_\+north@{test2\+\_\+object\+\_\+set\+\_\+north}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+north()}{test2\_object\_set\_north()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+north (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000052}{Test}]Prueba la función para establecer el norte de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_aa606c3fb296b209d5165b0c45a322fec}\label{object__test_8c_aa606c3fb296b209d5165b0c45a322fec}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+south@{test2\+\_\+object\+\_\+set\+\_\+south}}
+\index{test2\+\_\+object\+\_\+set\+\_\+south@{test2\+\_\+object\+\_\+set\+\_\+south}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+south()}{test2\_object\_set\_south()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+south (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000054}{Test}]Prueba la función para establecer el sur de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a79539ace87f072f2722181db52004696}\label{object__test_8c_a79539ace87f072f2722181db52004696}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+set\+\_\+west@{test2\+\_\+object\+\_\+set\+\_\+west}}
+\index{test2\+\_\+object\+\_\+set\+\_\+west@{test2\+\_\+object\+\_\+set\+\_\+west}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+set\+\_\+west()}{test2\_object\_set\_west()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+set\+\_\+west (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000058}{Test}]Prueba la función para establecer el norte de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_a0bd507dfdefd8223c1c0d5c8aeb44d23}\label{object__test_8c_a0bd507dfdefd8223c1c0d5c8aeb44d23}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test2\+\_\+object\+\_\+take\+\_\+object@{test2\+\_\+object\+\_\+take\+\_\+object}}
+\index{test2\+\_\+object\+\_\+take\+\_\+object@{test2\+\_\+object\+\_\+take\+\_\+object}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+object\+\_\+take\+\_\+object()}{test2\_object\_take\_object()}}
+{\footnotesize\ttfamily void test2\+\_\+object\+\_\+take\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000062}{Test}]Prueba la función para coger un objeto de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto con objetos 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_ab40669b5d083b6484197d917fb6882b1}\label{object__test_8c_ab40669b5d083b6484197d917fb6882b1}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test3\+\_\+object\+\_\+set\+\_\+name@{test3\+\_\+object\+\_\+set\+\_\+name}}
+\index{test3\+\_\+object\+\_\+set\+\_\+name@{test3\+\_\+object\+\_\+set\+\_\+name}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+object\+\_\+set\+\_\+name()}{test3\_object\_set\_name()}}
+{\footnotesize\ttfamily void test3\+\_\+object\+\_\+set\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000050}{Test}]Prueba la función para establecer el nombre de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El objeto es un puntero no N\+U\+LL, pero el nombre a establecer es N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{object__test_8c_add7988c5f1529d05be42760049c5b554}\label{object__test_8c_add7988c5f1529d05be42760049c5b554}} 
+\index{object\+\_\+test.\+c@{object\+\_\+test.\+c}!test3\+\_\+object\+\_\+take\+\_\+object@{test3\+\_\+object\+\_\+take\+\_\+object}}
+\index{test3\+\_\+object\+\_\+take\+\_\+object@{test3\+\_\+object\+\_\+take\+\_\+object}!object\+\_\+test.\+c@{object\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+object\+\_\+take\+\_\+object()}{test3\_object\_take\_object()}}
+{\footnotesize\ttfamily void test3\+\_\+object\+\_\+take\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000063}{Test}]Prueba la función para coger un objeto de un objeto \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+objeto N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}

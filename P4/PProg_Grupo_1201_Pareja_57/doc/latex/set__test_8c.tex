@@ -1,0 +1,285 @@
+\hypertarget{set__test_8c}{}\section{src/set\+\_\+test.c File Reference}
+\label{set__test_8c}\index{src/set\+\_\+test.\+c@{src/set\+\_\+test.\+c}}
+
+
+Prueba del modulo set.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+Include dependency graph for set\+\_\+test.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{set__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}~14
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{set__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Funcion principal de pruebas para el modulo set. \end{DoxyCompactList}\item 
+void \hyperlink{set__test_8c_a6f654ab4b44e8a9b9cedfb78c378a5d7}{test1\+\_\+set\+\_\+create} ()
+\item 
+void \hyperlink{set__test_8c_a4bec0c0f80b12fc9cabf5ed5ac6d1235}{test1\+\_\+set\+\_\+delete\+\_\+element} ()
+\item 
+void \hyperlink{set__test_8c_ac96b1e7b6602e3e491422053a43f08f6}{test2\+\_\+set\+\_\+delete\+\_\+element} ()
+\item 
+void \hyperlink{set__test_8c_a45af0aa2cb643d2809513f320a4f9af3}{test3\+\_\+set\+\_\+delete\+\_\+element} ()
+\item 
+void \hyperlink{set__test_8c_a014ebe1b46af5ea318143fc61894d9c0}{test1\+\_\+set\+\_\+add} ()
+\item 
+void \hyperlink{set__test_8c_ab09827322a313bf97b9757c98c2bdbb0}{test2\+\_\+set\+\_\+add} ()
+\item 
+void \hyperlink{set__test_8c_a7bae6941906dd98c8d8ffb2da8a409f6}{test1\+\_\+set\+\_\+is\+\_\+full} ()
+\item 
+void \hyperlink{set__test_8c_ab1de430f3e313725897f9b0b1aba543b}{test2\+\_\+set\+\_\+is\+\_\+full} ()
+\item 
+void \hyperlink{set__test_8c_a0d1505a528700bc71c89a71c88d6b21e}{test1\+\_\+set\+\_\+is\+\_\+empty} ()
+\item 
+void \hyperlink{set__test_8c_a13000e62535d3341e070963f4f3907ec}{test2\+\_\+set\+\_\+is\+\_\+empty} ()
+\item 
+void \hyperlink{set__test_8c_a44730a3c8aea8b09c4807d5a11794069}{test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in} ()
+\item 
+void \hyperlink{set__test_8c_af068866754cc693dee41ee757c5ee4a2}{test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in} ()
+\item 
+void \hyperlink{set__test_8c_a9a82ad51eca0f4cd5faf028e23b68bb3}{test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids} ()
+\item 
+void \hyperlink{set__test_8c_aaadf761f34e98a3a6d214cc2598ee852}{test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prueba del modulo set. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, �?lvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/11-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{set__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{set__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}}
+\index{M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+E\+S\+TS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~14}
+
+T\+A\+M\+\_\+\+T\+E\+S\+TS 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{set__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{set__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!main@{main}}
+\index{main@{main}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Funcion principal de pruebas para el modulo set. 
+
+Dos modos de ejecucion\+: 1.-\/\+Si se ejecuta sin parametros se ejecutan todas las pruebas 2.-\/\+Si se ejecuta con un numero entre 1 y el numero de pruebas solo ejecuta la prueba indicada \mbox{\Hypertarget{set__test_8c_a014ebe1b46af5ea318143fc61894d9c0}\label{set__test_8c_a014ebe1b46af5ea318143fc61894d9c0}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+add@{test1\+\_\+set\+\_\+add}}
+\index{test1\+\_\+set\+\_\+add@{test1\+\_\+set\+\_\+add}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+add()}{test1\_set\_add()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000111}{Test}]Prueba la función para añadir un objeto a un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+id que establecer en el set 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a6f654ab4b44e8a9b9cedfb78c378a5d7}\label{set__test_8c_a6f654ab4b44e8a9b9cedfb78c378a5d7}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+create@{test1\+\_\+set\+\_\+create}}
+\index{test1\+\_\+set\+\_\+create@{test1\+\_\+set\+\_\+create}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+create()}{test1\_set\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000107}{Test}]Prueba la función de creación de un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+nada 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Un puntero no nulo al set creado 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a4bec0c0f80b12fc9cabf5ed5ac6d1235}\label{set__test_8c_a4bec0c0f80b12fc9cabf5ed5ac6d1235}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+delete\+\_\+element@{test1\+\_\+set\+\_\+delete\+\_\+element}}
+\index{test1\+\_\+set\+\_\+delete\+\_\+element@{test1\+\_\+set\+\_\+delete\+\_\+element}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+delete\+\_\+element()}{test1\_set\_delete\_element()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+delete\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000108}{Test}]Prueba la función para borrar un objeto de un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set con un objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a9a82ad51eca0f4cd5faf028e23b68bb3}\label{set__test_8c_a9a82ad51eca0f4cd5faf028e23b68bb3}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids@{test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids}}
+\index{test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids@{test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids()}{test1\_set\_get\_num\_ids()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+get\+\_\+num\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000119}{Test}]Prueba la función para obtener el numero de ids de un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El set tiene cero ids 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser tam=0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a0d1505a528700bc71c89a71c88d6b21e}\label{set__test_8c_a0d1505a528700bc71c89a71c88d6b21e}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+is\+\_\+empty@{test1\+\_\+set\+\_\+is\+\_\+empty}}
+\index{test1\+\_\+set\+\_\+is\+\_\+empty@{test1\+\_\+set\+\_\+is\+\_\+empty}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+is\+\_\+empty()}{test1\_set\_is\_empty()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000115}{Test}]Prueba la función para comprobar si un invetario está vacío \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser T\+R\+UE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a7bae6941906dd98c8d8ffb2da8a409f6}\label{set__test_8c_a7bae6941906dd98c8d8ffb2da8a409f6}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+is\+\_\+full@{test1\+\_\+set\+\_\+is\+\_\+full}}
+\index{test1\+\_\+set\+\_\+is\+\_\+full@{test1\+\_\+set\+\_\+is\+\_\+full}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+is\+\_\+full()}{test1\_set\_is\_full()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+is\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000113}{Test}]Prueba la función para comprobar si un invetario está lleno \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a44730a3c8aea8b09c4807d5a11794069}\label{set__test_8c_a44730a3c8aea8b09c4807d5a11794069}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in@{test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in}}
+\index{test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in@{test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in()}{test1\_set\_is\_id\_in()}}
+{\footnotesize\ttfamily void test1\+\_\+set\+\_\+is\+\_\+id\+\_\+in (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000117}{Test}]Prueba la función para saber si hay un objeto en el set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El set tiene un objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser T\+R\+UE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_ab09827322a313bf97b9757c98c2bdbb0}\label{set__test_8c_ab09827322a313bf97b9757c98c2bdbb0}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test2\+\_\+set\+\_\+add@{test2\+\_\+set\+\_\+add}}
+\index{test2\+\_\+set\+\_\+add@{test2\+\_\+set\+\_\+add}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+set\+\_\+add()}{test2\_set\_add()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000112}{Test}]Prueba la función para añadir un objeto a un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+id válido, pero set N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_ac96b1e7b6602e3e491422053a43f08f6}\label{set__test_8c_ac96b1e7b6602e3e491422053a43f08f6}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test2\+\_\+set\+\_\+delete\+\_\+element@{test2\+\_\+set\+\_\+delete\+\_\+element}}
+\index{test2\+\_\+set\+\_\+delete\+\_\+element@{test2\+\_\+set\+\_\+delete\+\_\+element}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+set\+\_\+delete\+\_\+element()}{test2\_set\_delete\_element()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+delete\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000109}{Test}]Prueba la función para borrar un objeto de un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_aaadf761f34e98a3a6d214cc2598ee852}\label{set__test_8c_aaadf761f34e98a3a6d214cc2598ee852}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids@{test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids}}
+\index{test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids@{test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids()}{test2\_set\_get\_num\_ids()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+get\+\_\+num\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000120}{Test}]Prueba la función para obtener el numero de ids de un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El set es N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser -\/1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a13000e62535d3341e070963f4f3907ec}\label{set__test_8c_a13000e62535d3341e070963f4f3907ec}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test2\+\_\+set\+\_\+is\+\_\+empty@{test2\+\_\+set\+\_\+is\+\_\+empty}}
+\index{test2\+\_\+set\+\_\+is\+\_\+empty@{test2\+\_\+set\+\_\+is\+\_\+empty}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+set\+\_\+is\+\_\+empty()}{test2\_set\_is\_empty()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000116}{Test}]Prueba la función para comprobar si un invetario está lleno \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set lleno 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_ab1de430f3e313725897f9b0b1aba543b}\label{set__test_8c_ab1de430f3e313725897f9b0b1aba543b}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test2\+\_\+set\+\_\+is\+\_\+full@{test2\+\_\+set\+\_\+is\+\_\+full}}
+\index{test2\+\_\+set\+\_\+is\+\_\+full@{test2\+\_\+set\+\_\+is\+\_\+full}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+set\+\_\+is\+\_\+full()}{test2\_set\_is\_full()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+is\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000114}{Test}]Prueba la función para comprobar si un invetario está lleno \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set lleno 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser T\+R\+UE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_af068866754cc693dee41ee757c5ee4a2}\label{set__test_8c_af068866754cc693dee41ee757c5ee4a2}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in@{test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in}}
+\index{test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in@{test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in()}{test2\_set\_is\_id\_in()}}
+{\footnotesize\ttfamily void test2\+\_\+set\+\_\+is\+\_\+id\+\_\+in (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000118}{Test}]Prueba la función para saber si hay un objeto en el set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El set es N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser F\+A\+L\+SE 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{set__test_8c_a45af0aa2cb643d2809513f320a4f9af3}\label{set__test_8c_a45af0aa2cb643d2809513f320a4f9af3}} 
+\index{set\+\_\+test.\+c@{set\+\_\+test.\+c}!test3\+\_\+set\+\_\+delete\+\_\+element@{test3\+\_\+set\+\_\+delete\+\_\+element}}
+\index{test3\+\_\+set\+\_\+delete\+\_\+element@{test3\+\_\+set\+\_\+delete\+\_\+element}!set\+\_\+test.\+c@{set\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test3\+\_\+set\+\_\+delete\+\_\+element()}{test3\_set\_delete\_element()}}
+{\footnotesize\ttfamily void test3\+\_\+set\+\_\+delete\+\_\+element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000110}{Test}]Prueba la función para borrar un objeto de un set \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+set sin objetos 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}

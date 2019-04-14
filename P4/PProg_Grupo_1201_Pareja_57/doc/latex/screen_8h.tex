@@ -1,0 +1,284 @@
+\hypertarget{screen_8h}{}\section{include/screen.h File Reference}
+\label{screen_8h}\index{include/screen.\+h@{include/screen.\+h}}
+
+
+En este fichero implementamos las funciones de screen.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{screen_8h_aab63df3ae7b979d59ea0188055ea0763}{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Area}{\+\_\+\+Area} \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{screen_8h_a9dbb6c251337c03c078dc330caee48d2}{screen\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em inicia una pantalla \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}{screen\+\_\+destroy} ()
+\begin{DoxyCompactList}\small\item\em destruye una pantalla \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}{screen\+\_\+paint} ()
+\begin{DoxyCompactList}\small\item\em imprime una pantalla \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a57b2f852be623dca59255306c1482eb2}{screen\+\_\+gets} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em obtiene una pantalla \end{DoxyCompactList}\item 
+\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$ \hyperlink{screen_8h_a194528bec3ed3b57618a8f2df9bea743}{screen\+\_\+area\+\_\+init} (int x, int y, int width, int height)
+\begin{DoxyCompactList}\small\item\em crea un Area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}{screen\+\_\+area\+\_\+destroy} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em destruye un Area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a0950dc68cba3d491b909a8abaac1c666}{screen\+\_\+area\+\_\+clear} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em vacia un Area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}{screen\+\_\+area\+\_\+reset\+\_\+cursor} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area)
+\begin{DoxyCompactList}\small\item\em resetea el cursor de un Area \end{DoxyCompactList}\item 
+void \hyperlink{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}{screen\+\_\+area\+\_\+puts} (\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$area, char $\ast$str)
+\begin{DoxyCompactList}\small\item\em modifica un Area \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones de screen. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{screen_8h_aab63df3ae7b979d59ea0188055ea0763}\label{screen_8h_aab63df3ae7b979d59ea0188055ea0763}} 
+\index{screen.\+h@{screen.\+h}!S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR@{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}}
+\index{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR@{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR}{SCREEN\_MAX\_STR}}
+{\footnotesize\ttfamily \#define S\+C\+R\+E\+E\+N\+\_\+\+M\+A\+X\+\_\+\+S\+TR~100}
+
+M\+AX S\+TR 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{screen_8h_acfdfc42f6522d75fa3c16713afde8127}\label{screen_8h_acfdfc42f6522d75fa3c16713afde8127}} 
+\index{screen.\+h@{screen.\+h}!Area@{Area}}
+\index{Area@{Area}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{Area}{Area}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Area}{\+\_\+\+Area} \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}}
+
+Estructura de Area 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{screen_8h_a0950dc68cba3d491b909a8abaac1c666}\label{screen_8h_a0950dc68cba3d491b909a8abaac1c666}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+clear@{screen\+\_\+area\+\_\+clear}}
+\index{screen\+\_\+area\+\_\+clear@{screen\+\_\+area\+\_\+clear}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+clear()}{screen\_area\_clear()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+vacia un Area 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em area} & (area a vaciar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}\label{screen_8h_aca5123ed5a7afb75e79c0001e5d1df4f}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+destroy@{screen\+\_\+area\+\_\+destroy}}
+\index{screen\+\_\+area\+\_\+destroy@{screen\+\_\+area\+\_\+destroy}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+destroy()}{screen\_area\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+destruye un Area 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em area} & (area a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a194528bec3ed3b57618a8f2df9bea743}\label{screen_8h_a194528bec3ed3b57618a8f2df9bea743}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+init@{screen\+\_\+area\+\_\+init}}
+\index{screen\+\_\+area\+\_\+init@{screen\+\_\+area\+\_\+init}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+init()}{screen\_area\_init()}}
+{\footnotesize\ttfamily \hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area}$\ast$ screen\+\_\+area\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+crea un Area 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & (coordenada x) \\
+\hline
+{\em y} & (coordenada y) \\
+\hline
+{\em width} & (ancho) \\
+\hline
+{\em height} & (altura) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Area (El area creada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}\label{screen_8h_a4f4cd4c7899c096d6c90cc33de9a9814}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+puts@{screen\+\_\+area\+\_\+puts}}
+\index{screen\+\_\+area\+\_\+puts@{screen\+\_\+area\+\_\+puts}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+puts()}{screen\_area\_puts()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+puts (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+modifica un Area 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em area} & (area a usar) \\
+\hline
+{\em str} & (cadena que se introduce) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}\label{screen_8h_af77fa9df4f7170e1e3bf1c6209b7f0c2}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+area\+\_\+reset\+\_\+cursor@{screen\+\_\+area\+\_\+reset\+\_\+cursor}}
+\index{screen\+\_\+area\+\_\+reset\+\_\+cursor@{screen\+\_\+area\+\_\+reset\+\_\+cursor}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+area\+\_\+reset\+\_\+cursor()}{screen\_area\_reset\_cursor()}}
+{\footnotesize\ttfamily void screen\+\_\+area\+\_\+reset\+\_\+cursor (\begin{DoxyParamCaption}\item[{\hyperlink{screen_8h_acfdfc42f6522d75fa3c16713afde8127}{Area} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+resetea el cursor de un Area 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em area} & (area a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}\label{screen_8h_a3d6d82dde2bb4f3ddc4d276dabe313ef}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+destroy@{screen\+\_\+destroy}}
+\index{screen\+\_\+destroy@{screen\+\_\+destroy}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+destroy()}{screen\_destroy()}}
+{\footnotesize\ttfamily void screen\+\_\+destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destruye una pantalla 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a57b2f852be623dca59255306c1482eb2}\label{screen_8h_a57b2f852be623dca59255306c1482eb2}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+gets@{screen\+\_\+gets}}
+\index{screen\+\_\+gets@{screen\+\_\+gets}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+gets()}{screen\_gets()}}
+{\footnotesize\ttfamily void screen\+\_\+gets (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+obtiene una pantalla 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em str} & (pantalla a obtener) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a9dbb6c251337c03c078dc330caee48d2}\label{screen_8h_a9dbb6c251337c03c078dc330caee48d2}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+init@{screen\+\_\+init}}
+\index{screen\+\_\+init@{screen\+\_\+init}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+init()}{screen\_init()}}
+{\footnotesize\ttfamily void screen\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+inicia una pantalla 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}\label{screen_8h_a3eaa0547a956d39b6c55c9593524e0d1}} 
+\index{screen.\+h@{screen.\+h}!screen\+\_\+paint@{screen\+\_\+paint}}
+\index{screen\+\_\+paint@{screen\+\_\+paint}!screen.\+h@{screen.\+h}}
+\subsubsection{\texorpdfstring{screen\+\_\+paint()}{screen\_paint()}}
+{\footnotesize\ttfamily void screen\+\_\+paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+imprime una pantalla 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}

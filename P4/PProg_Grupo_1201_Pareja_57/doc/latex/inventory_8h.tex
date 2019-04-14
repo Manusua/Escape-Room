@@ -1,0 +1,388 @@
+\hypertarget{inventory_8h}{}\section{include/inventory.h File Reference}
+\label{inventory_8h}\index{include/inventory.\+h@{include/inventory.\+h}}
+
+
+En este fichero implementamos las funciones del inventario.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for inventory.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct__Inventory}{\+\_\+\+Inventory} \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{inventory_8h_af7029a1a54b97f41fbd9f8437bf55ff9}{inventory\+\_\+create} (int tam)
+\begin{DoxyCompactList}\small\item\em crea un inventario \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a654cebc804053355650fc71c49e79169}{inventory\+\_\+destroy} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em destruye un inventario \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8h_a8284d16f802fe1225be5a34f0616dffd}{inventory\+\_\+is\+\_\+full} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em comprueba si el inventario esta lleno \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8h_a2e42d41ecfb69141831596f72cd7d694}{inventory\+\_\+is\+\_\+empty} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em comprueba si el inventario esta vacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{inventory_8h_a15b54a6371860e214875899f790504b1}{inventory\+\_\+is\+\_\+object\+\_\+in} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em comprueba si el objeto esta en el inventario \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a7bdb60da746304e8e80af87fb9c7ca92}{inventory\+\_\+add\+\_\+object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em añade un objeto del inventario \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a8b507ba4c2009e194c6338dd609186aa}{inventory\+\_\+delete\+\_\+object} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em quita un objeto del inventario \end{DoxyCompactList}\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{inventory_8h_a60c25937b75342b2db4c18f3c21ace5f}{inventory\+\_\+get\+\_\+set} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em devuelve los objetos del inventario \end{DoxyCompactList}\item 
+int \hyperlink{inventory_8h_ae13ea773456a53a0de513478940087a4}{inventory\+\_\+get\+\_\+size} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em devuelve el tamaño de un inventario \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_aaf549db330cb81b574a0437ee8674e95}{inventory\+\_\+set\+\_\+set} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag, \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em modifica los objetos de un inventario \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{inventory_8h_a4823fd1e3eb0d1d97d36600dafa0a78c}{inventory\+\_\+set\+\_\+size} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag, int tam)
+\begin{DoxyCompactList}\small\item\em cambia el tamaño de un inventario \end{DoxyCompactList}\item 
+void \hyperlink{inventory_8h_a04e305db993339cf15c45aad1fa50144}{inventory\+\_\+print} (\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag, F\+I\+LE $\ast$filename)
+\begin{DoxyCompactList}\small\item\em imprime un inventario \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones del inventario. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}\label{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}} 
+\index{inventory.\+h@{inventory.\+h}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{Inventory}{Inventory}}
+{\footnotesize\ttfamily typedef struct \hyperlink{struct__Inventory}{\+\_\+\+Inventory} \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}}
+
+Estructura del inventario 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inventory_8h_a7bdb60da746304e8e80af87fb9c7ca92}\label{inventory_8h_a7bdb60da746304e8e80af87fb9c7ca92}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+add\+\_\+object@{inventory\+\_\+add\+\_\+object}}
+\index{inventory\+\_\+add\+\_\+object@{inventory\+\_\+add\+\_\+object}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+add\+\_\+object()}{inventory\_add\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+add\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+añade un objeto del inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a modificar) \\
+\hline
+{\em id} & (Id del objeto) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_af7029a1a54b97f41fbd9f8437bf55ff9}\label{inventory_8h_af7029a1a54b97f41fbd9f8437bf55ff9}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+create@{inventory\+\_\+create}}
+\index{inventory\+\_\+create@{inventory\+\_\+create}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+create()}{inventory\_create()}}
+{\footnotesize\ttfamily \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory}$\ast$ inventory\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{tam }\end{DoxyParamCaption})}
+
+
+
+crea un inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tam} & (tamaño del inventario) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+inventory (El inventario que crea)
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em tam} & (tamaño del inventario) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+inventory$\ast$ (El inventario que crea) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a8b507ba4c2009e194c6338dd609186aa}\label{inventory_8h_a8b507ba4c2009e194c6338dd609186aa}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+delete\+\_\+object@{inventory\+\_\+delete\+\_\+object}}
+\index{inventory\+\_\+delete\+\_\+object@{inventory\+\_\+delete\+\_\+object}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+delete\+\_\+object()}{inventory\_delete\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+delete\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+quita un objeto del inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a modificar) \\
+\hline
+{\em id} & (Id del objeto) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a654cebc804053355650fc71c49e79169}\label{inventory_8h_a654cebc804053355650fc71c49e79169}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+destroy@{inventory\+\_\+destroy}}
+\index{inventory\+\_\+destroy@{inventory\+\_\+destroy}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+destroy()}{inventory\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+destruye un inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a60c25937b75342b2db4c18f3c21ace5f}\label{inventory_8h_a60c25937b75342b2db4c18f3c21ace5f}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+set@{inventory\+\_\+get\+\_\+set}}
+\index{inventory\+\_\+get\+\_\+set@{inventory\+\_\+get\+\_\+set}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+get\+\_\+set()}{inventory\_get\_set()}}
+{\footnotesize\ttfamily \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}$\ast$ inventory\+\_\+get\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+devuelve los objetos del inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set (Objetos del inventario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_ae13ea773456a53a0de513478940087a4}\label{inventory_8h_ae13ea773456a53a0de513478940087a4}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+get\+\_\+size@{inventory\+\_\+get\+\_\+size}}
+\index{inventory\+\_\+get\+\_\+size@{inventory\+\_\+get\+\_\+size}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+get\+\_\+size()}{inventory\_get\_size()}}
+{\footnotesize\ttfamily int inventory\+\_\+get\+\_\+size (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+devuelve el tamaño de un inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (Tamaño del inventario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a2e42d41ecfb69141831596f72cd7d694}\label{inventory_8h_a2e42d41ecfb69141831596f72cd7d694}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+is\+\_\+empty@{inventory\+\_\+is\+\_\+empty}}
+\index{inventory\+\_\+is\+\_\+empty@{inventory\+\_\+is\+\_\+empty}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+is\+\_\+empty()}{inventory\_is\_empty()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} inventory\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+comprueba si el inventario esta vacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE si esta vacio o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a8284d16f802fe1225be5a34f0616dffd}\label{inventory_8h_a8284d16f802fe1225be5a34f0616dffd}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+is\+\_\+full@{inventory\+\_\+is\+\_\+full}}
+\index{inventory\+\_\+is\+\_\+full@{inventory\+\_\+is\+\_\+full}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+is\+\_\+full()}{inventory\_is\_full()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} inventory\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+comprueba si el inventario esta lleno 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE si esta lleno o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a15b54a6371860e214875899f790504b1}\label{inventory_8h_a15b54a6371860e214875899f790504b1}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+is\+\_\+object\+\_\+in@{inventory\+\_\+is\+\_\+object\+\_\+in}}
+\index{inventory\+\_\+is\+\_\+object\+\_\+in@{inventory\+\_\+is\+\_\+object\+\_\+in}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+is\+\_\+object\+\_\+in()}{inventory\_is\_object\_in()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} inventory\+\_\+is\+\_\+object\+\_\+in (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+comprueba si el objeto esta en el inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a usar) \\
+\hline
+{\em id} & (Id del objeto) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE si esta en el inventario o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a04e305db993339cf15c45aad1fa50144}\label{inventory_8h_a04e305db993339cf15c45aad1fa50144}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+print@{inventory\+\_\+print}}
+\index{inventory\+\_\+print@{inventory\+\_\+print}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+print()}{inventory\_print()}}
+{\footnotesize\ttfamily void inventory\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag,  }\item[{F\+I\+LE $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+imprime un inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a imprimir) \\
+\hline
+{\em filename} & (Donde se imprime) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_aaf549db330cb81b574a0437ee8674e95}\label{inventory_8h_aaf549db330cb81b574a0437ee8674e95}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+set\+\_\+set@{inventory\+\_\+set\+\_\+set}}
+\index{inventory\+\_\+set\+\_\+set@{inventory\+\_\+set\+\_\+set}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+set\+\_\+set()}{inventory\_set\_set()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+set\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag,  }\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+modifica los objetos de un inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario a modificar) \\
+\hline
+{\em set} & (Objetos nuevos del inventario) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inventory_8h_a4823fd1e3eb0d1d97d36600dafa0a78c}\label{inventory_8h_a4823fd1e3eb0d1d97d36600dafa0a78c}} 
+\index{inventory.\+h@{inventory.\+h}!inventory\+\_\+set\+\_\+size@{inventory\+\_\+set\+\_\+size}}
+\index{inventory\+\_\+set\+\_\+size@{inventory\+\_\+set\+\_\+size}!inventory.\+h@{inventory.\+h}}
+\subsubsection{\texorpdfstring{inventory\+\_\+set\+\_\+size()}{inventory\_set\_size()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} inventory\+\_\+set\+\_\+size (\begin{DoxyParamCaption}\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag,  }\item[{int}]{tam }\end{DoxyParamCaption})}
+
+
+
+cambia el tamaño de un inventario 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em bag} & (inventario que se va a cambiar) \\
+\hline
+{\em tam} & (tamaño nuevo del inventario) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}

@@ -1,0 +1,209 @@
+\hypertarget{command_8c}{}\section{src/command.c File Reference}
+\label{command_8c}\index{src/command.\+c@{src/command.\+c}}
+
+
+En este fichero definimos las funciones para los comandos.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+Include dependency graph for command.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Command}{\+\_\+\+Command}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{command_8c_a2b1bd24d2eddf8081d8c541e4cc4fd4b}{C\+M\+D\+\_\+\+L\+E\+N\+G\+HT}~30
+\item 
+\#define \hyperlink{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}~17
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{command_8c_a4175023cc724e0bec46240f2f271924a}{command\+\_\+get\+\_\+user\+\_\+input} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em lee el comando del teclado y si es valido lo ejecuta \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$ \hyperlink{command_8c_a3e1d59fed8f0eb039c403543477d2ce0}{command\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em crea un comando definiendo sus campos como U\+N\+K\+N\+O\+WN \end{DoxyCompactList}\item 
+void \hyperlink{command_8c_a2db1d7a9ea8d5d23e5a9a1de458efae9}{command\+\_\+destroy} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em destruye el comando y libera la memoria \end{DoxyCompactList}\item 
+\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} \hyperlink{command_8c_a3b5b1f579fe73e99b16b2310e59bdf21}{command\+\_\+get\+\_\+command} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em devuelve el simbolo del comando que se le pasa \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{command_8c_a087679436e7ea3b82c614f8824a96268}{command\+\_\+get\+\_\+name} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command)
+\begin{DoxyCompactList}\small\item\em devuelve el nombre del comando que se le pasa \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{command_8c_aa491d83d4e2f55a3074e418318a8d0fe}{cmd\+\_\+to\+\_\+str} \mbox{[}\hyperlink{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}\mbox{]} = \{\char`\"{}No command\char`\"{}, \char`\"{}Unknown\char`\"{}, \char`\"{}Quit\char`\"{}, \char`\"{}Go\char`\"{}, \char`\"{}Take\char`\"{}, \char`\"{}Leave\char`\"{}, \char`\"{}Roll\char`\"{}, \char`\"{}Inspect\char`\"{}, \char`\"{}Following\char`\"{}, \char`\"{}Previous\char`\"{}, \char`\"{}Goose\+\_\+\+Following\char`\"{}, \char`\"{}Goose\+\_\+\+Previous\char`\"{}, \char`\"{}Turnon\char`\"{}, \char`\"{}Turnoff\char`\"{}, \char`\"{}Open\char`\"{}, \char`\"{}Save\char`\"{}, \char`\"{}Load\char`\"{}\}
+\item 
+char $\ast$ \hyperlink{command_8c_a6397d54c2691d7e8ffe9a8da5db5df58}{short\+\_\+cmd\+\_\+to\+\_\+str} \mbox{[}\hyperlink{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}\mbox{]} = \{\char`\"{}\char`\"{}, \char`\"{}\char`\"{}, \char`\"{}q\char`\"{}, \char`\"{}g\char`\"{}, \char`\"{}t\char`\"{}, \char`\"{}l\char`\"{}, \char`\"{}r\char`\"{}, \char`\"{}i\char`\"{}, \char`\"{}f\char`\"{}, \char`\"{}p\char`\"{}, \char`\"{}o\char`\"{}, \char`\"{}a\char`\"{}, \char`\"{}e\char`\"{}, \char`\"{}c\char`\"{}, \char`\"{}h\char`\"{}, \char`\"{}s\char`\"{}, \char`\"{}d\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero definimos las funciones para los comandos. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+7/10/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{command_8c_a2b1bd24d2eddf8081d8c541e4cc4fd4b}\label{command_8c_a2b1bd24d2eddf8081d8c541e4cc4fd4b}} 
+\index{command.\+c@{command.\+c}!C\+M\+D\+\_\+\+L\+E\+N\+G\+HT@{C\+M\+D\+\_\+\+L\+E\+N\+G\+HT}}
+\index{C\+M\+D\+\_\+\+L\+E\+N\+G\+HT@{C\+M\+D\+\_\+\+L\+E\+N\+G\+HT}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{C\+M\+D\+\_\+\+L\+E\+N\+G\+HT}{CMD\_LENGHT}}
+{\footnotesize\ttfamily \#define C\+M\+D\+\_\+\+L\+E\+N\+G\+HT~30}
+
+longitud maxima del comando \mbox{\Hypertarget{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}\label{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}} 
+\index{command.\+c@{command.\+c}!N\+\_\+\+C\+MD@{N\+\_\+\+C\+MD}}
+\index{N\+\_\+\+C\+MD@{N\+\_\+\+C\+MD}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{N\+\_\+\+C\+MD}{N\_CMD}}
+{\footnotesize\ttfamily \#define N\+\_\+\+C\+MD~17}
+
+Tamaño de la cadena 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{command_8c_a3e1d59fed8f0eb039c403543477d2ce0}\label{command_8c_a3e1d59fed8f0eb039c403543477d2ce0}} 
+\index{command.\+c@{command.\+c}!command\+\_\+create@{command\+\_\+create}}
+\index{command\+\_\+create@{command\+\_\+create}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+create()}{command\_create()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command}$\ast$ command\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+crea un comando definiendo sus campos como U\+N\+K\+N\+O\+WN 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+command$\ast$ (el comando creado) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a2db1d7a9ea8d5d23e5a9a1de458efae9}\label{command_8c_a2db1d7a9ea8d5d23e5a9a1de458efae9}} 
+\index{command.\+c@{command.\+c}!command\+\_\+destroy@{command\+\_\+destroy}}
+\index{command\+\_\+destroy@{command\+\_\+destroy}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+destroy()}{command\_destroy()}}
+{\footnotesize\ttfamily void command\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+destruye el comando y libera la memoria 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em command$\ast$} & (el comando que recibe) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a3b5b1f579fe73e99b16b2310e59bdf21}\label{command_8c_a3b5b1f579fe73e99b16b2310e59bdf21}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+command@{command\+\_\+get\+\_\+command}}
+\index{command\+\_\+get\+\_\+command@{command\+\_\+get\+\_\+command}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+command()}{command\_get\_command()}}
+{\footnotesize\ttfamily \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} command\+\_\+get\+\_\+command (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+devuelve el simbolo del comando que se le pasa 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em command$\ast$} & (el comando que recibe) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+\_\+\+Command (El simbolo del commando) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a087679436e7ea3b82c614f8824a96268}\label{command_8c_a087679436e7ea3b82c614f8824a96268}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+name@{command\+\_\+get\+\_\+name}}
+\index{command\+\_\+get\+\_\+name@{command\+\_\+get\+\_\+name}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+name()}{command\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ command\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+devuelve el nombre del comando que se le pasa 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em command$\ast$} & (el comando que recibe) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ (El nombre del commando) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{command_8c_a4175023cc724e0bec46240f2f271924a}\label{command_8c_a4175023cc724e0bec46240f2f271924a}} 
+\index{command.\+c@{command.\+c}!command\+\_\+get\+\_\+user\+\_\+input@{command\+\_\+get\+\_\+user\+\_\+input}}
+\index{command\+\_\+get\+\_\+user\+\_\+input@{command\+\_\+get\+\_\+user\+\_\+input}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{command\+\_\+get\+\_\+user\+\_\+input()}{command\_get\_user\_input()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} command\+\_\+get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{command }\end{DoxyParamCaption})}
+
+
+
+lee el comando del teclado y si es valido lo ejecuta 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em command$\ast$} & (el comando que recibe) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si funciona correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{command_8c_aa491d83d4e2f55a3074e418318a8d0fe}\label{command_8c_aa491d83d4e2f55a3074e418318a8d0fe}} 
+\index{command.\+c@{command.\+c}!cmd\+\_\+to\+\_\+str@{cmd\+\_\+to\+\_\+str}}
+\index{cmd\+\_\+to\+\_\+str@{cmd\+\_\+to\+\_\+str}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{cmd\+\_\+to\+\_\+str}{cmd\_to\_str}}
+{\footnotesize\ttfamily char$\ast$ cmd\+\_\+to\+\_\+str\mbox{[}\hyperlink{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}\mbox{]} = \{\char`\"{}No command\char`\"{}, \char`\"{}Unknown\char`\"{}, \char`\"{}Quit\char`\"{}, \char`\"{}Go\char`\"{}, \char`\"{}Take\char`\"{}, \char`\"{}Leave\char`\"{}, \char`\"{}Roll\char`\"{}, \char`\"{}Inspect\char`\"{}, \char`\"{}Following\char`\"{}, \char`\"{}Previous\char`\"{}, \char`\"{}Goose\+\_\+\+Following\char`\"{}, \char`\"{}Goose\+\_\+\+Previous\char`\"{}, \char`\"{}Turnon\char`\"{}, \char`\"{}Turnoff\char`\"{}, \char`\"{}Open\char`\"{}, \char`\"{}Save\char`\"{}, \char`\"{}Load\char`\"{}\}}
+
+Lista de commandos largos \mbox{\Hypertarget{command_8c_a6397d54c2691d7e8ffe9a8da5db5df58}\label{command_8c_a6397d54c2691d7e8ffe9a8da5db5df58}} 
+\index{command.\+c@{command.\+c}!short\+\_\+cmd\+\_\+to\+\_\+str@{short\+\_\+cmd\+\_\+to\+\_\+str}}
+\index{short\+\_\+cmd\+\_\+to\+\_\+str@{short\+\_\+cmd\+\_\+to\+\_\+str}!command.\+c@{command.\+c}}
+\subsubsection{\texorpdfstring{short\+\_\+cmd\+\_\+to\+\_\+str}{short\_cmd\_to\_str}}
+{\footnotesize\ttfamily char$\ast$ short\+\_\+cmd\+\_\+to\+\_\+str\mbox{[}\hyperlink{command_8c_ae180fe89f0ae48ce5c80ffaa18de9271}{N\+\_\+\+C\+MD}\mbox{]} = \{\char`\"{}\char`\"{}, \char`\"{}\char`\"{}, \char`\"{}q\char`\"{}, \char`\"{}g\char`\"{}, \char`\"{}t\char`\"{}, \char`\"{}l\char`\"{}, \char`\"{}r\char`\"{}, \char`\"{}i\char`\"{}, \char`\"{}f\char`\"{}, \char`\"{}p\char`\"{}, \char`\"{}o\char`\"{}, \char`\"{}a\char`\"{}, \char`\"{}e\char`\"{}, \char`\"{}c\char`\"{}, \char`\"{}h\char`\"{}, \char`\"{}s\char`\"{}, \char`\"{}d\char`\"{}\}}
+
+Lista de commandos cortos 

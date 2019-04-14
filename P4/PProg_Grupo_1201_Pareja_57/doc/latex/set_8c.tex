@@ -1,0 +1,275 @@
+\hypertarget{set_8c}{}\section{src/set.c File Reference}
+\label{set_8c}\index{src/set.\+c@{src/set.\+c}}
+
+
+En este fichero implementamos las funciones de set.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}set.\+h\char`\"{}}\newline
+Include dependency graph for set.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Set}{\+\_\+\+Set}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$ \hyperlink{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}{set\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em crea un Set \end{DoxyCompactList}\item 
+void \hyperlink{set_8c_a9d762a027f1c3bcdd22f70ee9093a7dd}{set\+\_\+destroy} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em destruye y libera la memoria de un Set \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a214235069ee276ad9bceb2c66e56bfe1}{set\+\_\+add} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em añade un objeto a un Set \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{set_8c_a77f2edaabd819df68af4e1658cff9cfb}{set\+\_\+delete\+\_\+element} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em borra un objeto de un Set \end{DoxyCompactList}\item 
+int \hyperlink{set_8c_afaa9d55d67526584aba2e0688ca189b3}{set\+\_\+get\+\_\+num\+\_\+ids} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em devuelve el numero de objetos \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{set_8c_aac8585498aa55f445a6512bb8a2dfbf9}{set\+\_\+is\+\_\+id\+\_\+in} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em comprueba si un objeto esta dentro de un set \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{set_8c_a57c0701d4c0160d762c7a233603020e7}{set\+\_\+is\+\_\+empty} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em comprueba si un set esta vacio \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{set_8c_aed6909525ac4a1e1dd0fee8afba53a37}{set\+\_\+is\+\_\+full} (\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em comprueba si un set esta lleno \end{DoxyCompactList}\item 
+int \hyperlink{set_8c_acf28fd9289aabc528424ca9a865d5ed2}{set\+\_\+print} (F\+I\+LE $\ast$f, \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$set)
+\begin{DoxyCompactList}\small\item\em imprime un set \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones de set. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{set_8c_a214235069ee276ad9bceb2c66e56bfe1}\label{set_8c_a214235069ee276ad9bceb2c66e56bfe1}} 
+\index{set.\+c@{set.\+c}!set\+\_\+add@{set\+\_\+add}}
+\index{set\+\_\+add@{set\+\_\+add}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+add()}{set\_add()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+add (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+añade un objeto a un Set 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a usar) \\
+\hline
+{\em id} & (El id del objeto que se añade al set) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}\label{set_8c_abcc73b7ad3913fc92dd95d366c9c8687}} 
+\index{set.\+c@{set.\+c}!set\+\_\+create@{set\+\_\+create}}
+\index{set\+\_\+create@{set\+\_\+create}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+create()}{set\_create()}}
+{\footnotesize\ttfamily \hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set}$\ast$ set\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+crea un Set 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+Set (El set que crea) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a77f2edaabd819df68af4e1658cff9cfb}\label{set_8c_a77f2edaabd819df68af4e1658cff9cfb}} 
+\index{set.\+c@{set.\+c}!set\+\_\+delete\+\_\+element@{set\+\_\+delete\+\_\+element}}
+\index{set\+\_\+delete\+\_\+element@{set\+\_\+delete\+\_\+element}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+delete\+\_\+element()}{set\_delete\_element()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} set\+\_\+delete\+\_\+element (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+borra un objeto de un Set 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a usar) \\
+\hline
+{\em id} & (El id del objeto que se borra del set) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a9d762a027f1c3bcdd22f70ee9093a7dd}\label{set_8c_a9d762a027f1c3bcdd22f70ee9093a7dd}} 
+\index{set.\+c@{set.\+c}!set\+\_\+destroy@{set\+\_\+destroy}}
+\index{set\+\_\+destroy@{set\+\_\+destroy}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+destroy()}{set\_destroy()}}
+{\footnotesize\ttfamily void set\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+destruye y libera la memoria de un Set 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_afaa9d55d67526584aba2e0688ca189b3}\label{set_8c_afaa9d55d67526584aba2e0688ca189b3}} 
+\index{set.\+c@{set.\+c}!set\+\_\+get\+\_\+num\+\_\+ids@{set\+\_\+get\+\_\+num\+\_\+ids}}
+\index{set\+\_\+get\+\_\+num\+\_\+ids@{set\+\_\+get\+\_\+num\+\_\+ids}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+get\+\_\+num\+\_\+ids()}{set\_get\_num\_ids()}}
+{\footnotesize\ttfamily int set\+\_\+get\+\_\+num\+\_\+ids (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+devuelve el numero de objetos 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (el numero de objetos) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_a57c0701d4c0160d762c7a233603020e7}\label{set_8c_a57c0701d4c0160d762c7a233603020e7}} 
+\index{set.\+c@{set.\+c}!set\+\_\+is\+\_\+empty@{set\+\_\+is\+\_\+empty}}
+\index{set\+\_\+is\+\_\+empty@{set\+\_\+is\+\_\+empty}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+is\+\_\+empty()}{set\_is\_empty()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} set\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+comprueba si un set esta vacio 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+Ol (T\+R\+UE si el set esta vacio o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_aed6909525ac4a1e1dd0fee8afba53a37}\label{set_8c_aed6909525ac4a1e1dd0fee8afba53a37}} 
+\index{set.\+c@{set.\+c}!set\+\_\+is\+\_\+full@{set\+\_\+is\+\_\+full}}
+\index{set\+\_\+is\+\_\+full@{set\+\_\+is\+\_\+full}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+is\+\_\+full()}{set\_is\_full()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} set\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+comprueba si un set esta lleno 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+Ol (T\+R\+UE si el set esta lleno o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_aac8585498aa55f445a6512bb8a2dfbf9}\label{set_8c_aac8585498aa55f445a6512bb8a2dfbf9}} 
+\index{set.\+c@{set.\+c}!set\+\_\+is\+\_\+id\+\_\+in@{set\+\_\+is\+\_\+id\+\_\+in}}
+\index{set\+\_\+is\+\_\+id\+\_\+in@{set\+\_\+is\+\_\+id\+\_\+in}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+is\+\_\+id\+\_\+in()}{set\_is\_id\_in()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} set\+\_\+is\+\_\+id\+\_\+in (\begin{DoxyParamCaption}\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+comprueba si un objeto esta dentro de un set 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em set} & (El set a usar) \\
+\hline
+{\em id} & (El id del objeto que se comprueba) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+Ol (T\+R\+UE si el objeto esta dentro del set o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{set_8c_acf28fd9289aabc528424ca9a865d5ed2}\label{set_8c_acf28fd9289aabc528424ca9a865d5ed2}} 
+\index{set.\+c@{set.\+c}!set\+\_\+print@{set\+\_\+print}}
+\index{set\+\_\+print@{set\+\_\+print}!set.\+c@{set.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+print()}{set\_print()}}
+{\footnotesize\ttfamily int set\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\hyperlink{set_8h_a6d3b7f7c92cbb4577ef3ef7ddbf93161}{Set} $\ast$}]{set }\end{DoxyParamCaption})}
+
+
+
+imprime un set 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & (donde se va a imprimir) \\
+\hline
+{\em set} & (El set a imprimir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (-\/1 si hay algun error) 
+\end{DoxyReturn}

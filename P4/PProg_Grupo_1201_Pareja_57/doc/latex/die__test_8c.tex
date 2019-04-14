@@ -1,0 +1,205 @@
+\hypertarget{die__test_8c}{}\section{src/die\+\_\+test.c File Reference}
+\label{die__test_8c}\index{src/die\+\_\+test.\+c@{src/die\+\_\+test.\+c}}
+
+
+Prueba del modulo die.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}die.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}die\+\_\+test.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test.\+h\char`\"{}}\newline
+Include dependency graph for die\+\_\+test.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{die__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}{M\+A\+X\+\_\+\+T\+E\+S\+TS}~9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{die__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Funcion principal de pruebas para el modulo die. \end{DoxyCompactList}\item 
+void \hyperlink{die__test_8c_ac0b610468bd3d3b358051c966b771431}{test1\+\_\+die\+\_\+create} ()
+\item 
+void \hyperlink{die__test_8c_a35fcde570292ad4ff9a876b5e2a2d3f3}{test1\+\_\+die\+\_\+set\+\_\+id} ()
+\item 
+void \hyperlink{die__test_8c_a7d829d0cae947aad0bc21ded843bd9ab}{test2\+\_\+die\+\_\+set\+\_\+id} ()
+\item 
+void \hyperlink{die__test_8c_ad27d80a80c4b4fa108337135d5633c90}{test1\+\_\+die\+\_\+get\+\_\+id} ()
+\item 
+void \hyperlink{die__test_8c_a9c76572bbb86ca9138b99a010e6a184a}{test2\+\_\+die\+\_\+get\+\_\+id} ()
+\item 
+void \hyperlink{die__test_8c_ac005cb42fa33b38a79896934a5a50001}{test1\+\_\+die\+\_\+roll} ()
+\item 
+void \hyperlink{die__test_8c_af7df60d905acf9505f1e434c6f75d027}{test2\+\_\+die\+\_\+roll} ()
+\item 
+void \hyperlink{die__test_8c_a99e873ecce6a19186919e991876dadbe}{test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll} ()
+\item 
+void \hyperlink{die__test_8c_a0832aa306964705770b2f1240763d962}{test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prueba del modulo die. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, �?lvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/11-\/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{die__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}\label{die__test_8c_a2a77d2f2c5b698c69c19e1f8782bf709}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}}
+\index{M\+A\+X\+\_\+\+T\+E\+S\+TS@{M\+A\+X\+\_\+\+T\+E\+S\+TS}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+T\+E\+S\+TS}{MAX\_TESTS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+E\+S\+TS~9}
+
+M\+A\+X\+\_\+\+T\+E\+S\+TS 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{die__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{die__test_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!main@{main}}
+\index{main@{main}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Funcion principal de pruebas para el modulo die. 
+
+Dos modos de ejecucion\+: 1.-\/\+Si se ejecuta sin parametros se ejecutan todas las pruebas 2.-\/\+Si se ejecuta con un numero entre 1 y el numero de pruebas solo ejecuta la prueba indicada \mbox{\Hypertarget{die__test_8c_ac0b610468bd3d3b358051c966b771431}\label{die__test_8c_ac0b610468bd3d3b358051c966b771431}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test1\+\_\+die\+\_\+create@{test1\+\_\+die\+\_\+create}}
+\index{test1\+\_\+die\+\_\+create@{test1\+\_\+die\+\_\+create}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+die\+\_\+create()}{test1\_die\_create()}}
+{\footnotesize\ttfamily void test1\+\_\+die\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000001}{Test}]Prueba la función de creación de un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+nada 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Un puntero no nulo al dado creado 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_ad27d80a80c4b4fa108337135d5633c90}\label{die__test_8c_ad27d80a80c4b4fa108337135d5633c90}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test1\+\_\+die\+\_\+get\+\_\+id@{test1\+\_\+die\+\_\+get\+\_\+id}}
+\index{test1\+\_\+die\+\_\+get\+\_\+id@{test1\+\_\+die\+\_\+get\+\_\+id}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+die\+\_\+get\+\_\+id()}{test1\_die\_get\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+die\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000004}{Test}]Prueba la función para obtener el id de un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El dado tiene id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser id=1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_a99e873ecce6a19186919e991876dadbe}\label{die__test_8c_a99e873ecce6a19186919e991876dadbe}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll@{test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll}}
+\index{test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll@{test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll()}{test1\_die\_get\_last\_roll()}}
+{\footnotesize\ttfamily void test1\+\_\+die\+\_\+get\+\_\+last\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000008}{Test}]Prueba la función para obtener la tirada de un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+dado no N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser $>$0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_ac005cb42fa33b38a79896934a5a50001}\label{die__test_8c_ac005cb42fa33b38a79896934a5a50001}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test1\+\_\+die\+\_\+roll@{test1\+\_\+die\+\_\+roll}}
+\index{test1\+\_\+die\+\_\+roll@{test1\+\_\+die\+\_\+roll}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+die\+\_\+roll()}{test1\_die\_roll()}}
+{\footnotesize\ttfamily void test1\+\_\+die\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000006}{Test}]Prueba la función para tirar un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+dado no N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser $>$0 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_a35fcde570292ad4ff9a876b5e2a2d3f3}\label{die__test_8c_a35fcde570292ad4ff9a876b5e2a2d3f3}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test1\+\_\+die\+\_\+set\+\_\+id@{test1\+\_\+die\+\_\+set\+\_\+id}}
+\index{test1\+\_\+die\+\_\+set\+\_\+id@{test1\+\_\+die\+\_\+set\+\_\+id}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test1\+\_\+die\+\_\+set\+\_\+id()}{test1\_die\_set\_id()}}
+{\footnotesize\ttfamily void test1\+\_\+die\+\_\+set\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000002}{Test}]Prueba la función para establecer un id en el dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+dado no N\+U\+LL e id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser OK 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_a9c76572bbb86ca9138b99a010e6a184a}\label{die__test_8c_a9c76572bbb86ca9138b99a010e6a184a}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test2\+\_\+die\+\_\+get\+\_\+id@{test2\+\_\+die\+\_\+get\+\_\+id}}
+\index{test2\+\_\+die\+\_\+get\+\_\+id@{test2\+\_\+die\+\_\+get\+\_\+id}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+die\+\_\+get\+\_\+id()}{test2\_die\_get\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+die\+\_\+get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000005}{Test}]Prueba la función para obtener el id de un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El dado es N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser -\/1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_a0832aa306964705770b2f1240763d962}\label{die__test_8c_a0832aa306964705770b2f1240763d962}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll@{test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll}}
+\index{test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll@{test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll()}{test2\_die\_get\_last\_roll()}}
+{\footnotesize\ttfamily void test2\+\_\+die\+\_\+get\+\_\+last\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000009}{Test}]Prueba la función para obtener la tirada de un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El dado es N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser -\/1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_af7df60d905acf9505f1e434c6f75d027}\label{die__test_8c_af7df60d905acf9505f1e434c6f75d027}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test2\+\_\+die\+\_\+roll@{test2\+\_\+die\+\_\+roll}}
+\index{test2\+\_\+die\+\_\+roll@{test2\+\_\+die\+\_\+roll}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+die\+\_\+roll()}{test2\_die\_roll()}}
+{\footnotesize\ttfamily void test2\+\_\+die\+\_\+roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000007}{Test}]Prueba la función para tirar un dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+El dado es N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser -\/1 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{die__test_8c_a7d829d0cae947aad0bc21ded843bd9ab}\label{die__test_8c_a7d829d0cae947aad0bc21ded843bd9ab}} 
+\index{die\+\_\+test.\+c@{die\+\_\+test.\+c}!test2\+\_\+die\+\_\+set\+\_\+id@{test2\+\_\+die\+\_\+set\+\_\+id}}
+\index{test2\+\_\+die\+\_\+set\+\_\+id@{test2\+\_\+die\+\_\+set\+\_\+id}!die\+\_\+test.\+c@{die\+\_\+test.\+c}}
+\subsubsection{\texorpdfstring{test2\+\_\+die\+\_\+set\+\_\+id()}{test2\_die\_set\_id()}}
+{\footnotesize\ttfamily void test2\+\_\+die\+\_\+set\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Test}
+\item[\hyperlink{test__test000003}{Test}]Prueba la función para establecer un id en el dado \end{DoxyRefDesc}
+\begin{DoxyPrecond}{Precondition}
+dado N\+U\+LL 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La salida debe ser E\+R\+R\+OR 
+\end{DoxyPostcond}

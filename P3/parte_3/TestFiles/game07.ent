@@ -1,0 +1,26 @@
+take obj20
+go north
+take obj21
+go north
+take obj22
+go north
+take obj23
+go north
+take obj24
+go north
+take obj25
+go north
+take obj26
+go north
+take obj27
+go north
+take obj28
+go north
+take obj29
+leave obj20
+go south
+go north
+take obj29
+leave obj29
+take obj20
+quit

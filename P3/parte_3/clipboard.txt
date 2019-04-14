@@ -1,0 +1,1 @@
+	if (all || test == 28) test1_space_leave_object();

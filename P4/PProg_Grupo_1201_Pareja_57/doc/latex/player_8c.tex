@@ -1,0 +1,500 @@
+\hypertarget{player_8c}{}\section{src/player.c File Reference}
+\label{player_8c}\index{src/player.\+c@{src/player.\+c}}
+
+
+En este fichero implementamos las funciones del jugador.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+Include dependency graph for player.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Player}{\+\_\+\+Player}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$ \hyperlink{player_8c_a5e6b11365804f0ccebd2fac6d410369e}{player\+\_\+create} (int max\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em crea un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}{player\+\_\+destroy} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em destruye un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_a6a30809f7775f5c2d3bef47d92769e59}{player\+\_\+set\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, char $\ast$name)
+\begin{DoxyCompactList}\small\item\em cambia el nombre de un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_a511658c8ff616308825ae86d4bae2dd2}{player\+\_\+set\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em cambia el Id de un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_acea7143b0c9933e4c6f2fe699526e6f9}{player\+\_\+set\+\_\+inventory} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$bag)
+\begin{DoxyCompactList}\small\item\em cambia el inventario de un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_a280029f648f6d52747c95d81621b12d4}{player\+\_\+set\+\_\+space\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} space\+\_\+id)
+\begin{DoxyCompactList}\small\item\em cambia el Id de la posicion de un jugador \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{player_8c_a260d3419c458edcdb3d2b5e9d4a867e8}{player\+\_\+get\+\_\+name} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em devuelve el nombre de un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8c_af5a101ec91427951c5875569a8709956}{player\+\_\+get\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em devuelve el Id de un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{player_8c_acb8bca0eada9e103693473a53dcf7569}{player\+\_\+get\+\_\+space\+\_\+id} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em devuelve el Id de la posicion de un jugador \end{DoxyCompactList}\item 
+\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ \hyperlink{player_8c_a52652cc07dddb46f4632bfa728f1d38d}{player\+\_\+get\+\_\+inventory} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em devuelve el inventario de un jugador \end{DoxyCompactList}\item 
+int \hyperlink{player_8c_a9baf828f32452687598aa9573d94b9f3}{player\+\_\+get\+\_\+inventory\+\_\+size} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em devuelve el tamaño inventario de un jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_a433ca0333cf23c1e213e3b4ffe654654}{player\+\_\+drop\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em suelta un objeto que tiene el jugador \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{player_8c_a672d857a4a76b51c19f8b916175c92da}{player\+\_\+pick\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em el jugador coge un objeto \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{player_8c_ad5a08e5ca32270d87cf1494099a1cb25}{player\+\_\+has\+\_\+object} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em comprueba si un jugador tiene un objeto \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{player_8c_a843c6afd4ecaafd61e85ab5f866be7e1}{player\+\_\+bag\+\_\+is\+\_\+full} (\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em el jugador tiene el inventario lleno \end{DoxyCompactList}\item 
+int \hyperlink{player_8c_a8d1daf5ac3f9445145d4ec45e70f5940}{player\+\_\+print} (F\+I\+LE $\ast$f, \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em imprime el jugador \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones del jugador. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{player_8c_a843c6afd4ecaafd61e85ab5f866be7e1}\label{player_8c_a843c6afd4ecaafd61e85ab5f866be7e1}} 
+\index{player.\+c@{player.\+c}!player\+\_\+bag\+\_\+is\+\_\+full@{player\+\_\+bag\+\_\+is\+\_\+full}}
+\index{player\+\_\+bag\+\_\+is\+\_\+full@{player\+\_\+bag\+\_\+is\+\_\+full}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+bag\+\_\+is\+\_\+full()}{player\_bag\_is\_full()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} player\+\_\+bag\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+el jugador tiene el inventario lleno 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE si el jugador tiene el inventario lleno o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a5e6b11365804f0ccebd2fac6d410369e}\label{player_8c_a5e6b11365804f0ccebd2fac6d410369e}} 
+\index{player.\+c@{player.\+c}!player\+\_\+create@{player\+\_\+create}}
+\index{player\+\_\+create@{player\+\_\+create}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+create()}{player\_create()}}
+{\footnotesize\ttfamily \hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player}$\ast$ player\+\_\+create (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+obj }\end{DoxyParamCaption})}
+
+
+
+crea un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/201 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+obj} & (numero maximo de objetos de un jugador) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Player$\ast$ (El jugador que crea) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}\label{player_8c_a68e324aa5064e27d0a2f38aafb6809ad}} 
+\index{player.\+c@{player.\+c}!player\+\_\+destroy@{player\+\_\+destroy}}
+\index{player\+\_\+destroy@{player\+\_\+destroy}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+destroy()}{player\_destroy()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+destruye un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a433ca0333cf23c1e213e3b4ffe654654}\label{player_8c_a433ca0333cf23c1e213e3b4ffe654654}} 
+\index{player.\+c@{player.\+c}!player\+\_\+drop\+\_\+object@{player\+\_\+drop\+\_\+object}}
+\index{player\+\_\+drop\+\_\+object@{player\+\_\+drop\+\_\+object}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+drop\+\_\+object()}{player\_drop\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+drop\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+suelta un objeto que tiene el jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+{\em id} & (Id del objeto a soltar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_af5a101ec91427951c5875569a8709956}\label{player_8c_af5a101ec91427951c5875569a8709956}} 
+\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}}
+\index{player\+\_\+get\+\_\+id@{player\+\_\+get\+\_\+id}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+id()}{player\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (Devuelve el Id del jugador) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a52652cc07dddb46f4632bfa728f1d38d}\label{player_8c_a52652cc07dddb46f4632bfa728f1d38d}} 
+\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}}
+\index{player\+\_\+get\+\_\+inventory@{player\+\_\+get\+\_\+inventory}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+inventory()}{player\_get\_inventory()}}
+{\footnotesize\ttfamily \hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$ player\+\_\+get\+\_\+inventory (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+devuelve el inventario de un jugador 
+
+devuelve el tamaño inventario de un jugador
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inventory$\ast$ (Devuelve el inventario del jugador)
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inventory (Devuelve el inventario del jugador)
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/12/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (Devuelve el tamaño inventario del jugador) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a9baf828f32452687598aa9573d94b9f3}\label{player_8c_a9baf828f32452687598aa9573d94b9f3}} 
+\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+inventory\+\_\+size@{player\+\_\+get\+\_\+inventory\+\_\+size}}
+\index{player\+\_\+get\+\_\+inventory\+\_\+size@{player\+\_\+get\+\_\+inventory\+\_\+size}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+inventory\+\_\+size()}{player\_get\_inventory\_size()}}
+{\footnotesize\ttfamily int player\+\_\+get\+\_\+inventory\+\_\+size (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+devuelve el tamaño inventario de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/12/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (Devuelve el tamaño inventario del jugador) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a260d3419c458edcdb3d2b5e9d4a867e8}\label{player_8c_a260d3419c458edcdb3d2b5e9d4a867e8}} 
+\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}}
+\index{player\+\_\+get\+\_\+name@{player\+\_\+get\+\_\+name}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+name()}{player\_get\_name()}}
+{\footnotesize\ttfamily char$\ast$ player\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+devuelve el nombre de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ (Devuelve el nombre del objeto) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_acb8bca0eada9e103693473a53dcf7569}\label{player_8c_acb8bca0eada9e103693473a53dcf7569}} 
+\index{player.\+c@{player.\+c}!player\+\_\+get\+\_\+space\+\_\+id@{player\+\_\+get\+\_\+space\+\_\+id}}
+\index{player\+\_\+get\+\_\+space\+\_\+id@{player\+\_\+get\+\_\+space\+\_\+id}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+get\+\_\+space\+\_\+id()}{player\_get\_space\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} player\+\_\+get\+\_\+space\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+devuelve el Id de la posicion de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (Devuelve el Id de la posicion del jugador) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_ad5a08e5ca32270d87cf1494099a1cb25}\label{player_8c_ad5a08e5ca32270d87cf1494099a1cb25}} 
+\index{player.\+c@{player.\+c}!player\+\_\+has\+\_\+object@{player\+\_\+has\+\_\+object}}
+\index{player\+\_\+has\+\_\+object@{player\+\_\+has\+\_\+object}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+has\+\_\+object()}{player\_has\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} player\+\_\+has\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+comprueba si un jugador tiene un objeto 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+{\em id} & (Id del objeto a comprobar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL (T\+R\+UE si el jugador tiene el objeto o F\+A\+L\+SE de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a672d857a4a76b51c19f8b916175c92da}\label{player_8c_a672d857a4a76b51c19f8b916175c92da}} 
+\index{player.\+c@{player.\+c}!player\+\_\+pick\+\_\+object@{player\+\_\+pick\+\_\+object}}
+\index{player\+\_\+pick\+\_\+object@{player\+\_\+pick\+\_\+object}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+pick\+\_\+object()}{player\_pick\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+pick\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+el jugador coge un objeto 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+{\em id} & (Id del objeto a coger) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a8d1daf5ac3f9445145d4ec45e70f5940}\label{player_8c_a8d1daf5ac3f9445145d4ec45e70f5940}} 
+\index{player.\+c@{player.\+c}!player\+\_\+print@{player\+\_\+print}}
+\index{player\+\_\+print@{player\+\_\+print}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+print()}{player\_print()}}
+{\footnotesize\ttfamily int player\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+imprime el jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a usar) \\
+\hline
+{\em f} & (donde se va a imprimir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (-\/1 si hay algun error) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a511658c8ff616308825ae86d4bae2dd2}\label{player_8c_a511658c8ff616308825ae86d4bae2dd2}} 
+\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+id@{player\+\_\+set\+\_\+id}}
+\index{player\+\_\+set\+\_\+id@{player\+\_\+set\+\_\+id}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+id()}{player\_set\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a modificar) \\
+\hline
+{\em id} & (nuevo Id) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_acea7143b0c9933e4c6f2fe699526e6f9}\label{player_8c_acea7143b0c9933e4c6f2fe699526e6f9}} 
+\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+inventory@{player\+\_\+set\+\_\+inventory}}
+\index{player\+\_\+set\+\_\+inventory@{player\+\_\+set\+\_\+inventory}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+inventory()}{player\_set\_inventory()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+inventory (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{inventory_8h_a2253bf64ac4ce6a9c1d6f39c0b0d32a3}{Inventory} $\ast$}]{bag }\end{DoxyParamCaption})}
+
+
+
+cambia el inventario de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a modificar) \\
+\hline
+{\em bag} & (nuevo inventario) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a6a30809f7775f5c2d3bef47d92769e59}\label{player_8c_a6a30809f7775f5c2d3bef47d92769e59}} 
+\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}}
+\index{player\+\_\+set\+\_\+name@{player\+\_\+set\+\_\+name}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+name()}{player\_set\_name()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+name (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+cambia el nombre de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a modificar) \\
+\hline
+{\em name} & (nuevo nombre) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player_8c_a280029f648f6d52747c95d81621b12d4}\label{player_8c_a280029f648f6d52747c95d81621b12d4}} 
+\index{player.\+c@{player.\+c}!player\+\_\+set\+\_\+space\+\_\+id@{player\+\_\+set\+\_\+space\+\_\+id}}
+\index{player\+\_\+set\+\_\+space\+\_\+id@{player\+\_\+set\+\_\+space\+\_\+id}!player.\+c@{player.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+set\+\_\+space\+\_\+id()}{player\_set\_space\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} player\+\_\+set\+\_\+space\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{player_8h_af30e2030635a69690f85e48bc6ef202f}{Player} $\ast$}]{player,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{space\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+cambia el Id de la posicion de un jugador 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/10/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & (jugador a modificar) \\
+\hline
+{\em space\+\_\+id} & (nuevo Id de posicion) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se realiza con exito o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}

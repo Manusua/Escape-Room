@@ -1,0 +1,11 @@
+<map id="die.h" name="die.h">
+<area shape="rect" id="node2" href="$die_8c.html" title="En este fichero implementamos las funciones del dado. " alt="" coords="5,80,56,107"/>
+<area shape="rect" id="node3" href="$die__test_8c.html" title="Fichero de prueba del dado. " alt="" coords="81,80,159,107"/>
+<area shape="rect" id="node4" href="$game_8h.html" title="En este fichero definimos las funciones para el juego. " alt="" coords="183,80,249,107"/>
+<area shape="rect" id="node5" href="$game_8c.html" title="En este fichero definimos las funciones para el juego. " alt="" coords="33,229,98,256"/>
+<area shape="rect" id="node6" href="$game__reader_8h.html" title="En este fichero definimos las funciones para el leer los diferentes elementos del juego de un fichero..." alt="" coords="117,155,225,181"/>
+<area shape="rect" id="node8" href="$graphic__engine_8h.html" title="En este fichero estaran las funciones relacionadas con la interfaz gráfica. " alt="" coords="300,155,420,181"/>
+<area shape="rect" id="node9" href="$game__loop_8c.html" title="Ejecuta el main y el juego hasta el comando exit. " alt="" coords="255,229,351,256"/>
+<area shape="rect" id="node7" href="$game__reader_8c.html" title="En este fichero definimos las funciones para el leer los diferentes elementos del juego de un fichero..." alt="" coords="122,229,230,256"/>
+<area shape="rect" id="node10" href="$graphic__engine_8c.html" title="En este fichero estaran las funciones relacionadas con la interfaz gráfica. " alt="" coords="375,229,495,256"/>
+</map>

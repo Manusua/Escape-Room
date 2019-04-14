@@ -1,0 +1,40 @@
+digraph "include/inventory.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node6 [label="include/inventory.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/inventory.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$inventory_8c.html",tooltip="En este fichero implementamos las funciones del inventario. "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="src/inventory_test.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$inventory__test_8c.html",tooltip="Prueba del modulo inventory. "];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="include/player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h.html",tooltip="En este fichero implementamos las funciones del jugador. "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="src/player.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8c.html",tooltip="En este fichero implementamos las funciones del jugador. "];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="src/player_test.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player__test_8c.html",tooltip="Prueba del modulo player. "];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="include/game.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game_8h.html",tooltip="En este fichero definimos las funciones para el juego. "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="src/dialogue.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dialogue_8c.html",tooltip="En este fichero implementamos las funciones del dialogo. "];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="src/game.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game_8c.html",tooltip="En este fichero definimos las funciones para el juego. "];
+  Node12 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="src/game_loop.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__loop_8c.html",tooltip="Ejecuta el main y el juego hasta el comando exit. "];
+  Node12 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="include/game_management.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__management_8h.html",tooltip="En este fichero definimos las funciones para el leer los diferentes elementos del juego de un fichero..."];
+  Node16 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="src/game_management.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__management_8c.html",tooltip="En este fichero definimos las funciones para el leer los diferentes elementos del juego de un fichero..."];
+  Node12 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="include/game_rules.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__rules_8h_source.html"];
+  Node18 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="src/game_rules.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__rules_8c.html",tooltip="En este fichero implementamos las funciones de game_rules. "];
+  Node12 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="include/graphic_engine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic__engine_8h.html",tooltip="En este fichero estaran las funciones relacionadas con la interfaz gráfica. "];
+  Node20 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="src/graphic_engine.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic__engine_8c.html",tooltip="En este fichero estaran las funciones relacionadas con la interfaz gráfica. "];
+  Node9 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

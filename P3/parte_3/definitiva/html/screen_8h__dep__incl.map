@@ -1,0 +1,6 @@
+<map id="screen.h" name="screen.h">
+<area shape="rect" id="node2" href="$graphic__engine_8h.html" title="En este fichero estaran las funciones relacionadas con la interfaz gráfica. " alt="" coords="59,80,179,107"/>
+<area shape="rect" id="node5" href="$screen_8c.html" title="En este fichero implementamos las funciones de screen. " alt="" coords="203,80,275,107"/>
+<area shape="rect" id="node3" href="$game__loop_8c.html" title="Ejecuta el main y el juego hasta el comando exit. " alt="" coords="5,155,101,181"/>
+<area shape="rect" id="node4" href="$graphic__engine_8c.html" title="En este fichero estaran las funciones relacionadas con la interfaz gráfica. " alt="" coords="125,155,245,181"/>
+</map>

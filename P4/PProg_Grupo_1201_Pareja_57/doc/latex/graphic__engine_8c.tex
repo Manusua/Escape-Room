@@ -1,0 +1,127 @@
+\hypertarget{graphic__engine_8c}{}\section{src/graphic\+\_\+engine.c File Reference}
+\label{graphic__engine_8c}\index{src/graphic\+\_\+engine.\+c@{src/graphic\+\_\+engine.\+c}}
+
+
+En este fichero estaran las funciones relacionadas con la interfaz gráfica.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}graphic\+\_\+engine.\+h\char`\"{}}\newline
+Include dependency graph for graphic\+\_\+engine.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Graphic__engine}{\+\_\+\+Graphic\+\_\+engine}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{graphic__engine_8c_abbfa1cbfdceaae8480d3e5f171292315}{T\+A\+M\+\_\+\+D\+R\+AW}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ \hyperlink{graphic__engine_8c_a8c3d9abe7282bee1d77d23ea80a4bdec}{graphic\+\_\+engine\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em crea una interfaz grafica \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8c_a5a5eac4ef2033c5ad71aa6895f362f79}{graphic\+\_\+engine\+\_\+destroy} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge)
+\begin{DoxyCompactList}\small\item\em destruye una interfaz grafica \end{DoxyCompactList}\item 
+void \hyperlink{graphic__engine_8c_a0e275aa477d5fa59e903da33a2a40a5d}{graphic\+\_\+engine\+\_\+paint\+\_\+game} (\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$ge, \hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game)
+\begin{DoxyCompactList}\small\item\em hace la interfaz grafica del juego \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero estaran las funciones relacionadas con la interfaz gráfica. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+8/11/2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{graphic__engine_8c_abbfa1cbfdceaae8480d3e5f171292315}\label{graphic__engine_8c_abbfa1cbfdceaae8480d3e5f171292315}} 
+\index{graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}!T\+A\+M\+\_\+\+D\+R\+AW@{T\+A\+M\+\_\+\+D\+R\+AW}}
+\index{T\+A\+M\+\_\+\+D\+R\+AW@{T\+A\+M\+\_\+\+D\+R\+AW}!graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}}
+\subsubsection{\texorpdfstring{T\+A\+M\+\_\+\+D\+R\+AW}{TAM\_DRAW}}
+{\footnotesize\ttfamily \#define T\+A\+M\+\_\+\+D\+R\+AW~100}
+
+T\+A\+M\+\_\+\+D\+R\+AW 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graphic__engine_8c_a8c3d9abe7282bee1d77d23ea80a4bdec}\label{graphic__engine_8c_a8c3d9abe7282bee1d77d23ea80a4bdec}} 
+\index{graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}!graphic\+\_\+engine\+\_\+create@{graphic\+\_\+engine\+\_\+create}}
+\index{graphic\+\_\+engine\+\_\+create@{graphic\+\_\+engine\+\_\+create}!graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+create()}{graphic\_engine\_create()}}
+{\footnotesize\ttfamily \hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine}$\ast$ graphic\+\_\+engine\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+crea una interfaz grafica 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+8/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+Graphic\+\_\+engine (la interfaz que hemos creado) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8c_a5a5eac4ef2033c5ad71aa6895f362f79}\label{graphic__engine_8c_a5a5eac4ef2033c5ad71aa6895f362f79}} 
+\index{graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}!graphic\+\_\+engine\+\_\+destroy@{graphic\+\_\+engine\+\_\+destroy}}
+\index{graphic\+\_\+engine\+\_\+destroy@{graphic\+\_\+engine\+\_\+destroy}!graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+destroy()}{graphic\_engine\_destroy()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge }\end{DoxyParamCaption})}
+
+
+
+destruye una interfaz grafica 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+8/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & (la interfaz que se va a destruir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (no devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphic__engine_8c_a0e275aa477d5fa59e903da33a2a40a5d}\label{graphic__engine_8c_a0e275aa477d5fa59e903da33a2a40a5d}} 
+\index{graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}!graphic\+\_\+engine\+\_\+paint\+\_\+game@{graphic\+\_\+engine\+\_\+paint\+\_\+game}}
+\index{graphic\+\_\+engine\+\_\+paint\+\_\+game@{graphic\+\_\+engine\+\_\+paint\+\_\+game}!graphic\+\_\+engine.\+c@{graphic\+\_\+engine.\+c}}
+\subsubsection{\texorpdfstring{graphic\+\_\+engine\+\_\+paint\+\_\+game()}{graphic\_engine\_paint\_game()}}
+{\footnotesize\ttfamily void graphic\+\_\+engine\+\_\+paint\+\_\+game (\begin{DoxyParamCaption}\item[{\hyperlink{graphic__engine_8h_ae1bc5cdbfce93098f066274fdea49af1}{Graphic\+\_\+engine} $\ast$}]{ge,  }\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game }\end{DoxyParamCaption})}
+
+
+
+hace la interfaz grafica del juego 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+8/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em ge} & (la interfaz que se va a usar) \\
+\hline
+{\em game} & (El juego que se va a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (no devuelve nada) 
+\end{DoxyReturn}

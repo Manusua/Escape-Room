@@ -1,0 +1,10 @@
+go north
+go south
+go east
+go west
+go up
+go down
+take obj1
+leave obj1
+inspect obj1
+quit

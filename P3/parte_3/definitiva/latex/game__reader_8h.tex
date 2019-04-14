@@ -1,0 +1,154 @@
+\hypertarget{game__reader_8h}{}\section{game\+\_\+reader.\+h File Reference}
+\label{game__reader_8h}\index{game\+\_\+reader.\+h@{game\+\_\+reader.\+h}}
+
+
+En este fichero definimos las funciones para el leer los diferentes elementos del juego de un fichero.  
+
+
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+reader.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__reader_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{game__reader_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game__reader_8h_a1e0e4f4ede7bb399d6f33f66b7c38392}{game\+\_\+reader\+\_\+load\+\_\+spaces} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em carga los espacios en el juego \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game__reader_8h_a02873f9de543d5aa39a4859c3174d6a8}{game\+\_\+reader\+\_\+load\+\_\+object} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em carga los objetos en el juego \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game__reader_8h_aa47ab8dc1e29821281766ab359e8ac8b}{game\+\_\+reader\+\_\+load\+\_\+links} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em carga los links en el juego \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{game__reader_8h_ab683c8c4451a43ca9639c813cadbdafc}{game\+\_\+reader\+\_\+load\+\_\+players} (\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$game, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em carga los jugadores en el juego \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero definimos las funciones para el leer los diferentes elementos del juego de un fichero. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+3/11/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game__reader_8h_aa47ab8dc1e29821281766ab359e8ac8b}\label{game__reader_8h_aa47ab8dc1e29821281766ab359e8ac8b}} 
+\index{game\+\_\+reader.\+h@{game\+\_\+reader.\+h}!game\+\_\+reader\+\_\+load\+\_\+links@{game\+\_\+reader\+\_\+load\+\_\+links}}
+\index{game\+\_\+reader\+\_\+load\+\_\+links@{game\+\_\+reader\+\_\+load\+\_\+links}!game\+\_\+reader.\+h@{game\+\_\+reader.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+reader\+\_\+load\+\_\+links()}{game\_reader\_load\_links()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+reader\+\_\+load\+\_\+links (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+carga los links en el juego 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & (El juego donde queremos cargar los datos) \\
+\hline
+{\em filename} & (El fichero que contiene los datos) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__reader_8h_a02873f9de543d5aa39a4859c3174d6a8}\label{game__reader_8h_a02873f9de543d5aa39a4859c3174d6a8}} 
+\index{game\+\_\+reader.\+h@{game\+\_\+reader.\+h}!game\+\_\+reader\+\_\+load\+\_\+object@{game\+\_\+reader\+\_\+load\+\_\+object}}
+\index{game\+\_\+reader\+\_\+load\+\_\+object@{game\+\_\+reader\+\_\+load\+\_\+object}!game\+\_\+reader.\+h@{game\+\_\+reader.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+reader\+\_\+load\+\_\+object()}{game\_reader\_load\_object()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+reader\+\_\+load\+\_\+object (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+carga los objetos en el juego 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & (El juego donde queremos cargar los datos) \\
+\hline
+{\em filename} & (El fichero que contiene los datos) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__reader_8h_ab683c8c4451a43ca9639c813cadbdafc}\label{game__reader_8h_ab683c8c4451a43ca9639c813cadbdafc}} 
+\index{game\+\_\+reader.\+h@{game\+\_\+reader.\+h}!game\+\_\+reader\+\_\+load\+\_\+players@{game\+\_\+reader\+\_\+load\+\_\+players}}
+\index{game\+\_\+reader\+\_\+load\+\_\+players@{game\+\_\+reader\+\_\+load\+\_\+players}!game\+\_\+reader.\+h@{game\+\_\+reader.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+reader\+\_\+load\+\_\+players()}{game\_reader\_load\_players()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+reader\+\_\+load\+\_\+players (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+carga los jugadores en el juego 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & (El juego donde queremos cargar los datos) \\
+\hline
+{\em filename} & (El fichero que contiene los datos) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__reader_8h_a1e0e4f4ede7bb399d6f33f66b7c38392}\label{game__reader_8h_a1e0e4f4ede7bb399d6f33f66b7c38392}} 
+\index{game\+\_\+reader.\+h@{game\+\_\+reader.\+h}!game\+\_\+reader\+\_\+load\+\_\+spaces@{game\+\_\+reader\+\_\+load\+\_\+spaces}}
+\index{game\+\_\+reader\+\_\+load\+\_\+spaces@{game\+\_\+reader\+\_\+load\+\_\+spaces}!game\+\_\+reader.\+h@{game\+\_\+reader.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+reader\+\_\+load\+\_\+spaces()}{game\_reader\_load\_spaces()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} game\+\_\+reader\+\_\+load\+\_\+spaces (\begin{DoxyParamCaption}\item[{\hyperlink{game_8h_a57156d39c530aec3fba3a9dad8c2dc6a}{Game} $\ast$}]{game,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+carga los espacios en el juego 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em game} & (El juego donde queremos cargar los datos) \\
+\hline
+{\em filename} & (El fichero que contiene los datos) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si se ha realizado correctamente o E\+R\+R\+OR de lo contrario) 
+\end{DoxyReturn}

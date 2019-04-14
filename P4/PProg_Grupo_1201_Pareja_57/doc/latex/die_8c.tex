@@ -1,0 +1,219 @@
+\hypertarget{die_8c}{}\section{src/die.c File Reference}
+\label{die_8c}\index{src/die.\+c@{src/die.\+c}}
+
+
+En este fichero implementamos las funciones del dado.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}die.\+h\char`\"{}}\newline
+Include dependency graph for die.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__Die}{\+\_\+\+Die}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$ \hyperlink{die_8c_a7edfb04683a77471c710342df00b7562}{die\+\_\+create} ()
+\begin{DoxyCompactList}\small\item\em Crea el dado y devuelve el puntero al mismo. \end{DoxyCompactList}\item 
+void \hyperlink{die_8c_a0155d7ec003966bace47f3e032a368e8}{die\+\_\+destroy} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Destruye el dado y libera la memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{die_8c_a9062d99f612a9779903e9856c96db9d4}{die\+\_\+set\+\_\+id} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die, \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} id)
+\begin{DoxyCompactList}\small\item\em Destruye el dado y libera la memoria. \end{DoxyCompactList}\item 
+\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} \hyperlink{die_8c_a57c9a2627bb3a1ca04fe55d72bd6a5ea}{die\+\_\+get\+\_\+id} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Devuelve el id del dado. \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_a9347ed79daba7e8078611d67a52e1bfb}{die\+\_\+get\+\_\+last\+\_\+roll} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Devuelve el resultado obtenido en la anterior tirada. \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_a06289514edbedf660c4b043f78e859fc}{die\+\_\+roll} (\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Tira el dado y devuelve un entero aleatorio entre el inf y el sup. \end{DoxyCompactList}\item 
+int \hyperlink{die_8c_adb0fa0ace96ca78efc3c0b191293e005}{die\+\_\+print} (F\+I\+LE $\ast$f, \hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$die)
+\begin{DoxyCompactList}\small\item\em Imprime el valor de la tirada del dado en el archivo proporcionado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero implementamos las funciones del dado. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{die_8c_a7edfb04683a77471c710342df00b7562}\label{die_8c_a7edfb04683a77471c710342df00b7562}} 
+\index{die.\+c@{die.\+c}!die\+\_\+create@{die\+\_\+create}}
+\index{die\+\_\+create@{die\+\_\+create}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+create()}{die\_create()}}
+{\footnotesize\ttfamily \hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die}$\ast$ die\+\_\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea el dado y devuelve el puntero al mismo. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+Die (El dado que hemos creado) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a0155d7ec003966bace47f3e032a368e8}\label{die_8c_a0155d7ec003966bace47f3e032a368e8}} 
+\index{die.\+c@{die.\+c}!die\+\_\+destroy@{die\+\_\+destroy}}
+\index{die\+\_\+destroy@{die\+\_\+destroy}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+destroy()}{die\_destroy()}}
+{\footnotesize\ttfamily void die\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Destruye el dado y libera la memoria. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & (puntero a dado) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void (No devuelve nada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a57c9a2627bb3a1ca04fe55d72bd6a5ea}\label{die_8c_a57c9a2627bb3a1ca04fe55d72bd6a5ea}} 
+\index{die.\+c@{die.\+c}!die\+\_\+get\+\_\+id@{die\+\_\+get\+\_\+id}}
+\index{die\+\_\+get\+\_\+id@{die\+\_\+get\+\_\+id}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+get\+\_\+id()}{die\_get\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id} die\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Devuelve el id del dado. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & (el dado que vamos a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Id (El id del dado) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a9347ed79daba7e8078611d67a52e1bfb}\label{die_8c_a9347ed79daba7e8078611d67a52e1bfb}} 
+\index{die.\+c@{die.\+c}!die\+\_\+get\+\_\+last\+\_\+roll@{die\+\_\+get\+\_\+last\+\_\+roll}}
+\index{die\+\_\+get\+\_\+last\+\_\+roll@{die\+\_\+get\+\_\+last\+\_\+roll}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+get\+\_\+last\+\_\+roll()}{die\_get\_last\_roll()}}
+{\footnotesize\ttfamily int die\+\_\+get\+\_\+last\+\_\+roll (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Devuelve el resultado obtenido en la anterior tirada. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & (el dado que vamos a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (El valor de la tirada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_adb0fa0ace96ca78efc3c0b191293e005}\label{die_8c_adb0fa0ace96ca78efc3c0b191293e005}} 
+\index{die.\+c@{die.\+c}!die\+\_\+print@{die\+\_\+print}}
+\index{die\+\_\+print@{die\+\_\+print}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+print()}{die\_print()}}
+{\footnotesize\ttfamily int die\+\_\+print (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Imprime el valor de la tirada del dado en el archivo proporcionado. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & (El archivo donde lo queremos imprimir) \\
+\hline
+{\em die} & (el dado que vamos a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (devuelve -\/1 si hay algun error o el un entero en caso contrario) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a06289514edbedf660c4b043f78e859fc}\label{die_8c_a06289514edbedf660c4b043f78e859fc}} 
+\index{die.\+c@{die.\+c}!die\+\_\+roll@{die\+\_\+roll}}
+\index{die\+\_\+roll@{die\+\_\+roll}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+roll()}{die\_roll()}}
+{\footnotesize\ttfamily int die\+\_\+roll (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die }\end{DoxyParamCaption})}
+
+
+
+Tira el dado y devuelve un entero aleatorio entre el inf y el sup. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & (el dado que vamos a usar) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int (El valor de la tirada) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{die_8c_a9062d99f612a9779903e9856c96db9d4}\label{die_8c_a9062d99f612a9779903e9856c96db9d4}} 
+\index{die.\+c@{die.\+c}!die\+\_\+set\+\_\+id@{die\+\_\+set\+\_\+id}}
+\index{die\+\_\+set\+\_\+id@{die\+\_\+set\+\_\+id}!die.\+c@{die.\+c}}
+\subsubsection{\texorpdfstring{die\+\_\+set\+\_\+id()}{die\_set\_id()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} die\+\_\+set\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{die_8h_a892f0b0bf81d69a1f7a14ea238e36dd3}{Die} $\ast$}]{die,  }\item[{\hyperlink{types_8h_a845e604fb28f7e3d97549da3448149d3}{Id}}]{id }\end{DoxyParamCaption})}
+
+
+
+Destruye el dado y libera la memoria. 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/11/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em die} & (el dado que vamos a usar) \\
+\hline
+{\em id} & (el que sera el id del dado) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US (OK si funciona correctamente o E\+R\+R\+OR si no) 
+\end{DoxyReturn}

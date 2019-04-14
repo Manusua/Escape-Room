@@ -1,0 +1,78 @@
+\hypertarget{dialogue_8h}{}\section{include/dialogue.h File Reference}
+\label{dialogue_8h}\index{include/dialogue.\+h@{include/dialogue.\+h}}
+
+
+En este fichero definimos las funciones para el dialogo.  
+
+
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+Include dependency graph for dialogue.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{dialogue_8h_a75c574c3478c2a41ed3b1a11ee70d9ed}{dialogue\+\_\+action} (\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$command, \hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command} prev\+\_\+cmd, \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} prev\+\_\+stat, \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} act\+\_\+stat, char $\ast$aux)
+\begin{DoxyCompactList}\small\item\em imprime la descripcion de la acción \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+En este fichero definimos las funciones para el dialogo. 
+
+En este fichero definimos las funciones para las reglas del juego.
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/11/2018
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/12/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dialogue_8h_a75c574c3478c2a41ed3b1a11ee70d9ed}\label{dialogue_8h_a75c574c3478c2a41ed3b1a11ee70d9ed}} 
+\index{dialogue.\+h@{dialogue.\+h}!dialogue\+\_\+action@{dialogue\+\_\+action}}
+\index{dialogue\+\_\+action@{dialogue\+\_\+action}!dialogue.\+h@{dialogue.\+h}}
+\subsubsection{\texorpdfstring{dialogue\+\_\+action()}{dialogue\_action()}}
+{\footnotesize\ttfamily \hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} dialogue\+\_\+action (\begin{DoxyParamCaption}\item[{\hyperlink{command_8h_a7d2935971c252377cb0fc1c8545dc2bc}{Command} $\ast$}]{command,  }\item[{\hyperlink{command_8h_a0473597db8c45c0289b6b8e2f8abbe32}{T\+\_\+\+Command}}]{prev\+\_\+cmd,  }\item[{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}}]{prev\+\_\+stat,  }\item[{\hyperlink{types_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US}}]{act\+\_\+stat,  }\item[{char $\ast$}]{aux }\end{DoxyParamCaption})}
+
+
+
+imprime la descripcion de la acción 
+
+\begin{DoxyAuthor}{Author}
+Manuel Suarez, Saul Almazán, Álvaro Becerra, Rodrigo Lardiés 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/12/2018 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em command} & comando que se acaba de ejecutar \\
+\hline
+{\em prev\+\_\+cmd} & comando previo \\
+\hline
+{\em prev\+\_\+stat} & true si se ha podido ejecutar el comando anterior \\
+\hline
+{\em act\+\_\+stat} & resultado de la ejecucion del comando \\
+\hline
+{\em aux} & cadena donde se imprime el resultado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+OK o E\+R\+R\+OR 
+\end{DoxyReturn}
